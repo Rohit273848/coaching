@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #0F2038;
+    --color-primary-hover: #183256;
+    --color-secondary: #8B1E26;
+    --color-secondary-hover: #6D171E;
+    --color-accent: #D4AF37;
+    --color-accent-hover: #B59226;
+    --color-bg: #FBFBFA;
+    --color-surface: #FFFFFF;
+    --color-surface-subtle: #F4F3EF;
+    --color-surface-dark: #0B1526;
+    --color-text: #1C2430;
+    --color-text-light: #FFFFFF;
+    --color-heading: #0A1424;
+    --color-muted: #5A6578;
+    --color-border: #E2E8F0;
+    --color-border-dark: #1E293B;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Academic Styling Utilities */
+.font-accent {
+  font-family: 'Lora', Georgia, serif;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #B59226 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-pattern-grid {
+  background-image: radial-gradient(rgba(15, 32, 56, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.shadow-academic {
+  box-shadow: 0 4px 20px -2px rgba(15, 32, 56, 0.08), 0 2px 6px -1px rgba(15, 32, 56, 0.04);
+}
+
+.shadow-academic-lg {
+  box-shadow: 0 12px 36px -4px rgba(15, 32, 56, 0.12), 0 4px 12px -2px rgba(15, 32, 56, 0.06);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F3EF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
