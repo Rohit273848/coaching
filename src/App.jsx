@@ -32,6 +32,7 @@ export default function App() {
   const [enquiryModalOpen, setEnquiryModalOpen] = useState(false);
   const [enquiryCourse, setEnquiryCourse] = useState('');
   const [topBarVisible, setTopBarVisible] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Apply institute theme configuration on mount
   useEffect(() => {
@@ -60,7 +61,11 @@ export default function App() {
         <TopBar onOpenEnquiry={handleOpenEnquiry} />
 
         {/* Floating Glass Navbar */}
-        <Navbar onOpenEnquiry={handleOpenEnquiry} topBarVisible={topBarVisible} />
+        <Navbar 
+          onOpenEnquiry={handleOpenEnquiry} 
+          topBarVisible={topBarVisible} 
+          onMobileMenuToggle={setIsMobileMenuOpen}
+        />
 
         {/* Main Content Area — Mobile-First Padding: clears navbar at top and floating sticky bar on mobile */}
         <main className="flex-1 pt-[84px] sm:pt-[94px] lg:pt-[100px] pb-24 lg:pb-0">
@@ -83,10 +88,13 @@ export default function App() {
         {/* Footer */}
         <Footer onOpenEnquiry={handleOpenEnquiry} />
 
-        {/* Mobile Sticky Quick CTA Bar */}
-        <MobileStickyCTA onOpenEnquiry={handleOpenEnquiry} />
+        {/* Mobile Sticky Quick CTA Bar — completely hidden when menu or enquiry modal is open */}
+        <MobileStickyCTA 
+          onOpenEnquiry={handleOpenEnquiry} 
+          hidden={enquiryModalOpen || isMobileMenuOpen} 
+        />
 
-        {/* Global Enquiry Popup Modal */}
+        {/* Global Enquiry Popup Modal (z-[100] with prominent close options) */}
         <EnquiryModal
           isOpen={enquiryModalOpen}
           onClose={() => setEnquiryModalOpen(false)}

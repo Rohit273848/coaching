@@ -4,7 +4,7 @@ import { Menu, X, Phone, GraduationCap, ArrowRight, ChevronRight, MessageCircle 
 import { institute } from '../../config/institute';
 import { getNavLinks } from '../../config/navigation';
 
-export default function Navbar({ onOpenEnquiry, topBarVisible }) {
+export default function Navbar({ onOpenEnquiry, topBarVisible, onMobileMenuToggle }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -24,11 +24,14 @@ export default function Navbar({ onOpenEnquiry, topBarVisible }) {
     document.body.style.overflow = '';
   }, [location.pathname]);
 
-  // Lock body scroll when mobile menu is open
+  // Lock body scroll and notify parent when mobile menu is toggled
   useEffect(() => {
     document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    if (onMobileMenuToggle) {
+      onMobileMenuToggle(mobileMenuOpen);
+    }
     return () => { document.body.style.overflow = ''; };
-  }, [mobileMenuOpen]);
+  }, [mobileMenuOpen, onMobileMenuToggle]);
 
   return (
     <>
@@ -153,7 +156,7 @@ export default function Navbar({ onOpenEnquiry, topBarVisible }) {
 
                 <button
                   onClick={() => onOpenEnquiry && onOpenEnquiry('Header Enquiry')}
-                  className="flex items-center gap-1.5 text-white text-[13px] font-extrabold rounded-[9px] transition-all hover:shadow-md active:scale-[0.98] px-4 py-2 bg-[#8B1E26] hover:bg-[#6D171E]"
+                  className="flex items-center gap-1.5 text-white text-[13px] font-extrabold rounded-[9px] transition-all hover:shadow-md active:scale-[0.98] px-4 py-2 bg-[#8B1E26] hover:bg-[#6D171E] cursor-pointer"
                   style={{ boxShadow: '0 2px 8px rgba(139, 30, 38, 0.25)' }}
                 >
                   <span>Enquire Now</span>
@@ -164,7 +167,7 @@ export default function Navbar({ onOpenEnquiry, topBarVisible }) {
               {/* ── Mobile Hamburger (Min 44px x 44px tap target) ─────── */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl transition-colors active:scale-95"
+                className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl transition-colors active:scale-95 cursor-pointer"
                 style={{
                   background: mobileMenuOpen ? 'rgba(15, 32, 56, 0.08)' : 'rgba(15, 32, 56, 0.04)',
                 }}
@@ -183,19 +186,19 @@ export default function Navbar({ onOpenEnquiry, topBarVisible }) {
         </div>
       </header>
 
-      {/* ─── Mobile Drawer (Full-Width Touch-Friendly Panel) ─────────────────── */}
+      {/* ─── Mobile Drawer (Full-Width Touch-Friendly Panel, z-50 above everything) ─── */}
       {mobileMenuOpen && (
         <>
           {/* Backdrop overlay */}
           <div
-            className="fixed inset-0 z-30 lg:hidden bg-slate-950/40 backdrop-blur-xs transition-opacity"
+            className="fixed inset-0 z-40 lg:hidden bg-slate-950/50 backdrop-blur-xs transition-opacity"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
 
           {/* Drawer Panel */}
           <div
-            className="fixed z-40 lg:hidden max-h-[calc(100vh-90px)] overflow-y-auto"
+            className="fixed z-50 lg:hidden max-h-[calc(100vh-90px)] overflow-y-auto"
             style={{
               top: (topBarVisible ? 32 : 10) + 64,
               left: 12,
@@ -203,8 +206,8 @@ export default function Navbar({ onOpenEnquiry, topBarVisible }) {
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(20px)',
               WebkitBackdropFilter: 'blur(20px)',
-              border: '1px solid rgba(15, 32, 56, 0.10)',
-              boxShadow: '0 20px 50px rgba(15, 23, 42, 0.16), 0 4px 16px rgba(15, 23, 42, 0.08)',
+              border: '1px solid rgba(15, 32, 56, 0.12)',
+              boxShadow: '0 20px 50px rgba(15, 23, 42, 0.20), 0 4px 16px rgba(15, 23, 42, 0.10)',
               borderRadius: '16px',
             }}
           >
@@ -242,7 +245,7 @@ export default function Navbar({ onOpenEnquiry, topBarVisible }) {
                   setMobileMenuOpen(false);
                   onOpenEnquiry && onOpenEnquiry('Mobile Drawer Enquiry');
                 }}
-                className="w-full flex items-center justify-center gap-2 text-white text-[14px] font-extrabold rounded-xl py-3.5 bg-[#8B1E26] hover:bg-[#6D171E] shadow-md min-h-[48px] active:scale-[0.98] transition-all"
+                className="w-full flex items-center justify-center gap-2 text-white text-[14px] font-extrabold rounded-xl py-3.5 bg-[#8B1E26] hover:bg-[#6D171E] shadow-md min-h-[48px] active:scale-[0.98] transition-all cursor-pointer"
               >
                 <span>Book Free Academic Counselling</span>
                 <ArrowRight className="w-4 h-4 text-[#D4AF37]" />

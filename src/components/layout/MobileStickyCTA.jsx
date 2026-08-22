@@ -2,10 +2,13 @@ import React from 'react';
 import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 import { institute } from '../../config/institute';
 
-export default function MobileStickyCTA({ onOpenEnquiry }) {
+export default function MobileStickyCTA({ onOpenEnquiry, hidden = false }) {
+  // Completely hide when mobile menu drawer or enquiry modal is open
+  if (hidden) return null;
+
   return (
     <div 
-      className="lg:hidden fixed left-2.5 right-2.5 z-40"
+      className="lg:hidden fixed left-2.5 right-2.5 z-30 transition-opacity duration-200 pointer-events-auto"
       style={{
         bottom: 'max(12px, env(safe-area-inset-bottom, 12px))',
         maxWidth: 520,
@@ -16,7 +19,7 @@ export default function MobileStickyCTA({ onOpenEnquiry }) {
       <div 
         className="p-1.5 rounded-[16px] transition-all duration-200"
         style={{
-          background: 'rgba(15, 32, 56, 0.94)',
+          background: 'rgba(15, 32, 56, 0.95)',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
           border: '1px solid rgba(255, 255, 255, 0.12)',
@@ -25,7 +28,7 @@ export default function MobileStickyCTA({ onOpenEnquiry }) {
       >
         <div className="flex items-center justify-between gap-1">
           
-          {/* Action 1: Call - Secondary Clean Glass Link */}
+          {/* Action 1: Call */}
           <a
             href={`tel:${institute.contact.phonePrimary}`}
             className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl text-slate-200 hover:text-white hover:bg-white/5 active:bg-white/10 active:scale-[0.97] transition-all min-h-[46px] select-none"
@@ -40,7 +43,7 @@ export default function MobileStickyCTA({ onOpenEnquiry }) {
           {/* Hairline Divider */}
           <div className="h-5 w-[1px] bg-white/10 shrink-0" />
 
-          {/* Action 2: WhatsApp - Option B Dark Glass with Crisp Green Accent Icon */}
+          {/* Action 2: WhatsApp */}
           <a
             href={`https://wa.me/${institute.contact.whatsappNumber}?text=${encodeURIComponent(institute.contact.whatsappDefaultMessage)}`}
             target="_blank"
@@ -57,7 +60,7 @@ export default function MobileStickyCTA({ onOpenEnquiry }) {
           {/* Hairline Divider */}
           <div className="h-5 w-[1px] bg-white/10 shrink-0" />
 
-          {/* Action 3: Enquire - Primary Institute Red Conversion Action */}
+          {/* Action 3: Enquire */}
           <button
             onClick={() => onOpenEnquiry && onOpenEnquiry('Mobile Sticky CTA')}
             className="flex-[1.15] flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#8B1E26] hover:bg-[#72181F] active:bg-[#5C1319] active:scale-[0.97] text-white shadow-md transition-all min-h-[46px] select-none cursor-pointer"
