@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import TopBar from './components/layout/TopBar';
 import Navbar from './components/layout/Navbar';
@@ -32,18 +32,16 @@ export default function App() {
   const [enquiryModalOpen, setEnquiryModalOpen] = useState(false);
   const [enquiryCourse, setEnquiryCourse] = useState('');
   const [topBarVisible, setTopBarVisible] = useState(true);
-  const topBarRef = useRef(null);
 
   // Apply institute theme configuration on mount
   useEffect(() => {
     applyTheme();
   }, []);
 
-  // Measure topbar height to pass to floating navbar
+  // Measure topbar scroll threshold
   useEffect(() => {
     const updateTopBarVisibility = () => {
-      // TopBar is approximately 32px; check if it is scrolled past
-      setTopBarVisible(window.scrollY < 32);
+      setTopBarVisible(window.scrollY < 30);
     };
     window.addEventListener('scroll', updateTopBarVisibility, { passive: true });
     return () => window.removeEventListener('scroll', updateTopBarVisibility);
@@ -58,14 +56,14 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-[#F8F7F4] text-[#1C2430] selection:bg-[#8B1E26] selection:text-white">
-        {/* Top Announcement Bar — sits above the floating glass navbar */}
+        {/* Top Announcement Bar */}
         <TopBar onOpenEnquiry={handleOpenEnquiry} />
 
-        {/* Floating Glass Navbar — fixed positioned, requires content offset */}
+        {/* Floating Glass Navbar */}
         <Navbar onOpenEnquiry={handleOpenEnquiry} topBarVisible={topBarVisible} />
 
-        {/* Main Content Area — padded to clear the fixed navbar (topbar ~32px + navbar 60px + gap 10px) */}
-        <main className="flex-1" style={{ paddingTop: 102 }}>
+        {/* Main Content Area — Mobile-First Padding: clears navbar at top and floating sticky bar on mobile */}
+        <main className="flex-1 pt-[84px] sm:pt-[94px] lg:pt-[100px] pb-24 lg:pb-0">
           <Routes>
             <Route path="/" element={<Home onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/programs" element={<Programs onOpenEnquiry={handleOpenEnquiry} />} />

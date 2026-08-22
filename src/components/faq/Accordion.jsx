@@ -9,32 +9,32 @@ export default function Accordion({ items }) {
   };
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-2.5 sm:space-y-3">
       {items.map((item) => {
         const isOpen = openId === item.id;
         return (
           <div
             key={item.id}
-            className="bg-white rounded-xl border border-slate-200 overflow-hidden transition-colors"
+            className="bg-white rounded-xl border border-stone-200 overflow-hidden transition-colors shadow-xs"
           >
             <button
               onClick={() => toggle(item.id)}
-              className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 text-sm sm:text-base hover:text-[#0F2038] transition-colors"
+              className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-3 font-bold text-slate-900 text-sm sm:text-base hover:text-[#0F2038] transition-colors min-h-[52px]"
               aria-expanded={isOpen}
             >
               <span className="flex items-center gap-2.5">
-                <HelpCircle className="w-5 h-5 text-[#8B1E26] shrink-0" />
-                <span>{item.question}</span>
+                <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#8B1E26] shrink-0" />
+                <span className="leading-snug">{item.question}</span>
               </span>
               <ChevronDown
-                className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${
+                className={`w-4 h-4 sm:w-5 sm:h-5 text-slate-400 shrink-0 transition-transform duration-200 ${
                   isOpen ? 'rotate-180 text-[#8B1E26]' : ''
                 }`}
               />
             </button>
 
             {isOpen && (
-              <div className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3 animate-in fade-in-50">
+              <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-stone-100 pt-3 animate-in fade-in-50">
                 {item.answer}
               </div>
             )}

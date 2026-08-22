@@ -5,9 +5,9 @@ import { features } from '../../config/features';
 
 export default function CourseCard({ course, onOpenEnquiry }) {
   return (
-    <div className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+    <div className="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col h-full group">
       {/* Top Banner Tag */}
-      <div className="bg-[#0F2038] text-white p-4 flex items-center justify-between border-b border-slate-800">
+      <div className="bg-[#0F2038] text-white p-3.5 sm:p-4 flex items-center justify-between border-b border-slate-800">
         <div className="flex items-center gap-2">
           <span className="bg-[#8B1E26] text-white text-[10px] font-extrabold px-2 py-0.5 rounded tracking-wider uppercase">
             {course.category}
@@ -26,35 +26,35 @@ export default function CourseCard({ course, onOpenEnquiry }) {
       </div>
 
       {/* Main Body */}
-      <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
+      <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4 sm:space-y-5">
         <div>
           {/* Target Class & Title */}
-          <div className="space-y-1.5 mb-3">
-            <span className="text-xs font-bold text-[#8B1E26] uppercase tracking-wide">
+          <div className="space-y-1 mb-2.5">
+            <span className="text-[11px] sm:text-xs font-bold text-[#8B1E26] uppercase tracking-wide">
               {course.targetStudents}
             </span>
-            <h3 className="text-lg font-extrabold text-slate-900 leading-snug group-hover:text-[#0F2038] transition-colors">
+            <h3 className="text-base sm:text-lg font-extrabold text-slate-900 leading-snug group-hover:text-[#0F2038] transition-colors">
               {course.title}
             </h3>
           </div>
 
           {/* Subjects Pills */}
-          <div className="flex flex-wrap gap-1.5 mb-4">
+          <div className="flex flex-wrap gap-1.5 mb-3">
             {course.subjects.map((sub, idx) => (
-              <span key={idx} className="bg-slate-100 text-slate-700 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-slate-200">
+              <span key={idx} className="bg-stone-100 text-slate-700 text-[11px] sm:text-xs font-semibold px-2.5 py-0.5 rounded-full border border-stone-200">
                 {sub}
               </span>
             ))}
           </div>
 
-          <p className="text-xs text-slate-600 leading-relaxed mb-4 line-clamp-3">
+          <p className="text-xs text-slate-600 leading-relaxed mb-3 line-clamp-3 font-normal">
             {course.description}
           </p>
 
           {/* Key Features List */}
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             {course.features.slice(0, 3).map((feat, idx) => (
-              <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+              <div key={idx} className="flex items-start gap-1.5 text-xs text-slate-700">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                 <span>{feat}</span>
               </div>
@@ -63,7 +63,7 @@ export default function CourseCard({ course, onOpenEnquiry }) {
         </div>
 
         {/* Footer Info & Action */}
-        <div className="pt-4 border-t border-slate-100 space-y-3">
+        <div className="pt-3 border-t border-stone-100 space-y-3">
           <div className="flex items-center justify-between text-xs text-slate-600">
             <div className="flex items-center gap-1.5 font-medium">
               <Calendar className="w-4 h-4 text-[#8B1E26]" />
@@ -73,7 +73,7 @@ export default function CourseCard({ course, onOpenEnquiry }) {
 
           {/* Optional Fee Display */}
           {features.feeDisplay && course.feeStructure?.showFee && (
-            <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-xs">
+            <div className="bg-stone-50 p-2.5 rounded-lg border border-stone-200 text-xs">
               <span className="text-slate-500 font-medium">Tuition Fee: </span>
               <strong className="text-slate-900 text-sm">{course.feeStructure.annualFee}</strong>
               <span className="text-emerald-700 font-semibold block text-[11px]">
@@ -82,11 +82,11 @@ export default function CourseCard({ course, onOpenEnquiry }) {
             </div>
           )}
 
-          {/* Action CTAs */}
+          {/* Action CTAs (Min 44px tap targets) */}
           <div className="grid grid-cols-2 gap-2 pt-1">
             <Link
               to={`/programs/${course.id}`}
-              className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs py-2.5 px-3 rounded-lg text-center transition-colors flex items-center justify-center gap-1"
+              className="bg-stone-100 hover:bg-stone-200 active:scale-[0.98] text-slate-800 font-bold text-xs py-3 px-3 rounded-xl text-center transition-colors flex items-center justify-center gap-1 min-h-[44px]"
             >
               <span>Full Details</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -94,7 +94,7 @@ export default function CourseCard({ course, onOpenEnquiry }) {
 
             <button
               onClick={() => onOpenEnquiry && onOpenEnquiry(course.title)}
-              className="bg-[#8B1E26] hover:bg-[#6D171E] text-white font-bold text-xs py-2.5 px-3 rounded-lg text-center transition-colors shadow-xs"
+              className="bg-[#8B1E26] hover:bg-[#6D171E] active:scale-[0.98] text-white font-extrabold text-xs py-3 px-3 rounded-xl text-center transition-colors shadow-xs min-h-[44px] flex items-center justify-center"
             >
               Enquire Batch
             </button>
