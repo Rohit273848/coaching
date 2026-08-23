@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, GraduationCap } from 'lucide-react';
+import { X, GraduationCap, Sparkles } from 'lucide-react';
 import EnquiryForm from './EnquiryForm';
 import { institute } from '../../config/institute';
 
@@ -33,39 +33,39 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }) {
       aria-modal="true"
     >
       <div 
-        className="relative bg-white w-full max-w-lg rounded-t-2xl sm:rounded-2xl shadow-2xl overflow-hidden border border-stone-200 max-h-[94vh] flex flex-col animate-in slide-in-from-bottom-6 sm:zoom-in-95 duration-200"
+        className="relative bg-white w-full max-w-lg rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden border border-slate-200 max-h-[94vh] flex flex-col animate-in slide-in-from-bottom-6 sm:zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Sticky Header with Always-Visible Close Button */}
-        <div className="sticky top-0 z-30 bg-[#0F2038] text-white p-4 sm:p-5 border-b border-slate-800 shrink-0">
+        {/* Header */}
+        <div className="sticky top-0 z-30 bg-[#1D2B53] text-white p-4 sm:p-5 border-b border-[#283C6E] shrink-0">
           <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-2.5 min-w-0">
-              <div className="w-9 h-9 rounded-xl bg-white/10 text-[#D4AF37] flex items-center justify-center font-bold shrink-0">
-                <GraduationCap className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-xl bg-[#1E4FA8] text-white flex items-center justify-center font-bold shrink-0 shadow-md">
+                <GraduationCap className="w-5 h-5 text-[#F8B81F]" />
               </div>
               <div className="min-w-0">
-                <span className="block text-[10px] font-extrabold text-[#D4AF37] uppercase tracking-wider">
+                <span className="block text-[10px] font-black text-[#F8B81F] uppercase tracking-wider">
                   Admissions & Counselling
                 </span>
-                <h3 className="text-base sm:text-lg font-extrabold tracking-tight truncate text-white">
-                  {institute.name}
+                <h3 className="text-base sm:text-lg font-black tracking-tight truncate text-white">
+                  {institute.name} ({institute.marathiName})
                 </h3>
               </div>
             </div>
 
-            {/* High-Contrast Prominent Close Button (Min 44px) */}
+            {/* Close Button */}
             <button
               onClick={onClose}
               className="bg-white/15 hover:bg-white/25 active:bg-white/30 text-white font-bold px-3 py-2 rounded-xl transition-all flex items-center gap-1.5 text-xs shrink-0 border border-white/20 min-h-[44px] cursor-pointer"
               aria-label="Close enquiry modal"
             >
-              <X className="w-4 h-4 text-[#D4AF37]" />
-              <span className="font-extrabold">Close</span>
+              <X className="w-4 h-4 text-[#F8B81F]" />
+              <span className="font-bold">Close</span>
             </button>
           </div>
 
           <p className="text-[11px] text-slate-300 mt-2 font-normal">
-            Speak directly with senior academic mentors regarding batch timing & scholarships.
+            Speak directly with senior academic mentors regarding Banking & MCAER batch timings.
           </p>
         </div>
 
@@ -73,15 +73,16 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }) {
         <div className="p-4 sm:p-6 overflow-y-auto flex-1 pb-safe">
           <EnquiryForm 
             defaultSource={defaultCourse ? `Course: ${defaultCourse}` : 'Modal Popup'} 
+            defaultCourse={defaultCourse}
             onSuccessClose={onClose}
           />
 
-          {/* Bottom Secondary Close Button for mobile ease */}
-          <div className="pt-4 mt-4 border-t border-stone-100 text-center">
+          {/* Bottom Secondary Close Button */}
+          <div className="pt-4 mt-4 border-t border-slate-100 text-center">
             <button
               type="button"
               onClick={onClose}
-              className="w-full sm:w-auto text-xs font-bold text-slate-500 hover:text-slate-800 bg-stone-100 hover:bg-stone-200 py-2.5 px-6 rounded-xl transition-colors min-h-[44px]"
+              className="w-full sm:w-auto text-xs font-bold text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 py-2.5 px-6 rounded-xl transition-colors min-h-[44px] cursor-pointer"
             >
               ✕ Cancel & Return to Website
             </button>
