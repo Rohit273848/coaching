@@ -1,15 +1,16 @@
 import React from 'react';
 import Hero from '../components/home/Hero';
 import KeyStats from '../components/home/KeyStats';
-import ResultsEditorial from '../components/home/ResultsEditorial';
-import AcademyStory from '../components/home/AcademyStory';
 import ProgramsEditorial from '../components/home/ProgramsEditorial';
-import Methodology from '../components/home/Methodology';
+import AcademyStory from '../components/home/AcademyStory';
+import ResultsEditorial from '../components/home/ResultsEditorial';
+import WhyUs from '../components/home/WhyUs';
 import FacultyShowcase from '../components/home/FacultyShowcase';
-import StudentLifeGallery from '../components/home/StudentLifeGallery';
-import TestimonialsEditorial from '../components/home/TestimonialsEditorial';
+import MobileAppBanner from '../components/home/MobileAppBanner';
 import BatchesTable from '../components/home/BatchesTable';
-import ScholarshipBanner from '../components/home/ScholarshipBanner';
+import TestimonialsEditorial from '../components/home/TestimonialsEditorial';
+import Methodology from '../components/home/Methodology';
+import StudentLifeGallery from '../components/home/StudentLifeGallery';
 import UpdatesEditorial from '../components/home/UpdatesEditorial';
 import FinalCTA from '../components/home/FinalCTA';
 import Accordion from '../components/faq/Accordion';
@@ -20,55 +21,58 @@ export default function Home({ onOpenEnquiry }) {
   return (
     <div className="space-y-0 animate-in fade-in duration-300">
       
-      {/* 1. Contained Editorial Hero with Soft Tinted Canvas & Floating Badges */}
+      {/* 1. Hero Section matching saarthiedu.online */}
       <Hero onOpenEnquiry={onOpenEnquiry} />
 
-      {/* 2. Immediate Trust & Credibility Statistics Strip */}
+      {/* 2. Key Stats Strip */}
       <KeyStats />
 
-      {/* 3. Results Section — Featured Topper + Standout Rankers */}
-      {features.results && <ResultsEditorial />}
-
-      {/* 4. "The Academy" Story — Philosophy & Academic Approach */}
-      <AcademyStory />
-
-      {/* 5. Structured Programs Prospectus — Hierarchical Layout */}
+      {/* 3. "What we offer" Course Showcase (Banking, MCAER, AFO, SSC) */}
       <ProgramsEditorial onOpenEnquiry={onOpenEnquiry} />
 
-      {/* 6. 6-Step Connected Teaching System Progression */}
-      {features.methodology && <Methodology />}
+      {/* 4. "About Us" Story — Building Careers. Creating Success. (Since 2019) */}
+      <AcademyStory />
 
-      {/* 7. Faculty Showcase — Featured Director + Department HODs */}
+      {/* 5. Success Stories — Our Students, Our Pride */}
+      {features.results && <ResultsEditorial />}
+
+      {/* 6. Why Choose Saarthi Education (4 Pillars) */}
+      {features.whyUs && <WhyUs />}
+
+      {/* 7. Faculty Showcase — Master Educators */}
       {features.faculty && <FacultyShowcase />}
 
-      {/* 8. Campus Life & Student Experience Gallery */}
-      {features.gallery && <StudentLifeGallery />}
+      {/* 8. Take Saarthi Education App Banner */}
+      <MobileAppBanner onOpenEnquiry={onOpenEnquiry} />
 
-      {/* 9. Authentic Student & Parent Perspectives */}
-      {features.testimonials && <TestimonialsEditorial />}
-
-      {/* 10. Upcoming Batch Commencement Schedule Table */}
+      {/* 9. Upcoming Batch Schedule Table */}
       {features.batchSchedule && <BatchesTable onOpenEnquiry={onOpenEnquiry} />}
 
-      {/* 11. Merit Scholarship & Admission Test Banner */}
-      {features.scholarshipTest && <ScholarshipBanner onOpenEnquiry={onOpenEnquiry} />}
+      {/* 10. Student & Parent Testimonials */}
+      {features.testimonials && <TestimonialsEditorial />}
 
-      {/* 12. News & Dispatches (Editorial Magazine Style) */}
+      {/* 11. Systematic Pedagogy / Methodology */}
+      {features.methodology && <Methodology />}
+
+      {/* 12. Campus Life & Student Gallery */}
+      {features.gallery && <StudentLifeGallery />}
+
+      {/* 13. News & Batch Updates */}
       {features.updates && <UpdatesEditorial onOpenEnquiry={onOpenEnquiry} />}
 
-      {/* 13. Minimalist FAQ Section */}
+      {/* 14. Frequently Asked Questions Accordion (Marathi + English) */}
       {features.faq && (
-        <section className="py-16 lg:py-24 bg-white border-b border-stone-200">
+        <section className="py-16 lg:py-24 bg-white border-b border-slate-200">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-12 space-y-2">
-              <span className="text-xs font-extrabold text-[#8B1E26] uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100">
-                CLARITY & ADMISSIONS
+              <span className="text-[11px] sm:text-xs font-black text-[#1E4FA8] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100 inline-block">
+                FAQ’S
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F2038] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#1D2B53] tracking-tight">
                 Frequently Asked Questions
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 font-normal">
-                Direct answers regarding admissions, batch sizes, test series, and doubt solving counters.
+                Find answers to common questions about our courses, classes, admission process, and student support.
               </p>
             </div>
 
@@ -77,7 +81,7 @@ export default function Home({ onOpenEnquiry }) {
         </section>
       )}
 
-      {/* 14. Final Conversion & Academic Advisory Section */}
+      {/* 15. Final Free Trial CTA Section */}
       <FinalCTA onOpenEnquiry={onOpenEnquiry} />
 
     </div>

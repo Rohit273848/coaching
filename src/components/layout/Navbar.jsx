@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, GraduationCap, ArrowRight, ChevronRight, MessageCircle } from 'lucide-react';
+import { Menu, X, Phone, GraduationCap, ArrowRight, ChevronRight, MessageCircle, Sparkles } from 'lucide-react';
 import { institute } from '../../config/institute';
 import { getNavLinks } from '../../config/navigation';
 
@@ -37,65 +37,69 @@ export default function Navbar({ onOpenEnquiry, topBarVisible, onMobileMenuToggl
     <>
       {/* ─── Floating Glass Navbar ─────────────────────────────────────────── */}
       <header
-        className="fixed left-0 right-0 z-40"
-        style={{ top: topBarVisible ? 32 : 10 }}
+        className="fixed left-0 right-0 z-40 transition-all duration-300"
+        style={{ top: topBarVisible ? 36 : 10 }}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
           <div
             className="transition-all duration-300 ease-out"
             style={{
               background: scrolled
-                ? 'rgba(255, 255, 255, 0.92)'
-                : 'rgba(255, 255, 255, 0.78)',
+                ? 'rgba(255, 255, 255, 0.96)'
+                : 'rgba(255, 255, 255, 0.88)',
               backdropFilter: `blur(${scrolled ? 20 : 14}px)`,
               WebkitBackdropFilter: `blur(${scrolled ? 20 : 14}px)`,
               border: scrolled
-                ? '1px solid rgba(255, 255, 255, 0.60)'
-                : '1px solid rgba(15, 32, 56, 0.08)',
+                ? '1px solid rgba(30, 79, 168, 0.15)'
+                : '1px solid rgba(229, 233, 242, 0.9)',
               boxShadow: scrolled
-                ? '0 8px 30px rgba(15, 23, 42, 0.10), 0 2px 6px rgba(15, 23, 42, 0.04)'
-                : '0 4px 18px rgba(15, 23, 42, 0.06)',
-              borderRadius: '14px',
+                ? '0 12px 35px rgba(26, 46, 85, 0.12), 0 2px 6px rgba(26, 46, 85, 0.04)'
+                : '0 4px 20px rgba(26, 46, 85, 0.06)',
+              borderRadius: '16px',
             }}
           >
-            <div className="flex items-center justify-between h-[56px] sm:h-[60px] px-3 sm:px-4 lg:px-5">
+            <div className="flex items-center justify-between h-[60px] sm:h-[66px] px-3 sm:px-5 lg:px-6">
 
               {/* ── Brand / Logo ──────────────────────────────────────── */}
               <Link
                 to="/"
                 className="flex items-center gap-2.5 shrink-0 group min-h-[44px] items-center"
-                aria-label="Apex Momentum Academy - Home"
+                aria-label="Saarthi Education - Home"
               >
-                {/* Icon Badge */}
+                {/* Logo Icon Badge */}
                 <div
-                  className="w-9 h-9 rounded-[9px] flex items-center justify-center shrink-0 transition-colors duration-200 group-hover:bg-[#183256]"
+                  className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105"
                   style={{
-                    background: '#0F2038',
-                    boxShadow: '0 2px 6px rgba(15, 32, 56, 0.20)',
+                    background: 'linear-gradient(135deg, #1E4FA8 0%, #163E85 100%)',
+                    boxShadow: '0 4px 12px rgba(30, 79, 168, 0.3)',
                   }}
                 >
-                  <GraduationCap className="w-5 h-5 text-[#D4AF37]" />
+                  <GraduationCap className="w-5 h-5 text-[#F8B81F]" />
                 </div>
 
                 {/* Name Block */}
                 <div className="leading-tight">
+                  <div className="flex items-center gap-1.5">
+                    <span
+                      className="block font-black text-[16px] sm:text-[18px] tracking-tight text-[#1D2B53]"
+                      style={{ letterSpacing: '-0.02em' }}
+                    >
+                      {institute.name}
+                    </span>
+                    <span className="hidden sm:inline-block text-[11px] font-bold text-[#F8941F] bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200">
+                      {institute.marathiName}
+                    </span>
+                  </div>
                   <span
-                    className="block font-extrabold text-[14px] sm:text-[15px] tracking-tight text-[#0F2038] truncate max-w-[170px] xs:max-w-[210px] sm:max-w-none"
-                    style={{ letterSpacing: '-0.01em' }}
+                    className="block text-[9px] sm:text-[10px] font-bold tracking-[0.06em] uppercase text-[#1E4FA8]"
                   >
-                    {institute.name}
-                  </span>
-                  <span
-                    className="block text-[9px] sm:text-[10px] font-bold tracking-[0.06em] uppercase"
-                    style={{ color: '#8B1E26' }}
-                  >
-                    JEE • NEET • CET • Foundation
+                    Banking • MCAER • AFO Coaching
                   </span>
                 </div>
               </Link>
 
               {/* ── Desktop Navigation ───────────────────────────────── */}
-              <nav className="hidden xl:flex items-center" aria-label="Main navigation">
+              <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main navigation">
                 {navLinks.map((link) => {
                   const isActive = location.pathname === link.path ||
                     (link.path !== '/' && location.pathname.startsWith(link.path));
@@ -103,17 +107,16 @@ export default function Navbar({ onOpenEnquiry, topBarVisible, onMobileMenuToggl
                     <Link
                       key={link.path}
                       to={link.path}
-                      className="relative flex items-center px-3 py-1.5 mx-0.5 text-[13px] font-semibold rounded-lg transition-all duration-200"
+                      className="relative px-3 py-2 text-[14px] font-bold rounded-lg transition-all duration-200"
                       style={{
-                        color: isActive ? '#8B1E26' : '#374151',
-                        background: isActive ? 'rgba(139, 30, 38, 0.07)' : 'transparent',
+                        color: isActive ? '#1E4FA8' : '#374151',
+                        background: isActive ? 'rgba(30, 79, 168, 0.08)' : 'transparent',
                       }}
                     >
                       {link.label}
                       {isActive && (
                         <span
-                          className="absolute bottom-0 left-3 right-3 h-[2px] rounded-full"
-                          style={{ background: '#8B1E26', bottom: '3px' }}
+                          className="absolute bottom-1 left-3 right-3 h-[2.5px] rounded-full bg-[#1E4FA8]"
                         />
                       )}
                     </Link>
@@ -121,63 +124,41 @@ export default function Navbar({ onOpenEnquiry, topBarVisible, onMobileMenuToggl
                 })}
               </nav>
 
-              {/* ── Compact nav for lg ───────────────────────────────── */}
-              <nav className="hidden lg:flex xl:hidden items-center gap-0.5" aria-label="Main navigation compact">
-                {navLinks.slice(0, 5).map((link) => {
-                  const isActive = location.pathname === link.path ||
-                    (link.path !== '/' && location.pathname.startsWith(link.path));
-                  return (
-                    <Link
-                      key={link.path}
-                      to={link.path}
-                      className="relative px-2.5 py-1.5 text-[12px] font-semibold rounded-lg transition-all duration-200"
-                      style={{
-                        color: isActive ? '#8B1E26' : '#374151',
-                        background: isActive ? 'rgba(139, 30, 38, 0.07)' : 'transparent',
-                      }}
-                    >
-                      {link.label}
-                    </Link>
-                  );
-                })}
-              </nav>
-
               {/* ── Right Action Area (Desktop) ──────────────────────── */}
-              <div className="hidden lg:flex items-center gap-2 shrink-0">
+              <div className="hidden lg:flex items-center gap-3 shrink-0">
                 <a
                   href={`tel:${institute.contact.phonePrimary}`}
-                  className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-[12px] font-semibold text-slate-600 hover:text-[#0F2038] transition-colors"
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-[13px] font-bold text-slate-700 hover:text-[#1E4FA8] hover:bg-blue-50 transition-colors"
                 >
-                  <Phone className="w-3.5 h-3.5 text-emerald-600" />
-                  <span className="hidden xl:block">Call Desk</span>
+                  <Phone className="w-4 h-4 text-emerald-600" />
+                  <span className="hidden xl:block">{institute.contact.phonePrimary}</span>
+                  <span className="xl:hidden">Call</span>
                 </a>
-
-                <div className="h-5 w-px bg-slate-200" />
 
                 <button
                   onClick={() => onOpenEnquiry && onOpenEnquiry('Header Enquiry')}
-                  className="flex items-center gap-1.5 text-white text-[13px] font-extrabold rounded-[9px] transition-all hover:shadow-md active:scale-[0.98] px-4 py-2 bg-[#8B1E26] hover:bg-[#6D171E] cursor-pointer"
-                  style={{ boxShadow: '0 2px 8px rgba(139, 30, 38, 0.25)' }}
+                  className="flex items-center gap-2 text-white text-[13px] font-black rounded-xl px-5 py-2.5 transition-all hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer"
+                  style={{
+                    background: 'linear-gradient(135deg, #1E4FA8 0%, #163E85 100%)',
+                    boxShadow: '0 4px 14px rgba(30, 79, 168, 0.35)',
+                  }}
                 >
-                  <span>Enquire Now</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>Enquiry Now</span>
+                  <ArrowRight className="w-4 h-4 text-[#F8B81F]" />
                 </button>
               </div>
 
-              {/* ── Mobile Hamburger (Min 44px x 44px tap target) ─────── */}
+              {/* ── Mobile Hamburger ─────────────────────────────────── */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl transition-colors active:scale-95 cursor-pointer"
-                style={{
-                  background: mobileMenuOpen ? 'rgba(15, 32, 56, 0.08)' : 'rgba(15, 32, 56, 0.04)',
-                }}
+                className="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl transition-colors active:scale-95 cursor-pointer bg-slate-100/80"
                 aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 aria-expanded={mobileMenuOpen}
               >
                 {mobileMenuOpen ? (
-                  <X className="w-6 h-6 text-[#0F2038]" />
+                  <X className="w-6 h-6 text-[#1D2B53]" />
                 ) : (
-                  <Menu className="w-6 h-6 text-[#0F2038]" />
+                  <Menu className="w-6 h-6 text-[#1D2B53]" />
                 )}
               </button>
 
@@ -186,7 +167,7 @@ export default function Navbar({ onOpenEnquiry, topBarVisible, onMobileMenuToggl
         </div>
       </header>
 
-      {/* ─── Mobile Drawer (Full-Width Touch-Friendly Panel, z-50 above everything) ─── */}
+      {/* ─── Mobile Drawer ─────────────────────────────────────────────────── */}
       {mobileMenuOpen && (
         <>
           {/* Backdrop overlay */}
@@ -200,15 +181,15 @@ export default function Navbar({ onOpenEnquiry, topBarVisible, onMobileMenuToggl
           <div
             className="fixed z-50 lg:hidden max-h-[calc(100vh-90px)] overflow-y-auto"
             style={{
-              top: (topBarVisible ? 32 : 10) + 64,
+              top: (topBarVisible ? 36 : 10) + 70,
               left: 12,
               right: 12,
               background: 'rgba(255, 255, 255, 0.98)',
               backdropFilter: 'blur(20px)',
               WebkitBackdropFilter: 'blur(20px)',
-              border: '1px solid rgba(15, 32, 56, 0.12)',
-              boxShadow: '0 20px 50px rgba(15, 23, 42, 0.20), 0 4px 16px rgba(15, 23, 42, 0.10)',
-              borderRadius: '16px',
+              border: '1px solid rgba(30, 79, 168, 0.15)',
+              boxShadow: '0 20px 50px rgba(15, 23, 42, 0.25)',
+              borderRadius: '20px',
             }}
           >
             {/* Nav Links */}
@@ -222,20 +203,19 @@ export default function Navbar({ onOpenEnquiry, topBarVisible, onMobileMenuToggl
                     to={link.path}
                     className={`flex items-center justify-between px-4 py-3.5 rounded-xl text-[15px] font-bold transition-all min-h-[48px] ${
                       isActive
-                        ? 'text-[#8B1E26] bg-red-50/90 border-l-4 border-[#8B1E26]'
+                        ? 'text-[#1E4FA8] bg-blue-50/90 border-l-4 border-[#1E4FA8]'
                         : 'text-slate-800 hover:bg-slate-50'
                     }`}
                   >
                     <span>{link.label}</span>
                     <ChevronRight
-                      className={`w-4 h-4 ${isActive ? 'text-[#8B1E26]' : 'text-slate-400'}`}
+                      className={`w-4 h-4 ${isActive ? 'text-[#1E4FA8]' : 'text-slate-400'}`}
                     />
                   </Link>
                 );
               })}
             </div>
 
-            {/* Divider */}
             <div className="h-px bg-slate-100 mx-4" />
 
             {/* Quick Action Mobile Buttons */}
@@ -245,10 +225,10 @@ export default function Navbar({ onOpenEnquiry, topBarVisible, onMobileMenuToggl
                   setMobileMenuOpen(false);
                   onOpenEnquiry && onOpenEnquiry('Mobile Drawer Enquiry');
                 }}
-                className="w-full flex items-center justify-center gap-2 text-white text-[14px] font-extrabold rounded-xl py-3.5 bg-[#8B1E26] hover:bg-[#6D171E] shadow-md min-h-[48px] active:scale-[0.98] transition-all cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 text-white text-[14px] font-black rounded-xl py-3.5 bg-[#1E4FA8] hover:bg-[#163E85] shadow-md min-h-[48px] active:scale-[0.98] transition-all cursor-pointer"
               >
-                <span>Book Free Academic Counselling</span>
-                <ArrowRight className="w-4 h-4 text-[#D4AF37]" />
+                <span>Enquiry Now / Free Demo</span>
+                <ArrowRight className="w-4 h-4 text-[#F8B81F]" />
               </button>
 
               <div className="grid grid-cols-2 gap-2">
@@ -257,7 +237,7 @@ export default function Navbar({ onOpenEnquiry, topBarVisible, onMobileMenuToggl
                   className="flex items-center justify-center gap-1.5 text-[13px] font-bold rounded-xl py-3 bg-slate-100 text-slate-900 border border-slate-200 min-h-[44px] active:scale-[0.98] transition-all"
                 >
                   <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Call Desk</span>
+                  <span>Call Us</span>
                 </a>
 
                 <a

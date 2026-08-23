@@ -3,21 +3,23 @@ import { features } from './features';
 /**
  * DYNAMIC NAVIGATION BUILDER
  * 
- * Automatically generates header navigation links based on active feature flags.
+ * Matches https://saarthiedu.online/ menu:
+ * Home, About, Batches, Faculty, Results, Contact
  */
 
 export function getNavLinks() {
   const baseLinks = [
     { label: "Home", path: "/" },
-    { label: "Programs", path: "/programs" }
+    { label: "About", path: "/about" },
+    { label: "Batches", path: "/programs" }
   ];
-
-  if (features.results) {
-    baseLinks.push({ label: "Results & Ranks", path: "/results" });
-  }
 
   if (features.faculty) {
     baseLinks.push({ label: "Faculty", path: "/faculty" });
+  }
+
+  if (features.results) {
+    baseLinks.push({ label: "Results", path: "/results" });
   }
 
   if (features.gallery) {
@@ -28,7 +30,6 @@ export function getNavLinks() {
     baseLinks.push({ label: "Updates", path: "/updates" });
   }
 
-  baseLinks.push({ label: "About Us", path: "/about" });
   baseLinks.push({ label: "Contact", path: "/contact" });
 
   return baseLinks;

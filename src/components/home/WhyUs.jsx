@@ -1,78 +1,93 @@
 import React from 'react';
-import { ShieldCheck, Users, HelpCircle, Laptop, Bell, FileText } from 'lucide-react';
+import { Award, Users, HelpCircle, BookOpen, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { features } from '../../config/features';
 
 export default function WhyUs() {
   if (!features.whyUs) return null;
 
-  const points = [
+  const pillars = [
     {
-      title: "Strict Batch Size of 35 Students",
-      desc: "Unlike massive commercial coaching hubs with 150+ students in one hall, we strictly cap every batch to 35 students to guarantee individual attention.",
-      icon: Users
+      title: "Expert Faculty",
+      marathiTitle: "अनुभवी शिक्षक",
+      desc: "अनुभवी शिक्षकांकडून शिका, जे अवघड संकल्पना सोप्या पद्धतीने समजावून सांगतात आणि योग्य मार्गदर्शन करतात.",
+      englishDesc: "Learn from senior educators with 10+ years experience who make tough Quant, Reasoning, and Banking concepts simple.",
+      icon: Award,
+      color: "bg-blue-50 text-[#1E4FA8] border-blue-200"
     },
     {
-      title: "Full-Time Master Faculty",
-      desc: "Our educators are full-time IITians, Medical Doctors, and PhD Scholars devoted entirely to classroom teaching and doubt clearing.",
-      icon: ShieldCheck
+      title: "Personalized Learning",
+      marathiTitle: "वैयक्तिक लक्ष",
+      desc: "प्रत्येक विद्यार्थ्याच्या शिकण्याच्या गरजेनुसार वैयक्तिक अभ्यास योजना आणि विशेष लक्ष दिले जाते.",
+      englishDesc: "Customized study schedules, limited batch sizes, and 1-on-1 performance tracking for every aspirant.",
+      icon: Users,
+      color: "bg-amber-50 text-[#F8941F] border-amber-200"
     },
     {
-      title: "Daily Dedicated Doubt Desk",
-      desc: "Faculty members sit at 1-on-1 doubt counters every evening from 4 PM to 7 PM so no numerical doubt is left unresolved.",
-      icon: HelpCircle
+      title: "Doubt Support",
+      marathiTitle: "शंका निरसन",
+      desc: "तुमच्या सर्व शंका दूर करण्यासाठी दररोज विशेष डाउट सेशन्स आणि वैयक्तिक मार्गदर्शन.",
+      englishDesc: "Daily 1-on-1 doubt clearing desks with subject masters to ensure zero confusion before exam day.",
+      icon: HelpCircle,
+      color: "bg-emerald-50 text-emerald-600 border-emerald-200"
     },
     {
-      title: "Exact NTA CBT Test Environment",
-      desc: "Our on-campus computer lab replicates the real NTA JEE Main online interface, building time-management confidence.",
-      icon: Laptop
-    },
-    {
-      title: "Automated Parent Progress Reports",
-      desc: "Parents receive regular SMS updates for attendance and bi-weekly test marks, accompanied by 4-weekly PTM sessions.",
-      icon: Bell
-    },
-    {
-      title: "Comprehensive Study Modules",
-      desc: "Structured workbooks covering basic concepts, advanced numericals, NCERT line-by-line drills, and 20-Year PYQ archives.",
-      icon: FileText
+      title: "Free Library & Lab",
+      marathiTitle: "मोफत लायब्ररी व लॅब",
+      desc: "अभ्यास आणि सरावासाठी विद्यार्थ्यांना शांत वातावरणातील मोफत लॅब व अभ्यासिका सुविधा.",
+      englishDesc: "Peaceful air-conditioned reading hall and dedicated CBT computer lab for full-length mock practice.",
+      icon: BookOpen,
+      color: "bg-purple-50 text-purple-600 border-purple-200"
     }
   ];
 
   return (
-    <section className="py-16 bg-white border-b border-slate-200">
+    <section className="py-12 sm:py-16 lg:py-24 bg-[#F8F9FC] border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span className="text-xs font-extrabold text-[#0F2038] uppercase tracking-widest bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
-            THE APEX ADVANTAGE
+        {/* Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-3">
+          <span className="text-[11px] sm:text-xs font-black text-[#1E4FA8] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100 inline-block">
+            WHY CHOOSE US
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Why Serious Aspirants & Parents Choose Us
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#1D2B53] tracking-tight">
+            Why Choose Saarthi Education ?
           </h2>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            We avoid generic promises and flashy slogans. Here are the concrete structural reasons behind our consistent selection rate.
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
+            सार्थी एज्युकेशनमध्ये आम्ही अनुभवी शिक्षकांचे मार्गदर्शन, वैयक्तिक लक्ष आणि विद्यार्थ्यांना केंद्रस्थानी ठेवून शिक्षण देतो, ज्यामुळे प्रत्येक विद्यार्थी आत्मविश्वासाने आपले सरकारी नोकरीचे ध्येय पूर्ण करू शकतो.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {points.map((pt, idx) => {
-            const Icon = pt.icon;
+        {/* 4 Cards Grid matching saarthiedu.online */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          {pillars.map((p, idx) => {
+            const Icon = p.icon;
             return (
-              <div 
-                key={idx} 
-                className="p-6 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md transition-all space-y-3"
+              <div
+                key={idx}
+                className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-saarthi hover:shadow-saarthi-lg transition-all flex flex-col justify-between space-y-4 group hover:-translate-y-1"
               >
-                <div className="w-10 h-10 rounded-lg bg-[#8B1E26] text-white flex items-center justify-center shadow-xs">
-                  <Icon className="w-5 h-5 text-[#D4AF37]" />
+                <div className="space-y-3">
+                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border shadow-xs ${p.color}`}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+
+                  <div>
+                    <h3 className="font-black text-lg text-[#1D2B53] group-hover:text-[#1E4FA8] transition-colors">
+                      {p.title}
+                    </h3>
+                    <span className="text-xs font-bold text-[#F8941F] block">
+                      {p.marathiTitle}
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-slate-700 leading-relaxed font-medium">
+                    {p.desc}
+                  </p>
                 </div>
 
-                <h3 className="font-extrabold text-base text-slate-900 tracking-tight">
-                  {pt.title}
-                </h3>
-
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  {pt.desc}
-                </p>
+                <div className="pt-3 border-t border-slate-100 text-[11px] text-slate-500 font-normal">
+                  {p.englishDesc}
+                </div>
               </div>
             );
           })}

@@ -7,54 +7,54 @@ export default function Methodology() {
   const steps = [
     {
       num: "01",
-      title: "CONCEPT RIGOUR",
-      desc: "Deep theoretical derivations led by IITian faculty from first principles."
+      title: "CONCEPT MASTERY",
+      desc: "Comprehensive coverage of Quant, Reasoning, and Banking fundamentals from basic to advanced."
     },
     {
       num: "02",
-      title: "DAILY PRACTICE",
-      desc: "Graded Daily Practice Problems (DPP) with 20-year past PYQs."
+      title: "SPEED MATH DRILLS",
+      desc: "Daily simplification and Vedic Math shortcuts to solve arithmetic in seconds."
     },
     {
       num: "03",
-      title: "CBT & OMR TESTS",
-      desc: "Bi-weekly computer-based mocks replicating exact NTA JEE & NEET interface."
+      title: "TCS-PATTERN CBT MOCKS",
+      desc: "Regular computer-based tests matching exact IBPS, SBI, and MCAER interfaces."
     },
     {
       num: "04",
       title: "ERROR ANALYSIS",
-      desc: "Diagnostic topic scorecards tracking negative marking and speed bottlenecks."
+      desc: "Diagnostic topic scorecards tracking negative marking and sectional time bottlenecks."
     },
     {
       num: "05",
-      title: "DOUBT DESK",
-      desc: "Daily 1-on-1 doubt counters from 4 PM to 7 PM to eliminate backlogs."
+      title: "DAILY DOUBT DESK",
+      desc: "Daily 1-on-1 doubt clearing counters with subject experts at our Paithan Gate center."
     },
     {
       num: "06",
-      title: "TARGET REVISION",
-      desc: "Structured micro-revision modules and high-speed mock test marathons."
+      title: "MOCK INTERVIEWS",
+      desc: "Specialized GD/PI interview panels led by experienced educators and bank officers."
     }
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-[#0F2038] text-white border-b border-slate-800 relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-24 bg-[#1D2B53] text-white border-b border-slate-800 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-2 sm:space-y-3">
-          <span className="text-[10px] sm:text-xs font-extrabold text-[#D4AF37] uppercase tracking-widest bg-slate-800/80 px-3.5 py-1 rounded-full border border-slate-700 inline-block">
+          <span className="text-[11px] sm:text-xs font-black text-[#F8B81F] uppercase tracking-widest bg-slate-800 px-3.5 py-1.5 rounded-full border border-slate-700 inline-block">
             SYSTEMATIC PEDAGOGY
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-            How We Prepare Students for Top Percentiles
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight">
+            How We Prepare Students for Banking & MCAER Success
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
-            Consistent ranks don't happen by accident. Every aspirant follows our time-tested 6-phase academic progression.
+            1000+ selections don't happen by chance. Every student at Saarthi Education follows our proven 6-stage preparation framework.
           </p>
         </div>
 
-        {/* Vertical Timeline on Mobile, Horizontal on Desktop */}
+        {/* Timeline Grid */}
         <div className="relative">
           
           {/* Connecting Line for Desktop */}
@@ -67,15 +67,15 @@ export default function Methodology() {
             {steps.map((step, idx) => (
               <div 
                 key={idx}
-                className="flex items-start lg:block gap-4 bg-slate-900/60 lg:bg-transparent p-3.5 sm:p-4 lg:p-2 rounded-xl lg:rounded-none border border-slate-800/80 lg:border-none group"
+                className="flex items-start lg:block gap-4 bg-slate-900/60 lg:bg-transparent p-4 lg:p-2 rounded-2xl lg:rounded-none border border-slate-800 lg:border-none group"
               >
-                {/* Step Number Badge (Min 40px) */}
-                <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full bg-[#0B1526] border-2 border-slate-700 text-[#D4AF37] flex items-center justify-center font-black text-sm sm:text-base lg:text-lg font-accent shadow-md group-hover:border-[#8B1E26] group-hover:bg-[#8B1E26] group-hover:text-white transition-all shrink-0">
+                {/* Step Badge */}
+                <div className="w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-2xl bg-[#111822] border-2 border-slate-700 text-[#F8B81F] flex items-center justify-center font-black text-sm sm:text-base lg:text-lg shadow-md group-hover:border-[#F8B81F] group-hover:bg-[#1E4FA8] group-hover:text-white transition-all shrink-0">
                   {step.num}
                 </div>
 
                 <div className="space-y-1 lg:pt-3 flex-1">
-                  <h3 className="font-extrabold text-xs sm:text-sm text-white tracking-tight uppercase group-hover:text-[#D4AF37] transition-colors">
+                  <h3 className="font-black text-xs sm:text-sm text-white tracking-tight uppercase group-hover:text-[#F8B81F] transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed font-normal">

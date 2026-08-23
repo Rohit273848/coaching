@@ -2,22 +2,22 @@
 
 @layer base {
   :root {
-    --color-primary: #0F2038;
-    --color-primary-hover: #183256;
-    --color-secondary: #8B1E26;
-    --color-secondary-hover: #6D171E;
-    --color-accent: #D4AF37;
-    --color-accent-hover: #B59226;
-    --color-bg: #F8F7F4;
+    --color-primary: #1E4FA8;
+    --color-primary-hover: #163E85;
+    --color-secondary: #E74C3C;
+    --color-secondary-hover: #C0392B;
+    --color-accent: #F8B81F;
+    --color-accent-hover: #E5A40F;
+    --color-bg: #F8F9FC;
     --color-surface: #FFFFFF;
-    --color-surface-subtle: #F5F3ED;
-    --color-surface-dark: #0B1526;
-    --color-text: #1C2430;
+    --color-surface-subtle: #EEF2F9;
+    --color-surface-dark: #1D2B53;
+    --color-text: #231F40;
     --color-text-light: #FFFFFF;
-    --color-heading: #0A1424;
-    --color-muted: #5A6578;
-    --color-border: #E2E8F0;
-    --color-border-dark: #1E293B;
+    --color-heading: #1D2B53;
+    --color-muted: #555555;
+    --color-border: #E5E9F2;
+    --color-border-dark: #2A3C6E;
   }
 
   html {
@@ -28,7 +28,7 @@
   body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -37,7 +37,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading);
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: -0.02em;
   }
 
@@ -47,28 +47,64 @@
   }
 }
 
-/* Custom Academic Styling Utilities */
+/* Custom Saarthi Education Styling Utilities */
 .font-accent {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-.text-gradient-gold {
-  background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #B59226 100%);
+.text-gradient-amber {
+  background: linear-gradient(135deg, #F8B81F 0%, #FF6900 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.bg-saarthi-blue {
+  background-color: #1E4FA8;
+}
+
+.text-saarthi-blue {
+  color: #1E4FA8;
+}
+
+.bg-saarthi-amber {
+  background-color: #F8B81F;
+}
+
+.text-saarthi-amber {
+  color: #F8B81F;
+}
+
 .bg-pattern-grid {
-  background-image: radial-gradient(rgba(15, 32, 56, 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(30, 79, 168, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
-.shadow-academic {
-  box-shadow: 0 4px 20px -2px rgba(15, 32, 56, 0.08), 0 2px 6px -1px rgba(15, 32, 56, 0.04);
+.shadow-saarthi {
+  box-shadow: 0 10px 40px 0 rgba(26, 46, 85, 0.08);
 }
 
-.shadow-academic-lg {
-  box-shadow: 0 12px 36px -4px rgba(15, 32, 56, 0.12), 0 4px 12px -2px rgba(15, 32, 56, 0.06);
+.shadow-saarthi-lg {
+  box-shadow: 0 20px 50px 0 rgba(26, 46, 85, 0.12);
+}
+
+/* Marquee Scroller Animation */
+@keyframes scroller-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: scroller-marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
 
 /* Hide scrollbar utility for mobile horizontal swipe lists */
@@ -95,7 +131,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #F4F3EF;
+    background: #F0F4F8;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -104,6 +140,6 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #94A3B8;
+    background: #1E4FA8;
   }
 }

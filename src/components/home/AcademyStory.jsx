@@ -1,117 +1,97 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Target, LineChart, Users, ArrowRight, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Award, ShieldCheck, Target, HeartHandshake } from 'lucide-react';
 import { institute } from '../../config/institute';
 
 export default function AcademyStory() {
-  const pillars = [
-    {
-      title: "Conceptual Grounding First",
-      desc: "Deep root derivations and physical intuition before solving advanced numericals.",
-      icon: BookOpen
-    },
-    {
-      title: "Daily 1-on-1 Doubt Desks",
-      desc: "Senior IITian faculty sit at doubt counters from 4 PM to 7 PM to ensure zero backlog.",
-      icon: Users
-    },
-    {
-      title: "Exact NTA-Pattern CBT Tests",
-      desc: "On-campus computer lab simulates the real JEE/NEET environment with instant diagnostics.",
-      icon: Target
-    },
-    {
-      title: "Transparent Parent Progress",
-      desc: "Monthly PTMs and automated attendance/test reports keep parents fully in sync.",
-      icon: LineChart
-    }
-  ];
-
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-white border-b border-stone-200">
+    <section className="py-12 sm:py-16 lg:py-24 bg-white border-b border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           
-          {/* Left Column: Institute / Classroom Image with Mobile-Friendly Ratio */}
+          {/* Left Column: Image / Visual */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden border border-stone-200 shadow-md bg-slate-900 aspect-16/10 sm:aspect-4/3 lg:aspect-auto lg:h-[480px]">
+            <div className="relative rounded-3xl overflow-hidden border-4 border-slate-100 shadow-xl bg-slate-900 aspect-16/10 sm:aspect-4/3 lg:aspect-auto lg:h-[480px]">
               <img
-                src={institute.images.buildingImage || institute.images.heroImage}
-                alt="Apex Momentum Academic Center"
+                src={institute.images.classroomImage || institute.images.heroImage}
+                alt="Saarthi Education Chhatrapati Sambhajinagar"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F2038]/85 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1D2B53]/90 via-transparent to-transparent" />
               
-              <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 text-white space-y-1">
-                <div className="inline-flex items-center gap-1.5 bg-[#8B1E26] text-white text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase">
-                  <ShieldCheck className="w-3 h-3" />
-                  <span>Samarth Nagar Center</span>
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-white space-y-1">
+                <div className="inline-flex items-center gap-1.5 bg-[#1E4FA8] text-white text-[10px] sm:text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#F8B81F]" />
+                  <span>Paithan Gate Center</span>
                 </div>
-                <h4 className="text-sm sm:text-base font-extrabold text-white">
-                  Disciplined Academic Infrastructure
+                <h4 className="text-base sm:text-lg font-black text-white">
+                  Driven To Succeed — 2019 पासून विश्वास
                 </h4>
                 <p className="text-[11px] sm:text-xs text-slate-200">
-                  Smart classrooms, silent study library, and 50-seater CBT lab.
+                  Smart interactive classrooms, free silent library, and regular computer-based mock drills.
                 </p>
               </div>
             </div>
 
             {/* Badge overlay */}
-            <div className="absolute -bottom-3 -right-2 sm:-bottom-5 sm:-right-4 bg-white p-2.5 sm:p-4 rounded-xl border border-stone-300 shadow-lg flex items-center gap-2.5">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#0F2038] text-white flex items-center justify-center font-bold">
-                <span className="text-[#D4AF37] font-accent text-base sm:text-xl font-black">15</span>
+            <div className="absolute -bottom-3 -right-2 sm:-bottom-5 sm:-right-4 bg-white p-3 sm:p-5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#1E4FA8] text-white flex items-center justify-center font-bold shadow-md">
+                <span className="text-[#F8B81F] text-lg sm:text-2xl font-black">2019</span>
               </div>
               <div>
-                <span className="text-[9px] sm:text-[10px] font-extrabold uppercase text-slate-500 block">Legacy</span>
-                <strong className="text-xs sm:text-sm font-extrabold text-slate-900 block">Years of Merit</strong>
+                <span className="text-[10px] font-black uppercase text-slate-400 block tracking-wider">ESTABLISHED</span>
+                <strong className="text-xs sm:text-sm font-black text-[#1D2B53] block">Years of Trust</strong>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Editorial Story & Approach */}
-          <div className="lg:col-span-6 space-y-4 sm:space-y-6 pt-2 lg:pt-0">
+          {/* Right Column: Narrative & Values */}
+          <div className="lg:col-span-6 space-y-4 sm:space-y-6">
             
-            <div className="space-y-1.5 sm:space-y-2">
-              <span className="text-[10px] sm:text-xs font-extrabold text-[#8B1E26] uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100 inline-block">
-                THE ACADEMIC APPROACH
+            <div className="space-y-2">
+              <span className="text-[11px] sm:text-xs font-black text-[#1E4FA8] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100 inline-block">
+                ABOUT US
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-[#0F2038] tracking-tight leading-tight">
-                Preparation Built Around Concepts, Practice & Performance.
+              <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-black text-[#1D2B53] tracking-tight leading-tight">
+                Building Careers. <br />
+                <span className="text-[#1E4FA8]">Creating Success.</span>
               </h2>
             </div>
 
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
-              At {institute.name}, we refuse the assembly-line commercial model. We strictly cap batches to 35 students so every student is known by name and mentored directly by senior IITian educators.
+              सारथी एज्युकेशन ही स्पर्धा परीक्षांच्या तयारीसाठी विश्वासार्ह संस्था आहे. सरकारी नोकरीचे स्वप्न पाहणाऱ्या विद्यार्थ्यांना योग्य मार्गदर्शन आणि दर्जेदार शिक्षण देणे हे आमचे ध्येय आहे.
             </p>
 
-            {/* 4 Pillars Grid (Mobile-First 1 or 2 col) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5 pt-1">
-              {pillars.map((p, idx) => {
-                const Icon = p.icon;
-                return (
-                  <div key={idx} className="p-3 sm:p-4 rounded-xl bg-stone-50 border border-stone-200/80 space-y-1">
-                    <div className="flex items-center gap-2">
-                      <Icon className="w-4 h-4 text-[#8B1E26] shrink-0" />
-                      <h4 className="font-extrabold text-xs text-[#0F2038]">{p.title}</h4>
-                    </div>
-                    <p className="text-[11px] text-slate-600 leading-relaxed font-normal">
-                      {p.desc}
-                    </p>
-                  </div>
-                );
-              })}
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+              2019 पासून, आम्ही गुणवत्तापूर्ण शिक्षण, अनुभवी शिक्षकांचे मार्गदर्शन आणि परीक्षाकेंद्रित प्रशिक्षण देत आहोत. प्रत्येक विद्यार्थ्याला योग्य दिशा, आत्मविश्वास आणि उत्तम तयारी मिळावी, जेणेकरून तो आपल्या स्वप्नातील सरकारी नोकरी मिळवू शकेल. <strong className="text-[#1D2B53]">"तुमचे यश हेच आमचे ध्येय"</strong> हीच आमची प्रेरणा आहे.
+            </p>
+
+            {/* 3 Reference Feature Points */}
+            <div className="space-y-2.5 pt-2">
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-blue-50/50 border border-blue-100">
+                <CheckCircle2 className="w-5 h-5 text-[#1E4FA8] shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-[#1D2B53]">अनुभवी शिक्षकांकडून उत्तम मार्गदर्शन (Expert Faculty Guidance)</span>
+              </div>
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-amber-50/50 border border-amber-100">
+                <CheckCircle2 className="w-5 h-5 text-[#F8941F] shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-[#1D2B53]">प्रत्येक विद्यार्थ्याकडे वैयक्तिक लक्ष (Personal Attention to Every Student)</span>
+              </div>
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-emerald-50/50 border border-emerald-100">
+                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-[#1D2B53]">यशस्वी भविष्यासाठी दर्जेदार शिक्षण (Quality Education for a Successful Future)</span>
+              </div>
             </div>
 
-            {/* Story Link */}
+            {/* Link */}
             <div className="pt-2">
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 text-xs font-extrabold text-[#0F2038] hover:text-[#8B1E26] group transition-colors min-h-[44px] items-center"
+                className="inline-flex items-center gap-2 bg-[#1E4FA8] hover:bg-[#163E85] text-white font-black text-xs px-6 py-3.5 rounded-xl transition-all shadow-md min-h-[46px] cursor-pointer"
               >
-                <span>Discover Our Complete Academic Philosophy</span>
-                <ArrowRight className="w-4 h-4 text-[#8B1E26] group-hover:translate-x-1 transition-transform" />
+                <span>Learn More About Saarthi</span>
+                <ArrowRight className="w-4 h-4 text-[#F8B81F]" />
               </Link>
             </div>
 

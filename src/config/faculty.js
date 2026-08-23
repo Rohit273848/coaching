@@ -1,58 +1,88 @@
 /**
  * FACULTY & ACADEMIC TEAM DATA MODEL
  * 
- * Reusable faculty profile collection highlighting academic authority,
- * qualifications, subject domain, and teaching philosophy.
+ * Saarthi Education Faculty Team:
+ * Master educators with years of banking, MCAER, and competitive coaching expertise.
  */
 
 export const facultySummary = {
-  title: "Learn From Master Educators & Top Rankers",
-  subTitle: "Our core faculty team consists of full-time IITians, Medical Doctors, and PhD Scholars with over 15+ years of dedicated competitive exam coaching experience."
+  title: "MEET OUR FACULTY",
+  marathiTitle: "अनुभवी शिक्षकांचे मार्गदर्शन",
+  headline: "Learn From Teachers Who've Been There",
+  subTitle: "अनुभवी शिक्षक, स्पष्ट मार्गदर्शन आणि प्रत्येक विद्यार्थ्याकडे वैयक्तिक लक्ष — हीच आमची ताकद. (Expert teachers, clear guidance, and personal attention to every student)."
 };
 
 export const facultyMembers = [
   {
     id: "f1",
-    name: "Er. Rajesh V. Sharma",
-    designation: "Senior Director & HOD Physics",
-    qualification: "B.Tech (Physics), IIT Bombay",
-    experience: "16+ Years Experience",
-    specialization: "Mechanics, Electromagnetism & JEE Advanced Physics",
-    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80",
-    bio: "Former Senior Physics Faculty at Kota with a track record of mentoring 40+ Top 100 AIR rankers in JEE Advanced.",
-    quote: "Physics is not about memorising formulas — it's about visualising physical phenomena and translating them into elegant mathematical equations."
+    name: "Mr. Rahul Misal",
+    marathiName: "श्री. राहुल मिसाळ",
+    designation: "Director & Senior Faculty (Quantitative Aptitude)",
+    qualification: "M.Sc (Mathematics)",
+    experience: "10+ Years Experience",
+    specialization: "Quantitative Aptitude, Speed Math & Data Interpretation",
+    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-4.png",
+    bio: "Renowned for simplifying complex numerical calculations and developing high-speed mental math techniques for IBPS PO, SBI, and RBI aspirants.",
+    quote: "Quantitative aptitude is not about lengthy formulas — it is about pattern recognition, simplification logic, and exam-day speed."
   },
   {
     id: "f2",
-    name: "Dr. Meenal A. Kulkarni",
-    designation: "Head of Department (Biology & NEET Division)",
-    qualification: "MBBS (BJ Medical College, Pune), MD",
-    experience: "14+ Years Experience",
-    specialization: "Human Physiology, Genetics & NCERT Mastery",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80",
-    bio: "Passionate medical educator who simplified Biology for over 5,000 NEET aspirants through custom NCERT workbooks and memory techniques.",
-    quote: "To score 360/360 in NEET Biology, you need to read NCERT not just with your eyes, but with deep clinical curiosity."
+    name: "Mr. Dnyandev Warade",
+    marathiName: "श्री. ज्ञानदेव वराडे",
+    designation: "Senior Faculty (Banking & Financial Awareness)",
+    qualification: "MBA (Finance)",
+    experience: "9+ Years Experience",
+    specialization: "Banking Awareness, Indian Economy & Current Affairs",
+    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-5.png",
+    bio: "Specialist in Indian Financial System, RBI guidelines, Monetary Policy, and budget analysis with deep knowledge of exam interview expectations.",
+    quote: "General and Banking Awareness gives you the maximum score in the shortest time when prepared with conceptual clarity."
   },
   {
     id: "f3",
-    name: "Er. Sameer H. Joshi",
-    designation: "HOD Mathematics",
-    qualification: "M.Tech, IIT Kharagpur",
-    experience: "12+ Years Experience",
-    specialization: "Calculus, Coordinate Geometry & Problem Speed",
-    photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80",
-    bio: "Renowned for developing 100+ mathematical speed shortcuts and pattern-recognition techniques for JEE Main & CET exams.",
-    quote: "Mathematics rewards clarity of thought and step-by-step logic. Once you master the core patterns, speed follows naturally."
+    name: "Mr. Akshay Cholke",
+    marathiName: "श्री. अक्षय चोळके",
+    designation: "Senior Faculty (Reasoning & Logical Ability)",
+    qualification: "B.E. (Electrical Engineering)",
+    experience: "8+ Years Experience",
+    specialization: "High-level Puzzles, Seating Arrangement & Logical Reasoning",
+    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-6.png",
+    bio: "Known for systematic decoding of complicated floor, box, and circular seating puzzles that routinely determine Mains cutoffs.",
+    quote: "A structured, condition-based breakdown turns the toughest 5-minute puzzle into a 2-minute guaranteed score."
   },
   {
     id: "f4",
-    name: "Dr. Vikramaditya P. Patil",
-    designation: "HOD Chemistry",
-    qualification: "Ph.D. Organic Chemistry (ICT Mumbai)",
-    experience: "15+ Years Experience",
-    specialization: "Organic Reaction Mechanisms & Physical Chemistry",
-    photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80",
-    bio: "Authored 3 widely recommended problem books for JEE Organic Chemistry. Known for making complex reaction pathways intuitive.",
-    quote: "Organic chemistry becomes effortless when you understand electron displacement and stability rather than memorising reactions."
+    name: "Mr. Khalid Ahmed",
+    marathiName: "श्री. खालीद अहमद",
+    designation: "Faculty (Economics, GA & Interview Mentor)",
+    qualification: "MBA (Finance)",
+    experience: "7+ Years Experience",
+    specialization: "Economic Trends, Government Schemes & Interview Prep",
+    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-7.png",
+    bio: "Extensively mentors students on personality development, Group Discussion, and banking personal interview rounds.",
+    quote: "Confidence in interviews comes from authentic knowledge, clarity of expression, and structured thinking."
+  },
+  {
+    id: "f5",
+    name: "Mr. Krishna Patil",
+    marathiName: "श्री. कृष्णा पाटील",
+    designation: "Lead Educator (MCAER & Agriculture Division)",
+    qualification: "M.Sc (Agriculture)",
+    experience: "8+ Years Experience",
+    specialization: "Agronomy, Soil Science & MCAER PG-CET Syllabus",
+    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-8.png",
+    bio: "State-recognized mentor for Maharashtra Agriculture graduates aspiring for M.Sc Agri PG-CET and IBPS Agriculture Field Officer positions.",
+    quote: "Comprehensive understanding of core agricultural sciences is the gateway to top state university ranks."
+  },
+  {
+    id: "f6",
+    name: "Mr. Deepak Wadhwa",
+    marathiName: "श्री. दीपक वाधवा",
+    designation: "Senior Faculty (English Language & Verbal Ability)",
+    qualification: "M.A. (English Literature), B.Ed",
+    experience: "9+ Years Experience",
+    specialization: "Reading Comprehension, Error Spotting & Grammar",
+    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-9.png",
+    bio: "Helps regional Marathi & vernacular medium students overcome English anxiety and achieve high scores in Bank PO and Clerk prelims.",
+    quote: "English for competitive exams is a practical skill of sentence structure and contextual reading, not rote memorization."
   }
 ];

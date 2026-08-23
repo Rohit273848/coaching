@@ -1,47 +1,51 @@
 /**
  * THEME SYSTEM CONFIGURATION
  * 
- * Rebrand the entire institute website by editing the theme values below.
- * Colors are injected dynamically into CSS root variables.
+ * Saarthi Education Color Palette:
+ * Primary: #1E4FA8 (Saarthi Navy Blue)
+ * Primary Alt: #163E85
+ * Accent: #F8B81F / #FFB606 (Warm Amber Gold)
+ * Secondary: #E74C3C (Dynamic Coral Red)
+ * Dark: #1D2B53 / #111822
  */
 
 export const theme = {
   // Main Institute Colors
-  primary: "#0F2038",      // Deep Academic Navy (Authority & Trust)
-  primaryHover: "#183256", // Darker Navy hover state
-  secondary: "#8B1E26",    // Classic Academic Maroon / Crimson (Discipline & Merit)
-  secondaryHover: "#6D171E",
-  accent: "#D4AF37",       // Rich Academic Gold (Excellence & Achievements)
-  accentHover: "#B59226",
+  primary: "#1E4FA8",      // Saarthi Brand Blue
+  primaryHover: "#163E85", // Deep Navy hover state
+  secondary: "#E74C3C",    // Dynamic Coral Red / Secondary
+  secondaryHover: "#C0392B",
+  accent: "#F8B81F",       // Saarthi Golden Amber
+  accentHover: "#E5A40F",
 
-  // Backgrounds & Surfaces (Off-white / Warm Ivory aesthetics)
-  background: "#FBFBFA",   // Warm off-white page background
+  // Backgrounds & Surfaces
+  background: "#F8F9FC",   // Clean subtle modern tinted background
   surface: "#FFFFFF",      // Card & Container crisp white background
-  surfaceSubtle: "#F4F3EF",// Subtle warm neutral surface for alternating sections
-  surfaceDark: "#0B1526",  // Deep charcoal background for contrast sections (Stats, Footer)
+  surfaceSubtle: "#EEF2F9",// Cool slate/blue subtle surface
+  surfaceDark: "#1D2B53",  // Deep Navy for contrast sections (Stats, Footer)
 
   // Typography Colors
-  text: "#1C2430",         // Deep charcoal body text (readable, high contrast)
+  text: "#231F40",         // Deep neutral body text
   textLight: "#FFFFFF",    // Inverted text for dark surfaces
-  heading: "#0A1424",      // High contrast heading text
-  mutedText: "#5A6578",    // Muted secondary text
-  border: "#E2E8F0",       // Clean subtle border
-  borderDark: "#1E293B",
+  heading: "#1D2B53",      // High contrast heading text
+  mutedText: "#555555",    // Muted secondary text
+  border: "#E5E9F2",       // Clean subtle border
+  borderDark: "#2A3C6E",
 
   // Contextual Colors
-  success: "#15803D",      // Green for selections / positive badges
-  warning: "#B45309",      // Orange/Amber for status flags
-  info: "#1D4ED8",         // Blue for updates/info tags
+  success: "#0ECD73",      // Green for selections / positive badges
+  warning: "#F8941F",      // Orange/Amber for status flags
+  info: "#39C0FA",         // Sky blue for updates/info tags
 
   // Visual Styling Details
-  borderRadius: "0.5rem",  // Restrained card rounding (8px)
-  fontHeading: "'Plus Jakarta Sans', sans-serif",
-  fontBody: "'Plus Jakarta Sans', sans-serif",
-  fontAccent: "'Lora', serif" // Used for AIR Ranks & Topper numbers
+  borderRadius: "0.75rem", // Modern rounding (12px)
+  fontHeading: "'Poppins', sans-serif",
+  fontBody: "'Poppins', system-ui, -apple-system, sans-serif",
+  fontAccent: "'Spartan', 'Poppins', sans-serif"
 };
 
 /**
- * Utility to inject theme CSS variables into the document head dynamically.
+ * Utility to inject theme CSS variables into document head dynamically.
  */
 export function applyTheme(currentTheme = theme) {
   const root = document.documentElement;

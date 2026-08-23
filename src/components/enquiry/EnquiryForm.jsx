@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2, MessageCircle } from 'lucide-react';
+import { Send, CheckCircle2, MessageCircle, Phone } from 'lucide-react';
 import { institute } from '../../config/institute';
 
-export default function EnquiryForm({ defaultSource = 'General Enquiry', onSuccessClose }) {
+export default function EnquiryForm({ defaultSource = 'General Enquiry', defaultCourse = '', onSuccessClose }) {
   const [formData, setFormData] = useState({
     studentName: '',
     parentName: '',
     mobile: '',
-    targetClass: 'Class 11',
-    targetExam: 'JEE (Main + Advanced)',
-    preferredMode: 'Offline Classroom',
+    targetQualification: 'Graduate / Final Year',
+    targetExam: defaultCourse || 'Banking (IBPS / SBI / RRB)',
+    preferredMode: 'Offline Classroom (Paithan Gate)',
     notes: ''
   });
 
@@ -22,33 +22,33 @@ export default function EnquiryForm({ defaultSource = 'General Enquiry', onSucce
     setSubmitted(true);
     setTimeout(() => {
       if (onSuccessClose) {
-        // Option to close modal after short delay
+        onSuccessClose();
       }
     }, 4000);
   };
 
   const handleWhatsAppClick = () => {
-    const text = `Hello ${institute.name}! I am submitting an enquiry:\nStudent: ${formData.studentName || 'Aspirant'}\nMobile: ${formData.mobile || 'N/A'}\nClass: ${formData.targetClass}\nExam: ${formData.targetExam}\nSource: ${defaultSource}`;
+    const text = `Hello ${institute.name}! I am submitting an admission enquiry:\nStudent: ${formData.studentName || 'Aspirant'}\nMobile: ${formData.mobile || 'N/A'}\nQualification: ${formData.targetQualification}\nTarget Exam: ${formData.targetExam}\nPreferred Mode: ${formData.preferredMode}\nSource: ${defaultSource}`;
     window.open(`https://wa.me/${institute.contact.whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   if (submitted) {
     return (
-      <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5 sm:p-6 text-center space-y-4 animate-in fade-in">
-        <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-          <CheckCircle2 className="w-7 h-7" />
+      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 sm:p-8 text-center space-y-4 animate-in fade-in">
+        <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto shadow-xs">
+          <CheckCircle2 className="w-8 h-8" />
         </div>
         <div className="space-y-1">
-          <h3 className="text-lg sm:text-xl font-bold text-slate-900">Counselling Request Received!</h3>
+          <h3 className="text-xl sm:text-2xl font-black text-slate-900">Enquiry Received Successfully!</h3>
           <p className="text-xs sm:text-sm text-slate-600">
-            Thank you, <span className="font-semibold text-slate-900">{formData.studentName}</span>. Our academic counselor will call you on <span className="font-semibold text-slate-900">{formData.mobile}</span> within 2 hours.
+            Thank you, <span className="font-bold text-slate-900">{formData.studentName}</span>. Our senior counselor from Saarthi Education will contact you at <span className="font-bold text-slate-900">{formData.mobile}</span> with complete batch timings and free demo lecture details.
           </p>
         </div>
         
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
           <button
             onClick={handleWhatsAppClick}
-            className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold px-5 py-3 rounded-xl text-xs flex items-center justify-center gap-2 min-h-[44px]"
+            className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold px-6 py-3.5 rounded-xl text-xs flex items-center justify-center gap-2 min-h-[46px]"
           >
             <MessageCircle className="w-4 h-4" />
             <span>Connect on WhatsApp Instantly</span>
@@ -65,40 +65,40 @@ export default function EnquiryForm({ defaultSource = 'General Enquiry', onSucce
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4">
       {/* Student & Parent Name */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
         <div>
-          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+          <label className="block text-[11px] font-black text-slate-700 uppercase tracking-wider mb-1">
             Student Full Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
             required
-            placeholder="e.g. Arjun Patil"
+            placeholder="e.g. Rahul Sharma"
             value={formData.studentName}
             onChange={(e) => setFormData({ ...formData, studentName: e.target.value })}
-            className="w-full px-3.5 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8B1E26]/20 focus:border-[#8B1E26] min-h-[48px]"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1E4FA8]/20 focus:border-[#1E4FA8] min-h-[48px]"
           />
         </div>
         <div>
-          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+          <label className="block text-[11px] font-black text-slate-700 uppercase tracking-wider mb-1">
             Parent Name (Optional)
           </label>
           <input
             type="text"
-            placeholder="e.g. Suresh Patil"
+            placeholder="e.g. Sanjay Sharma"
             value={formData.parentName}
             onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
-            className="w-full px-3.5 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8B1E26]/20 focus:border-[#8B1E26] min-h-[48px]"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1E4FA8]/20 focus:border-[#1E4FA8] min-h-[48px]"
           />
         </div>
       </div>
 
-      {/* Mobile & Target Class */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {/* Mobile & Target Qualification */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
         <div>
-          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+          <label className="block text-[11px] font-black text-slate-700 uppercase tracking-wider mb-1">
             Mobile Number <span className="text-red-500">*</span>
           </label>
           <input
@@ -109,85 +109,85 @@ export default function EnquiryForm({ defaultSource = 'General Enquiry', onSucce
             placeholder="10-digit mobile number"
             value={formData.mobile}
             onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-            className="w-full px-3.5 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8B1E26]/20 focus:border-[#8B1E26] min-h-[48px]"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1E4FA8]/20 focus:border-[#1E4FA8] min-h-[48px]"
           />
         </div>
 
         <div>
-          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-            Target Class
+          <label className="block text-[11px] font-black text-slate-700 uppercase tracking-wider mb-1">
+            Current Qualification
           </label>
           <select
-            value={formData.targetClass}
-            onChange={(e) => setFormData({ ...formData, targetClass: e.target.value })}
-            className="w-full px-3.5 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8B1E26]/20 focus:border-[#8B1E26] min-h-[48px]"
+            value={formData.targetQualification}
+            onChange={(e) => setFormData({ ...formData, targetQualification: e.target.value })}
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1E4FA8]/20 focus:border-[#1E4FA8] min-h-[48px]"
           >
-            <option value="Class 8">Class 8th</option>
-            <option value="Class 9">Class 9th</option>
-            <option value="Class 10">Class 10th</option>
-            <option value="Class 11">Moving to Class 11th</option>
-            <option value="Class 12">Moving to Class 12th</option>
-            <option value="Class 12 Passed (Dropper)">Class 12th Passed (Dropper Batch)</option>
+            <option value="Graduate / Final Year">Graduate / Final Year Student</option>
+            <option value="B.Sc Agriculture / Allied">B.Sc (Agriculture) / Allied Degree</option>
+            <option value="12th Pass">12th Standard Passed</option>
+            <option value="Post Graduate">Post Graduate (M.Sc / MBA / M.Com)</option>
+            <option value="Working Professional">Working Professional</option>
           </select>
         </div>
       </div>
 
       {/* Target Exam & Mode */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
         <div>
-          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+          <label className="block text-[11px] font-black text-slate-700 uppercase tracking-wider mb-1">
             Target Exam
           </label>
           <select
             value={formData.targetExam}
             onChange={(e) => setFormData({ ...formData, targetExam: e.target.value })}
-            className="w-full px-3.5 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8B1E26]/20 focus:border-[#8B1E26] min-h-[48px]"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1E4FA8]/20 focus:border-[#1E4FA8] min-h-[48px]"
           >
-            <option value="JEE (Main + Advanced)">JEE (Main + Advanced)</option>
-            <option value="NEET-UG Medical">NEET-UG Medical</option>
-            <option value="MHT-CET State Exam">MHT-CET State Exam</option>
-            <option value="Foundation (Olympiads / NTSE)">Foundation (Class 8-10)</option>
-            <option value="CBSE / State Board Integrated">CBSE / State Board Integrated</option>
+            <option value="Banking (IBPS / SBI / RRB / RBI)">Banking Comprehensive (IBPS / SBI / RRB / RBI)</option>
+            <option value="MCAER (Agri PG-CET)">MCAER (Agri PG-CET 2026)</option>
+            <option value="IBPS AFO (Agriculture Field Officer)">IBPS AFO (Agriculture Field Officer)</option>
+            <option value="SSC CGL / CHSL & Railway">SSC CGL / CHSL & Railway RRB</option>
+            <option value="Free Demo Lecture Request">Book Free Offline Demo Lecture</option>
           </select>
         </div>
 
         <div>
-          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+          <label className="block text-[11px] font-black text-slate-700 uppercase tracking-wider mb-1">
             Learning Mode
           </label>
           <select
             value={formData.preferredMode}
             onChange={(e) => setFormData({ ...formData, preferredMode: e.target.value })}
-            className="w-full px-3.5 py-3 bg-stone-50 border border-stone-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#8B1E26]/20 focus:border-[#8B1E26] min-h-[48px]"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1E4FA8]/20 focus:border-[#1E4FA8] min-h-[48px]"
           >
-            <option value="Offline Classroom">Offline Classroom (Samarth Nagar)</option>
-            <option value="Hybrid (Classroom + Online App)">Hybrid (Classroom + Online App)</option>
+            <option value="Offline Classroom (Paithan Gate)">Offline Classroom (Paithan Gate Center)</option>
+            <option value="Online Live + App Recorded">Online Live + Mobile App</option>
+            <option value="Hybrid (Classroom + App)">Hybrid (Classroom + App)</option>
           </select>
         </div>
       </div>
 
-      {/* Submit Button (Min 48px height) */}
+      {/* Submit Button */}
       <div className="pt-2 space-y-2">
         <button
           type="submit"
-          className="w-full bg-[#8B1E26] hover:bg-[#6D171E] active:scale-[0.98] text-white font-extrabold py-3.5 px-4 rounded-xl shadow hover:shadow-md transition-all flex items-center justify-center gap-2 text-sm min-h-[48px]"
+          className="w-full bg-[#1E4FA8] hover:bg-[#163E85] active:scale-[0.98] text-white font-black py-4 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm min-h-[50px] cursor-pointer"
         >
-          <Send className="w-4 h-4 text-[#D4AF37]" />
-          <span>Book Free Academic Counselling</span>
+          <Send className="w-4 h-4 text-[#F8B81F]" />
+          <span>Book Free Counselling / Reserve Seat</span>
         </button>
 
         <button
           type="button"
           onClick={handleWhatsAppClick}
-          className="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold py-3 px-4 rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 text-xs min-h-[44px]"
+          className="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold py-3 px-4 rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 text-xs min-h-[44px] cursor-pointer"
         >
           <MessageCircle className="w-4 h-4" />
-          <span>Instant WhatsApp Enquiry</span>
+          <span>Instant WhatsApp Enquiry (+91 86949 47070)</span>
         </button>
       </div>
 
-      <p className="text-[10px] text-slate-400 text-center pt-1">
-        🔒 Phone numbers are kept strictly confidential for academic counselling only.
+      <p className="text-[11px] text-slate-400 text-center pt-1">
+        🔒 Your phone number is kept confidential for Saarthi Education counselling only.
       </p>
     </form>
   );
