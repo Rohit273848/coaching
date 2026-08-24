@@ -1,25 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 import EnquiryForm from './EnquiryForm';
 import { institute } from '../../config/institute';
 
 export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }) {
-  // Lock body scroll and listen for Escape key when modal is open
+  const scrollContainerRef = useRef(null);
+
+  // Lock body scroll with scroll position preservation and listen for Escape key
   useEffect(() => {
     if (isOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
       document.body.style.overflow = 'hidden';
+
       const handleKeyDown = (e) => {
         if (e.key === 'Escape' && onClose) {
           onClose();
         }
       };
       window.addEventListener('keydown', handleKeyDown);
+
+      // Reset scroll position of the form container to top on open
+      if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollTop = 0;
+      }
+
       return () => {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
         document.body.style.overflow = '';
+        window.scrollTo(0, scrollY);
         window.removeEventListener('keydown', handleKeyDown);
       };
-    } else {
-      document.body.style.overflow = '';
     }
   }, [isOpen, onClose]);
 
@@ -27,20 +42,21 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }) {
 
   return (
     <div 
-      className="fixed inset-0 z-[100] bg-slate-950/80 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 animate-in fade-in duration-200"
+      className="fixed inset-0 z-[100] bg-slate-950/85 backdrop-blur-sm flex flex-col justify-end sm:justify-center sm:items-center p-0 sm:p-4 animate-in fade-in duration-200"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
+      aria-labelledby="enquiry-modal-title"
     >
-      {/* Modal Bottom-Sheet (Mobile) / Center Dialog (Desktop) */}
+      {/* Modal Container: Viewport-aware Sheet on Mobile, Centered Dialog on Desktop */}
       <div 
-        className="relative bg-white w-full max-w-lg rounded-t-[28px] sm:rounded-3xl shadow-2xl overflow-hidden border border-slate-200 h-[88dvh] max-h-[88dvh] sm:h-auto sm:max-h-[88vh] flex flex-col animate-in slide-in-from-bottom-6 sm:zoom-in-95 duration-200"
+        className="relative bg-white w-full max-w-lg rounded-t-[28px] sm:rounded-3xl shadow-2xl overflow-hidden border border-slate-200 h-[90dvh] max-h-[90dvh] sm:h-auto sm:max-h-[88vh] flex flex-col animate-in slide-in-from-bottom duration-200"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Sticky Header — Always Visible at Top */}
-        <div className="sticky top-0 z-30 bg-[#0B192C] text-white px-4 py-3 sm:p-5 border-b border-slate-800 shrink-0 shadow-md">
-          {/* Mobile Sheet Handle Bar */}
-          <div className="w-10 h-1 bg-white/20 rounded-full mx-auto mb-2.5 sm:hidden" />
+        {/* Fixed Sticky Header — ALWAYS Visible with Close Button */}
+        <div className="sticky top-0 z-30 bg-[#0B192C] text-white px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-800 shrink-0 shadow-md">
+          {/* Mobile Sheet Pill Handle */}
+          <div className="w-10 h-1 bg-white/25 rounded-full mx-auto mb-2 sm:hidden" />
 
           <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-2.5 min-w-0 text-left">
@@ -53,17 +69,18 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }) {
                 <span className="block text-[9.5px] sm:text-[10px] font-black text-[#F59E0B] uppercase tracking-wider">
                   Book a Free Demo Class
                 </span>
-                <h3 className="text-sm sm:text-base font-black tracking-tight truncate text-white">
+                <h3 id="enquiry-modal-title" className="text-sm sm:text-base font-black tracking-tight truncate text-white">
                   {institute.name}
                 </h3>
               </div>
             </div>
 
-            {/* High-Contrast Prominent Close Button */}
+            {/* Always Visible, Easy-to-Tap Close Button */}
             <button
+              type="button"
               onClick={onClose}
-              className="bg-white/15 hover:bg-white/25 active:bg-white/30 text-white font-bold px-3 py-2 rounded-xl transition-all flex items-center gap-1.5 text-xs shrink-0 border border-white/20 min-h-[42px] cursor-pointer"
-              aria-label="Close enquiry modal"
+              className="bg-white/15 hover:bg-white/25 active:bg-white/30 text-white font-bold px-3 py-2 rounded-xl transition-all flex items-center gap-1.5 text-xs shrink-0 border border-white/25 min-h-[42px] cursor-pointer"
+              aria-label="Close free demo form"
             >
               <X className="w-4 h-4 text-[#F59E0B]" />
               <span className="font-bold">Close</span>
@@ -71,19 +88,22 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }) {
           </div>
 
           <p className="text-[10.5px] sm:text-[11px] text-slate-300 mt-1.5 font-normal truncate">
-            1st Floor, Shrinath Complex, New Usmanpura, Aurangabad
+            1st Floor, Shrinath Complex, New Usmanpura, Aurangabad • +91 88620 15626
           </p>
         </div>
 
-        {/* Modal Scrollable Body Form */}
-        <div className="p-4 sm:p-6 overflow-y-auto flex-1 overscroll-contain pb-[max(24px,env(safe-area-inset-bottom,24px))]">
+        {/* Scrollable Form Body — Natural Touch Scrolling */}
+        <div 
+          ref={scrollContainerRef}
+          className="p-4 sm:p-6 overflow-y-auto flex-1 overscroll-contain pb-[max(28px,env(safe-area-inset-bottom,28px))]"
+        >
           <EnquiryForm 
             defaultSource={defaultCourse ? `Course: ${defaultCourse}` : 'Modal Popup'} 
             defaultCourse={defaultCourse}
             onSuccessClose={onClose}
           />
 
-          {/* Bottom Secondary Close Button */}
+          {/* Bottom Secondary Cancel Button */}
           <div className="pt-4 mt-4 border-t border-slate-100 text-center">
             <button
               type="button"
