@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TopperCard from '../components/results/TopperCard';
 import { toppers, resultSummary, examCategories, availableYears } from '../config/results';
-import { Trophy, Search, CheckCircle2, Award } from 'lucide-react';
+import { Trophy, Search, Star } from 'lucide-react';
 
 export default function Results() {
   const [selectedExam, setSelectedExam] = useState('ALL');
@@ -19,20 +19,21 @@ export default function Results() {
   });
 
   return (
-    <div className="py-6 sm:py-12 bg-[#F8F9FC] min-h-screen">
+    <div className="py-6 sm:py-12 bg-[#F8FAFC] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         
         {/* Header */}
-        <div className="bg-[#1D2B53] text-white p-6 sm:p-10 rounded-3xl shadow-xl space-y-4 border border-[#283C6E]">
+        <div className="bg-[#0B192C] text-white p-6 sm:p-10 rounded-3xl shadow-xl space-y-4 border border-slate-800">
           <div className="max-w-3xl space-y-2.5">
-            <span className="text-[11px] sm:text-xs font-black text-[#F8B81F] uppercase tracking-widest bg-slate-800 px-3.5 py-1.5 rounded-full border border-slate-700 inline-block">
-              1,000+ STUDENTS PLACED • HALL OF FAME
-            </span>
+            <div className="inline-flex items-center gap-1.5 bg-amber-500/20 text-[#F59E0B] px-3.5 py-1.5 rounded-full border border-amber-500/30 text-[11px] sm:text-xs font-black uppercase tracking-wider">
+              <Star className="w-3.5 h-3.5 fill-[#F59E0B]" />
+              <span>PERL EDUCATION HALL OF FAME</span>
+            </div>
             <h1 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
               {resultSummary.headline}
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-              {resultSummary.marathiHeadline} — {resultSummary.subHeadline}
+              {resultSummary.subHeadline}
             </p>
           </div>
 
@@ -42,31 +43,31 @@ export default function Results() {
               <span className="text-2xl sm:text-3xl font-black text-white block">
                 {resultSummary.totalSelections}
               </span>
-              <span className="text-[11px] font-bold text-slate-400">Total Placed</span>
+              <span className="text-[11px] font-bold text-slate-400">Total Selections</span>
             </div>
             <div className="bg-slate-900/60 p-3 rounded-2xl border border-slate-800/80">
-              <span className="text-2xl sm:text-3xl font-black text-[#F8B81F] block">
-                {resultSummary.bankingSelections}
+              <span className="text-2xl sm:text-3xl font-black text-[#F59E0B] block">
+                {resultSummary.jeeQualifiers}
               </span>
-              <span className="text-[11px] font-bold text-slate-400">Banking Selections</span>
+              <span className="text-[11px] font-bold text-slate-400">JEE Qualifiers</span>
             </div>
             <div className="bg-slate-900/60 p-3 rounded-2xl border border-slate-800/80">
               <span className="text-2xl sm:text-3xl font-black text-emerald-400 block">
-                {resultSummary.mcaerSelections}
+                {resultSummary.neetSelections}
               </span>
-              <span className="text-[11px] font-bold text-slate-400">MCAER Agri Ranks</span>
+              <span className="text-[11px] font-bold text-slate-400">NEET Selections</span>
             </div>
             <div className="bg-slate-900/60 p-3 rounded-2xl border border-slate-800/80">
               <span className="text-2xl sm:text-3xl font-black text-sky-400 block">
-                {resultSummary.sbiIbpsOfficers}
+                {resultSummary.boardToppers}
               </span>
-              <span className="text-[11px] font-bold text-slate-400">Bank PO / Officers</span>
+              <span className="text-[11px] font-bold text-slate-400">95%+ Board Merit</span>
             </div>
           </div>
         </div>
 
         {/* Filters & Search */}
-        <div className="bg-white p-4 sm:p-5 rounded-3xl border border-slate-200 shadow-saarthi space-y-3">
+        <div className="bg-white p-4 sm:p-5 rounded-3xl border border-slate-200 shadow-sm space-y-3">
           <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
             
             {/* Exam Filter Tabs */}
@@ -77,7 +78,7 @@ export default function Results() {
                   onClick={() => setSelectedExam(exam)}
                   className={`px-3.5 py-2 rounded-xl text-xs font-black uppercase shrink-0 transition-all min-h-[38px] cursor-pointer ${
                     selectedExam === exam
-                      ? 'bg-[#1E4FA8] text-white shadow-xs'
+                      ? 'bg-[#0F4C81] text-white shadow-xs'
                       : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                   }`}
                 >
@@ -92,7 +93,7 @@ export default function Results() {
                 <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
-                  placeholder="Search by student or bank name..."
+                  placeholder="Search by student or college name..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:bg-white min-h-[38px]"

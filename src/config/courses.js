@@ -1,196 +1,190 @@
 /**
  * COURSES & ACADEMIC PROGRAMS DATA MODEL
  * 
- * Saarthi Education Offerings: Banking (IBPS, SBI, RBI, RRB), MCAER (Agri PG-CET),
- * AFO (Agriculture Field Officer), and SSC / Govt Competitive Exams.
+ * PERL Education Offerings:
+ * - IIT-JEE (Mains & Advanced)
+ * - NEET (UG Medical Entrance)
+ * - School & Foundation Programs (Classes 8th, 9th, 10th - CBSE, ICSE, State Board)
+ * - Higher Secondary (Classes 11th & 12th PCMB Integrated)
  */
 
 export const courses = [
   {
-    id: "banking-master-batch",
-    title: "BANKING Comprehensive Master Program",
-    marathiTitle: "बँकिंग संपूर्ण तयारी बॅच (IBPS, SBI, RBI, RRB)",
-    shortTitle: "Banking Master Batch",
-    category: "BANKING",
-    targetStudents: "Graduates / Final Year Students Preparing for Banking",
-    duration: "25 weeks",
-    studentCount: "653+",
-    lessonCount: "180+ Lessons",
-    rating: "4.9 / 5.0",
-    mode: ["Offline Classroom", "Online Live + Recorded"],
-    badge: "Most Popular",
+    id: "iit-jee-mains-advanced",
+    title: "IIT-JEE (Mains & Advanced) Comprehensive Prep",
+    shortTitle: "IIT-JEE (Mains & Advanced)",
+    category: "JEE",
+    targetStudents: "Class 11th, 12th & 12th Pass / Droppers Targeting IITs & NITs",
+    duration: "1 to 2 Years Integrated",
+    studentCount: "450+ Aspirants",
+    lessonCount: "350+ Hours Live / Smart Class",
+    rating: "4.9 / 5.0 (Google Rated)",
+    mode: ["Smart Classroom (Usmanpura)", "Hybrid with App Tests"],
+    badge: "Top Engineering Choice",
     subjects: [
-      "Quantitative Aptitude",
-      "Reasoning Ability & Puzzles",
-      "English Language & Vocab",
-      "Banking Awareness & Economy",
-      "Computer Knowledge",
-      "Current Affairs & GD/PI"
+      "Physics (Mechanics, Electrodynamics, Optics, Modern Physics)",
+      "Chemistry (Physical, Organic & Inorganic Chemistry)",
+      "Mathematics (Calculus, Algebra, Coordinate Geometry, Vectors)"
     ],
-    batchStartDate: "1st September 2026",
-    weeklyHours: "20 Hours (Classes + Daily Speed Tests)",
-    testFrequency: "Daily Sectional Quizzes + Weekly Full-Length IBPS/SBI Mock Tests",
-    eligibility: "Any Degree Graduate / Final Year Appearing",
-    description: "सारथी एज्युकेशनचा बँकिंग कोर्स हा IBPS, SBI, RBI आणि इतर बँकिंग परीक्षांची संपूर्ण तयारी करून देतो. अनुभवी शिक्षक, नियमित टेस्ट, दर्जेदार नोट्स आणि मुलाखत मार्गदर्शनासह संपूर्ण अभ्यासक्रम पूर्ण केला जातो.",
-    detailedDescription: "A structured, mentor-led program designed for high speed and accuracy in Pre, Mains, and Interview stages of IBPS PO/Clerk, SBI PO/Clerk, RBI Assistant/Grade B, and Regional Rural Banks (RRBs).",
+    batchStartDate: "New Batches Starting Every Month",
+    weeklyHours: "18-22 Hours (Lectures + Guided DPP Practice)",
+    testFrequency: "Weekly Sectional Chapter Tests + Bi-weekly JEE Mains/Adv Full Mock Tests",
+    eligibility: "Class 10th Passed / Class 11th / Class 12th Appearing or Passed",
+    description: "Engineered to help students secure top percentile ranks in JEE Main and Advanced. Features small batch sizes, individual mentor focus, digital smart boards, and regular Computer-Based Test (CBT) mock exam series.",
+    detailedDescription: "A highly rigorous, concept-first coaching program engineered to bridge foundational school theory with advanced problem-solving techniques required for cracking JEE Main and securing Top Ranks in JEE Advanced for IITs & NITs.",
     features: [
-      "Zero-to-Advanced Quantitative Aptitude with short tricks & Vedic Math",
-      "High-level Reasoning & Puzzle Mastery for Prelims and Mains cutoff clearing",
-      "Daily Banking & Financial Awareness with weekly current affairs capsules",
-      "Computer-Based Test (CBT) Series matching exact TCS-iON exam interface",
-      "Special 1-on-1 Doubt Clearing Sessions with Senior Quant & Reasoning Faculty",
-      "Free Silent Study Library & Computer Lab Access for all offline students",
-      "Exclusive Mock Interview Panels with retired Bank Managers & Officers"
+      "Small Batch Sizes (Strict limits for maximum teacher-student interaction)",
+      "Air-Conditioned Smart Classrooms with interactive digital visual boards",
+      "Daily Practice Problems (DPP) & high-volume multi-concept question banks",
+      "Special 1-on-1 Daily Doubt-Clearing Desks with senior faculty",
+      "National-level Computer Based Test (CBT) Series simulating NTA exam interface",
+      "Comprehensive Study Material, Formula Guides & Previous 15 Years Solved Papers"
     ],
     syllabusOverview: [
-      { unit: "Quantitative Aptitude", topics: ["Simplification & Approximation", "Number Series & Quadratic Equations", "Data Interpretation (DI & Caselets)", "Arithmetic Word Problems (Percentages, Ratio, SI-CI, Time & Work)"] },
-      { unit: "Reasoning Ability", topics: ["Seating Arrangement & High-level Puzzles", "Syllogism (Only a few cases)", "Inequalities & Coding-Decoding", "Critical Reasoning & Input-Output", "Blood Relations & Direction Sense"] },
-      { unit: "English Language", topics: ["Reading Comprehension (Economy & Tech based)", "Cloze Test & Error Spotting", "Para Jumbles & Sentence Rearrangement", "Grammar Rules & Vocabulary Builder"] },
-      { unit: "General & Banking Awareness", topics: ["RBI Monetary Policy & Functions", "Banking Terminologies & NPA Management", "Govt Schemes & Union Budget", "National & International Current Affairs (Last 6 Months)"] }
+      { unit: "Physics Module", topics: ["Kinematics, Laws of Motion & Work-Energy-Power", "Rotational Dynamics & Gravitation", "Thermodynamics & Kinetic Theory", "Electrostatics, Current Electricity & Magnetism", "Optics (Ray & Wave) and Modern Physics"] },
+      { unit: "Chemistry Module", topics: ["Atomic Structure, Chemical Bonding & Periodic Table", "Thermodynamics, Equilibrium & Electrochemistry", "Organic Reaction Mechanisms & Functional Groups", "Coordination Compounds, Metallurgy & p/d/f Block Elements"] },
+      { unit: "Mathematics Module", topics: ["Sets, Relations & Functions, Trigonometry", "Differential & Integral Calculus with Applications", "Coordinate Geometry (Circles, Parabola, Ellipse, Hyperbola)", "Vectors, 3D Geometry, Matrices & Determinants, Probability"] }
     ],
     feeStructure: {
       showFee: false,
-      annualFee: "Affordable Installments",
+      annualFee: "Affordable Installment Plan Available",
       installmentAvailable: true,
-      scholarshipUpto: "Special Early Bird Discount Available"
+      scholarshipUpto: "Scholarships available on Admission Test / 10th Board Marks"
     },
-    ctaText: "Enroll in Banking Batch"
+    ctaText: "Book Free JEE Demo Class"
   },
   {
-    id: "mcaer-pg-cet-batch",
-    title: "MCAER PG-CET (Agricultural Post Graduate CET)",
-    marathiTitle: "MCAER PG-CET कृषी पदव्युत्तर प्रवेश परीक्षा बॅच",
-    shortTitle: "MCAER PG-CET Batch",
-    category: "MCAER",
-    targetStudents: "B.Sc (Agriculture) & Allied Degree Students",
-    duration: "25 weeks",
-    studentCount: "465+",
-    lessonCount: "160+ Lessons",
-    rating: "4.9 / 5.0",
-    mode: ["Offline Classroom", "Online Live"],
-    badge: "State Toppers Choice",
+    id: "neet-medical-entrance",
+    title: "NEET (UG) Medical Entrance Preparation",
+    shortTitle: "NEET (UG) Medical Prep",
+    category: "NEET",
+    targetStudents: "Class 11th, 12th & Repeaters Targeting MBBS, BDS & AIIMS",
+    duration: "1 to 2 Years Integrated",
+    studentCount: "520+ Aspirants",
+    lessonCount: "400+ Hours Smart Lectures",
+    rating: "4.9 / 5.0 (Google Rated)",
+    mode: ["Smart Classroom (Usmanpura)", "Hybrid with App Access"],
+    badge: "Medical Aspirants Choice",
     subjects: [
-      "Agronomy",
-      "Genetics & Plant Breeding",
-      "Horticulture",
-      "Soil Science & Agri Chemistry",
-      "Agri Economics & Extension",
-      "Plant Pathology & Entomology"
+      "Biology (Botany - Diversity, Cell Biology, Genetics, Ecology)",
+      "Biology (Zoology - Human Physiology, Reproduction, Evolution)",
+      "Physics (Mechanics, Thermal, Electromagnetism, Modern Physics)",
+      "Chemistry (Organic, Physical & Inorganic Chemistry)"
     ],
-    batchStartDate: "1st September 2026",
-    weeklyHours: "18 Hours (Specialized Domain Lectures)",
-    testFrequency: "Chapterwise Subject Drills + 20 Full-Length MCAER Mocks",
-    eligibility: "B.Sc (Agri / Horti / Forestry / Agri-BioTech) Passed or Final Year",
-    description: "MCAER PG-CET हा महाराष्ट्रातील कृषी पदव्युत्तर प्रवेश परीक्षेसाठी खास तयार केलेला अभ्यासक्रम आहे. अनुभवी शिक्षकांचे मार्गदर्शन, नवीन अभ्यासक्रमानुसार अध्यापन आणि नियमित टेस्ट सिरीजमुळे विद्यार्थ्यांचे सरकारी कृषी विद्यापीठांमध्ये प्रवेशाचे स्वप्न पूर्ण होते.",
-    detailedDescription: "Comprehensive preparation for Maharashtra Council of Agricultural Education and Research (MCAER) PG-CET for admission to M.Sc (Agri) in state agricultural universities (MPKV Rahuri, VNMKV Parbhani, PDKV Akola, Dr. BSKKV Dapoli).",
+    batchStartDate: "New Batches Starting Every Month",
+    weeklyHours: "20-24 Hours (Classes + Daily NCERT Line-by-Line Drills)",
+    testFrequency: "Weekly NCERT Objective Tests + OMR-Based 720-Marks NEET Mock Exams",
+    eligibility: "Class 10th Passed / Class 11th / Class 12th Biology Stream",
+    description: "Specialized coaching targeting 650+ scores for admission to prestigious Government Medical Colleges (MBBS). Combines 100% NCERT line-by-line mastery, daily doubt resolution, and high-standard full-length mock tests.",
+    detailedDescription: "A specialized, intensive medical entrance coaching program meticulously aligned with NTA NEET patterns and 100% NCERT mastery, backed by speed-accuracy training in Physics and Chemistry.",
     features: [
-      "Subject-wise deep coverage strictly according to latest MCAER Syllabus guidelines",
-      "Concise conceptual notes & summary tables for quick revision",
-      "10-Year Previous Years Question (PYQ) analysis and discussion",
-      "OMR and CBT Mock Test Series with State Rank Prediction",
-      "Guidance by Agri Subject Specialists & Past MCAER University Rankers",
-      "Hostel & Library Assistance in Chhatrapati Sambhajinagar"
+      "100% NCERT Line-by-Line Deep Dive with mind maps and diagram analyses",
+      "High-Yield Question Banks with 10,000+ chapter-wise NEET practice questions",
+      "Interactive 3D Visual Learning for Complex Biological & Chemical mechanisms",
+      "Dedicated Daily Doubt Clearance & Mentorship from medical education experts",
+      "Full-Length OMR Mock Test Series with detailed negative marking analysis",
+      "Mobile App access for anytime recorded lecture revision and instant quizzes"
     ],
     syllabusOverview: [
-      { unit: "Agronomy & Soil Science", topics: ["Principles of Agronomy", "Field Crops (Kharif & Rabi)", "Weed & Water Management", "Soil Fertility, Pedology & Fertilizer Chemistry"] },
-      { unit: "Genetics, Breeding & Seed Tech", topics: ["Mendelian Genetics & Cytogenetics", "Plant Breeding Methods & Heterosis", "Seed Production Technology", "Biotechnology Fundamentals"] },
-      { unit: "Horticulture & Plant Protection", topics: ["Pomology, Olericulture & Floriculture", "Plant Pathology, Fungal & Viral Diseases", "Economic Entomology & Integrated Pest Management"] },
-      { unit: "Economics & Extension", topics: ["Agri Marketing & Farm Management", "Extension Methods & Rural Sociology", "Agri Statistics & Experimental Designs"] }
+      { unit: "Biology (Botany & Zoology)", topics: ["Diversity in Living World & Structural Organisation", "Cell Structure and Function, Biomolecules", "Plant Physiology & Human Physiology", "Reproduction & Genetics and Evolution", "Biology in Human Welfare, Biotechnology & Ecology"] },
+      { unit: "Physics for NEET", topics: ["Mechanics, Properties of Bulk Matter, Gravitation", "Thermodynamics, Oscillations and Waves", "Electrostatics, Current, Magnetism & EMI", "Optics, Dual Nature of Matter, Atoms & Nuclei"] },
+      { unit: "Chemistry for NEET", topics: ["Basic Concepts of Chemistry, Structure of Atom", "States of Matter, Thermodynamics, Equilibrium", "Organic Chemistry Basics, Hydrocarbons, Biomolecules", "Periodic Table, Coordination Chemistry & Metallurgy"] }
     ],
     feeStructure: {
       showFee: false,
-      annualFee: "Affordable Fee Structure",
+      annualFee: "Flexible Installment Option",
       installmentAvailable: true,
-      scholarshipUpto: "Merit Discount Available"
+      scholarshipUpto: "Merit-based Concession on Board Scores"
     },
-    ctaText: "Enroll in MCAER Batch"
+    ctaText: "Book Free NEET Demo Class"
   },
   {
-    id: "afo-agriculture-field-officer",
-    title: "IBPS AFO (Agriculture Field Officer - Specialist Officer)",
-    marathiTitle: "IBPS AFO कृषी अधिकारी विशेष बॅच",
-    shortTitle: "IBPS AFO Specialist",
-    category: "BANKING",
-    targetStudents: "B.Sc Agri & Allied Graduates Targeting Scale-I Bank Officer",
-    duration: "25 weeks",
-    studentCount: "380+",
-    lessonCount: "175+ Lessons",
-    rating: "4.9 / 5.0",
-    mode: ["Offline Classroom", "Online Hybrid"],
-    badge: "High Selection Record",
+    id: "foundation-class-8-9-10",
+    title: "School Foundation Program (Classes 8th, 9th & 10th)",
+    shortTitle: "Foundation (Class 8–10)",
+    category: "FOUNDATION",
+    targetStudents: "Students of Classes 8th, 9th & 10th (CBSE, ICSE & State Board)",
+    duration: "Academic Year (10-12 Months)",
+    studentCount: "380+ Students",
+    lessonCount: "250+ Interactive Sessions",
+    rating: "4.8 / 5.0 (Google Rated)",
+    mode: ["Smart Classroom (Usmanpura)", "Offline + App Support"],
+    badge: "Strong Academic Base",
     subjects: [
-      "Prelims (Quant, Reasoning, English)",
-      "Mains (Professional Agri Knowledge)",
-      "Govt Agri Schemes & NABARD Norms",
-      "Mock Interview Panel"
+      "Physics & Chemistry (Conceptual Science)",
+      "Mathematics (Algebra, Geometry, Mental Ability)",
+      "Biology (Fundamentals & Life Processes)",
+      "Olympiad & NTSE Aptitude Training"
     ],
-    batchStartDate: "1st September 2026",
-    weeklyHours: "22 Hours",
-    testFrequency: "Dual Track: Prelims Speed Tests + Mains Subject Tests",
-    eligibility: "4-Year B.Sc Agriculture / Horticulture / Agri Engg / Forestry Graduate",
-    description: "IBPS SO Agriculture Field Officer (Scale-I) पदासाठी पूर्व, मुख्य आणि मुलाखतीची संपूर्ण एकात्मिक तयारी. व्यावसायिक कृषी ज्ञान आणि बँकिंग पूर्व परीक्षेचा परिपूर्ण सराव.",
-    detailedDescription: "A specialized double-advantage course tailored for Agri graduates aiming to crack IBPS AFO in top Nationalized Commercial Banks (PNB, BOB, Canara, Indian Bank, CBI).",
+    batchStartDate: "Fresh Batches Available",
+    weeklyHours: "12-15 Hours",
+    testFrequency: "Chapter-wise Subjective & Objective Tests with Parent Performance Reports",
+    eligibility: "Students studying in or entering Class 8th, 9th, or 10th",
+    description: "Builds solid fundamentals for CBSE, ICSE, and State Board students. Clarifies core concepts in Mathematics and Science to lay a strong base for future IIT-JEE, NEET, and Olympiad competitive examinations.",
+    detailedDescription: "Builds unshakeable conceptual clarity in Math and Science while ensuring stellar school board exam performance and developing logical reasoning for NTSE, MTSE, and Olympiad competitive exams.",
     features: [
-      "Simultaneous training for Phase-I Prelims speed and Phase-II Professional Knowledge",
-      "Complete coverage of NABARD guidelines, Priority Sector Lending (PSL), and Agri census",
-      "Specialized study notes for Animal Husbandry, Fisheries, Dairy & Forestry",
-      "Daily Mains question practice + previous 5 years AFO solved papers",
-      "Exclusive mock interview sessions with real feedback from banking panels"
+      "Small Batch Strength allowing individual monitoring of every child",
+      "Dual focus: 100% Board Exam Excellence + Early Competitive Foundation",
+      "Air-Conditioned classrooms with digital animations for abstract scientific topics",
+      "Regular Chapter Tests, Periodic Term Exams & Timely Parent-Teacher Meetings",
+      "Mental Ability & Logical Aptitude training for analytical thinking development",
+      "Doubt clearing sessions after every lecture to ensure zero backlog"
     ],
     syllabusOverview: [
-      { unit: "Phase 1: Prelims Section", topics: ["Quantitative Aptitude (Speed Math & DI)", "Reasoning Ability (Puzzles & Logic)", "English Language for Qualifying Marks"] },
-      { unit: "Phase 2: Professional Agri Knowledge", topics: ["Agronomy & Field Crops", "Horticulture & Post Harvest Technology", "Soil Science & Nutrient Management", "Animal Husbandry, Dairy & Poultry"] },
-      { unit: "Agri Schemes & Current Trends", topics: ["PM-KISAN, PMFBY, AIF & KCC Guidelines", "NABARD Model Schemes & Unit Costs", "Recent Agri Statistics & MSP Announcements"] }
+      { unit: "Class 8 Foundation", topics: ["Force & Pressure, Light, Chemical Effects of Current", "Rational Numbers, Linear Equations, Mensuration", "Microorganisms, Cell Structure, Conservation of Plants/Animals"] },
+      { unit: "Class 9 Foundation", topics: ["Motion, Force and Laws of Motion, Gravitation, Work & Energy", "Matter in Our Surroundings, Atoms and Molecules, Structure of Atom", "Number Systems, Polynomials, Coordinate Geometry, Triangles, Circles"] },
+      { unit: "Class 10 Board & Foundation", topics: ["Light - Reflection & Refraction, Electricity, Magnetic Effects", "Chemical Reactions, Acids-Bases-Salts, Carbon & Its Compounds", "Real Numbers, Quadratic Equations, Trigonometry, Statistics & Probability", "Life Processes, Control & Coordination, Heredity & Evolution"] }
     ],
     feeStructure: {
       showFee: false,
-      annualFee: "Affordable Fee",
+      annualFee: "Affordable Monthly / Term Installments",
       installmentAvailable: true,
-      scholarshipUpto: "Early Admission Benefit"
+      scholarshipUpto: "Sibling & Merit Discounts Available"
     },
-    ctaText: "Enroll in AFO Batch"
+    ctaText: "Book Free Foundation Demo"
   },
   {
-    id: "ssc-railway-central-govt",
-    title: "SSC CGL / CHSL & Railway RRB Foundation Batch",
-    marathiTitle: "SSC व रेल्वे भरती परीक्षा फाउंडेशन बॅच",
-    shortTitle: "SSC & Railway Govt Batch",
-    category: "GOVT EXAMS",
-    targetStudents: "12th / Graduate Students Targeting Central Govt Jobs",
-    duration: "20 weeks",
-    studentCount: "290+",
-    lessonCount: "140+ Lessons",
-    rating: "4.8 / 5.0",
-    mode: ["Offline Classroom", "Online Support"],
-    badge: "Complete Syllabus",
+    id: "class-11-12-pcmb-boards-entrance",
+    title: "Class 11th & 12th Science (PCMB) - Boards + Entrance",
+    shortTitle: "Class 11th & 12th PCMB",
+    category: "BOARDS",
+    targetStudents: "11th & 12th Science Students (CBSE, ICSE & Maharashtra State Board)",
+    duration: "1 to 2 Years",
+    studentCount: "310+ Students",
+    lessonCount: "300+ Smart Sessions",
+    rating: "4.8 / 5.0 (Google Rated)",
+    mode: ["Smart Classroom (Usmanpura)", "Classroom + Digital Notes"],
+    badge: "Board + Competitive Mastery",
     subjects: [
-      "Mathematics (Arithmetic & Advanced)",
-      "General Intelligence & Reasoning",
-      "English Comprehension",
-      "General Studies (History, Polity, Geo, Sci)"
+      "Physics (Theory, Numerical & Board Derivations)",
+      "Chemistry (Theory, Reactions & Practical Conceptuals)",
+      "Mathematics (Pure & Applied Problem Solving)",
+      "Biology (Botanical & Zoological In-depth Study)"
     ],
-    batchStartDate: "1st September 2026",
-    weeklyHours: "16 Hours",
-    testFrequency: "Weekly TCS-Pattern CBT Mock Exams",
-    eligibility: "12th Pass or Any Graduate",
-    description: "कर्मचारी निवड आयोग (SSC) आणि रेल्वे भरती बोर्ड (RRB) च्या सर्व परीक्षांची संपूर्ण अभ्यासक्रमानुसार एकाच बॅचमध्ये प्रभावी तयारी.",
-    detailedDescription: "Structured foundation coaching for SSC CGL, CHSL, MTS, CPO, and Railway NTPC & Group D exams with specialized focus on Advanced Mathematics and General Studies.",
+    batchStartDate: "Admissions Open",
+    weeklyHours: "16-20 Hours",
+    testFrequency: "Subjective Board Pattern Unit Tests + Competitive MCQ Drills",
+    eligibility: "Class 10th Passed (CBSE / ICSE / State Board)",
+    description: "Comprehensive curriculum designed for 11th and 12th Science students to achieve 90%+ scores in Board examinations alongside robust preparation for MHT-CET, JEE, and NEET.",
+    detailedDescription: "Designed to eliminate the tension between Board exam subjective writing and Entrance exam multiple-choice speed. Students master textbook derivations, definitions, and high-speed numericals concurrently.",
     features: [
-      "Step-by-step Advanced Math tricks (Algebra, Geometry, Trigonometry, Mensuration)",
-      "Concise General Science and Indian Polity & History bullet notes",
-      "Extensive TCS-pattern previous years question drill (2019-2025)",
-      "Typing guidance & computer skill test readiness"
+      "Complete coverage of Maharashtra State Board (HSC), CBSE & ICSE syllabus",
+      "Rigorous subjective answer-writing practice for scoring top marks in 12th Boards",
+      "Integrated competitive orientation for MHT-CET, JEE & NEET",
+      "State-of-the-art air-conditioned digital classrooms at Shrinath Complex",
+      "Printed comprehensive notes, formula charts & solved past 10 years board papers",
+      "Continuous performance feedback shared with parents"
     ],
     syllabusOverview: [
-      { unit: "Quantitative & Advanced Math", topics: ["Arithmetic Master Series", "Geometry & Mensuration 2D/3D", "Trigonometry & Heights-Distances", "Algebra & Number System"] },
-      { unit: "General Awareness", topics: ["Indian Constitution & Polity", "Physical & Indian Geography", "Indian History & Freedom Struggle", "Physics, Chemistry & Biology Basics", "Static GK & Current Affairs"] }
+      { unit: "Class 11 PCMB Foundation", topics: ["Physics: Units, Motion, Gravitation, Mechanical Properties, Sound", "Chemistry: Basic Concepts, Bonding, Redox, Hydrocarbons", "Maths: Trigonometry, Complex Numbers, Sequences, Straight Lines", "Biology: Biomolecules, Cell Division, Plant & Animal Tissues"] },
+      { unit: "Class 12 Board Mastery", topics: ["Physics: Rotational Dynamics, Wave Optics, Current, Modern Physics", "Chemistry: Solid State, Solutions, Aldehydes & Ketones, Coordination", "Maths: Differentiation, Integration, Vectors, Linear Programming", "Biology: Reproduction in Organisms, Genetics, Enhancement in Food, Ecology"] }
     ],
     feeStructure: {
       showFee: false,
-      annualFee: "Standard Fee",
+      annualFee: "Easy Installment Schedule",
       installmentAvailable: true,
-      scholarshipUpto: "Batch Concession Available"
+      scholarshipUpto: "Concession for 10th Board Achievers"
     },
-    ctaText: "Enroll in SSC Batch"
+    ctaText: "Book Free PCMB Demo Class"
   }
 ];

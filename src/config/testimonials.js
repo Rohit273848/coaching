@@ -1,56 +1,57 @@
 /**
  * TESTIMONIALS DATA MODEL
  * 
- * Saarthi Education student and parent reflections.
+ * PERL Education student and parent reflections.
+ * Reflecting 4.8 / 5.0 Google Rating (370+ Reviews)
  */
 
 export const studentTestimonials = [
   {
     id: "st1",
-    name: "Rajendra Darade",
-    role: "IBPS Selected Candidate (Roll: 4211000059)",
-    course: "Banking Master Batch",
-    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/ChatGPT-Image-Aug-9-2026-01_16_35-PM.png",
-    content: "सारथी एज्युकेशनच्या नियमित मॉक टेस्ट, राहुल मिसाळ सरांचे क्वांट ट्रिक्स आणि ज्ञानदेव वराडे सरांचे बँकिंग मार्गदर्शन यामुळे मला पहिल्याच प्रयत्नात बँकिंग परीक्षेत यश मिळाले.",
-    highlight: "1st Attempt Selection"
+    name: "Aditya Kulkarni",
+    role: "IIT Bombay (Computer Science) - JEE Adv AIR 412",
+    course: "IIT-JEE 2-Year Classroom Program",
+    photo: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200&auto=format&fit=crop&q=80",
+    content: "The small batch sizes and personal attention from faculty at PERL Education made difficult physics and calculus concepts very clear. The weekly CBT mock test series completely removed my exam fear.",
+    highlight: "IIT Bombay Selection"
   },
   {
     id: "st2",
-    name: "Sachin Shriram Mule",
-    role: "SBI Selected Officer (Roll: 4121000165)",
-    course: "Banking Regular Classroom Batch",
-    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/ChatGPT-Image-Aug-9-2026-01_19_21-PM.png",
-    content: "बँकिंग परीक्षांसाठी योग्य दिशेची गरज असते. सारथी एज्युकेशनमधील प्रत्येक शिक्षकाचे वैयक्तिक लक्ष आणि मोफत लायब्ररी सुविधेने माझ्या अभ्यासात सातत्य आणले.",
-    highlight: "SBI Officer Selection"
+    name: "Tanvi Deshpande",
+    role: "MBBS Student, GMC Aurangabad (NEET 682/720)",
+    course: "NEET Medical Preparation Batch",
+    photo: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&auto=format&fit=crop&q=80",
+    content: "Line-by-line NCERT analysis and 3D visual models on the digital smart boards helped me score 350+ in Biology. Daily 1-on-1 doubt clearing sessions played a decisive role in getting into Government Medical College.",
+    highlight: "GMC Aurangabad MBBS"
   },
   {
     id: "st3",
-    name: "Pankaj Phate",
-    role: "IBPS AFO (Indian Bank - Roll: 2400101580)",
-    course: "Agriculture Field Officer Batch",
-    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/ChatGPT-Image-Aug-9-2026-01_22_20-PM.png",
-    content: "कृषी शाखेच्या पदवीधरांसाठी बँकिंग क्षेत्रात करिअर करण्यासाठी सारथी एज्युकेशन ही छत्रपती संभाजीनगरमधील सर्वात विश्वासार्ह संस्था आहे.",
-    highlight: "AFO Scale-I Officer"
+    name: "Saurabh Jadhav",
+    role: "Class 10th CBSE 98.4% & NTSE Scholar",
+    course: "School Foundation Batch (Class 8-10)",
+    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop&q=80",
+    content: "Joining PERL Education in Class 8 completely eliminated my fear of Mathematics and Science. The teachers explained concepts from the fundamentals up, helping me achieve a perfect 100/100 in Math.",
+    highlight: "100/100 in Mathematics"
   }
 ];
 
 export const parentTestimonials = [
   {
     id: "pt1",
-    name: "Shri. Shriram Mule (Parent of Sachin Mule, SBI Officer)",
-    role: "Proud Parent",
-    course: "Parent of Banking Aspirant",
+    name: "Dr. Sanjay Deshpande",
+    role: "Doctor & Proud Parent of Tanvi (GMC Student)",
+    course: "Parent of NEET Aspirant",
     photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80",
-    content: "सारथी एज्युकेशनच्या शिक्षकांनी मुलाला दिलेला आत्मविश्वास आणि योग्य मार्गदर्शन यामुळे आज आमचा मुलगा सरकारी बँकेत ऑफिसर झाला आहे. खूप खूप धन्यवाद!",
-    highlight: "Parents Trust"
+    content: "The teaching methodology and sincere commitment to each student at PERL Education is truly commendable. Their continuous mentoring helped our daughter secure admission to a prestigious Government Medical College.",
+    highlight: "4.8★ Trusted Experience"
   },
   {
     id: "pt2",
-    name: "Shri. Darade (Parent of Rajendra Darade)",
-    role: "Proud Parent",
-    course: "Parent of Banking Aspirant",
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&auto=format&fit=crop&q=80",
-    content: "छत्रपती संभाजीनगरमध्ये स्पर्धा परीक्षांसाठी सारथीसारखी शिस्तबद्ध आणि प्रामाणिक संस्था मिळणे हे विद्यार्थ्यांचे भाग्य आहे.",
-    highlight: "Academic Discipline"
+    name: "Mrs. Sunita Kulkarni",
+    role: "Proud Parent of Aditya (IITian)",
+    course: "Parent of IIT-JEE Aspirant",
+    photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&auto=format&fit=crop&q=80",
+    content: "Finding an institute in Usmanpura with such disciplined faculty, small batch focus, and modern air-conditioned digital classrooms has been a wonderful experience for our family.",
+    highlight: "Small Batch Attention"
   }
 ];

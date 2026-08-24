@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Users, HelpCircle, BookOpen, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { Users, MonitorPlay, Laptop, HelpCircle } from 'lucide-react';
 import { features } from '../../config/features';
 
 export default function WhyUs() {
@@ -7,76 +7,76 @@ export default function WhyUs() {
 
   const pillars = [
     {
-      title: "Expert Faculty",
-      marathiTitle: "अनुभवी शिक्षक",
-      desc: "अनुभवी शिक्षकांकडून शिका, जे अवघड संकल्पना सोप्या पद्धतीने समजावून सांगतात आणि योग्य मार्गदर्शन करतात.",
-      englishDesc: "Learn from senior educators with 10+ years experience who make tough Quant, Reasoning, and Banking concepts simple.",
-      icon: Award,
-      color: "bg-blue-50 text-[#1E4FA8] border-blue-200"
-    },
-    {
-      title: "Personalized Learning",
-      marathiTitle: "वैयक्तिक लक्ष",
-      desc: "प्रत्येक विद्यार्थ्याच्या शिकण्याच्या गरजेनुसार वैयक्तिक अभ्यास योजना आणि विशेष लक्ष दिले जाते.",
-      englishDesc: "Customized study schedules, limited batch sizes, and 1-on-1 performance tracking for every aspirant.",
+      title: "Small Batch Sizes",
+      subtitle: "Personalized Care & 1-on-1 Mentoring",
+      desc: "Strict limits on batch strength to ensure our educators closely monitor every student's academic progress and doubts.",
+      englishDesc: "Strict batch size caps to guarantee personalized attention, continuous tracking, and direct teacher accessibility for every student.",
       icon: Users,
-      color: "bg-amber-50 text-[#F8941F] border-amber-200"
+      color: "bg-blue-50 text-[#0F4C81] border-blue-200"
     },
     {
-      title: "Doubt Support",
-      marathiTitle: "शंका निरसन",
-      desc: "तुमच्या सर्व शंका दूर करण्यासाठी दररोज विशेष डाउट सेशन्स आणि वैयक्तिक मार्गदर्शन.",
-      englishDesc: "Daily 1-on-1 doubt clearing desks with subject masters to ensure zero confusion before exam day.",
-      icon: HelpCircle,
+      title: "Modern Infrastructure",
+      subtitle: "AC Digital Smart Classrooms",
+      desc: "Fully air-conditioned classrooms equipped with state-of-the-art interactive digital smart boards for 3D visual learning.",
+      englishDesc: "Air-conditioned smart classrooms equipped with interactive digital boards that make abstract scientific concepts crystal clear.",
+      icon: MonitorPlay,
       color: "bg-emerald-50 text-emerald-600 border-emerald-200"
     },
     {
-      title: "Free Library & Lab",
-      marathiTitle: "मोफत लायब्ररी व लॅब",
-      desc: "अभ्यास आणि सरावासाठी विद्यार्थ्यांना शांत वातावरणातील मोफत लॅब व अभ्यासिका सुविधा.",
-      englishDesc: "Peaceful air-conditioned reading hall and dedicated CBT computer lab for full-length mock practice.",
-      icon: BookOpen,
+      title: "Hybrid / Tech Integration",
+      subtitle: "Learning App & Online CBT Mocks",
+      desc: "App-based daily quizzes, 24/7 recorded lecture access for anytime revision, and full-length NTA pattern computer-based tests.",
+      englishDesc: "App-based daily quizzes, on-demand recorded lecture access for revision, and full-length online CBT mock testing.",
+      icon: Laptop,
       color: "bg-purple-50 text-purple-600 border-purple-200"
+    },
+    {
+      title: "Doubt Clearing & Practice",
+      subtitle: "Daily Doubt Desks & High-Volume Q-Banks",
+      desc: "Daily 1-on-1 doubt resolution desks immediately following lectures, supported by 10,000+ practice questions and solved past papers.",
+      englishDesc: "Daily doubt-resolution desks with senior subject faculties and high-volume question banks to eliminate all doubts immediately.",
+      icon: HelpCircle,
+      color: "bg-amber-50 text-[#D97706] border-amber-200"
     }
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-[#F8F9FC] border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-16 lg:py-20 bg-[#F8FAFC] border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
         
         {/* Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-3">
-          <span className="text-[11px] sm:text-xs font-black text-[#1E4FA8] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100 inline-block">
-            WHY CHOOSE US
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 space-y-2 sm:space-y-3">
+          <span className="text-[10px] sm:text-xs font-black text-[#0F4C81] uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100 inline-block">
+            WHY PERL EDUCATION
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#1D2B53] tracking-tight">
-            Why Choose Saarthi Education ?
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0B192C] tracking-tight">
+            The PERL Advantage for IIT-JEE & NEET
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
-            सार्थी एज्युकेशनमध्ये आम्ही अनुभवी शिक्षकांचे मार्गदर्शन, वैयक्तिक लक्ष आणि विद्यार्थ्यांना केंद्रस्थानी ठेवून शिक्षण देतो, ज्यामुळे प्रत्येक विद्यार्थी आत्मविश्वासाने आपले सरकारी नोकरीचे ध्येय पूर्ण करू शकतो.
+            At PERL Education, we combine small batch sizes, digital smart classrooms, and daily 1-on-1 doubt desks to instill peak competitive confidence in every aspirant.
           </p>
         </div>
 
-        {/* 4 Cards Grid matching saarthiedu.online */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        {/* 4 Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5 lg:gap-6">
           {pillars.map((p, idx) => {
             const Icon = p.icon;
             return (
               <div
                 key={idx}
-                className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-saarthi hover:shadow-saarthi-lg transition-all flex flex-col justify-between space-y-4 group hover:-translate-y-1"
+                className="bg-white rounded-3xl p-5 sm:p-6 lg:p-7 border border-slate-200 shadow-2xs hover:shadow-xl transition-all flex flex-col justify-between space-y-3 sm:space-y-4 group hover:-translate-y-1 text-left"
               >
-                <div className="space-y-3">
-                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border shadow-xs ${p.color}`}>
-                    <Icon className="w-6 h-6" />
+                <div className="space-y-2.5 sm:space-y-3">
+                  <div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center border shadow-2xs ${p.color}`}>
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
 
                   <div>
-                    <h3 className="font-black text-lg text-[#1D2B53] group-hover:text-[#1E4FA8] transition-colors">
+                    <h3 className="font-black text-base sm:text-lg text-[#0B192C] group-hover:text-[#0F4C81] transition-colors">
                       {p.title}
                     </h3>
-                    <span className="text-xs font-bold text-[#F8941F] block">
-                      {p.marathiTitle}
+                    <span className="text-[11px] sm:text-xs font-bold text-[#D97706] block">
+                      {p.subtitle}
                     </span>
                   </div>
 
@@ -85,7 +85,7 @@ export default function WhyUs() {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100 text-[11px] text-slate-500 font-normal">
+                <div className="pt-2.5 sm:pt-3 border-t border-slate-100 text-[10.5px] sm:text-[11px] text-slate-500 font-normal">
                   {p.englishDesc}
                 </div>
               </div>

@@ -56,24 +56,24 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-[#F8F7F4] text-[#1C2430] selection:bg-[#8B1E26] selection:text-white">
+      <div className="min-h-screen flex flex-col bg-[#F8FAFC] text-[#1E293B] selection:bg-[#0F4C81] selection:text-white">
         {/* Top Announcement Bar */}
         <TopBar onOpenEnquiry={handleOpenEnquiry} />
 
         {/* Floating Glass Navbar */}
-        <Navbar 
-          onOpenEnquiry={handleOpenEnquiry} 
-          topBarVisible={topBarVisible} 
+        <Navbar
+          onOpenEnquiry={handleOpenEnquiry}
+          topBarVisible={topBarVisible}
           onMobileMenuToggle={setIsMobileMenuOpen}
         />
 
-        {/* Main Content Area — Mobile-First Padding: clears navbar at top and floating sticky bar on mobile */}
-        <main className="flex-1 pt-21 sm:pt-[94px] lg:pt-[100px] pb-24 lg:pb-0">
+        {/* Main Content Area — Mobile-First Padding: clears top announcement and floating navbar cleanly */}
+        <main className="flex-1 pt-[58px] sm:pt-[58px] lg:pt-[60px] pb-24 lg:pb-0">
           <Routes>
             <Route path="/" element={<Home onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/programs" element={<Programs onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/programs/:courseId" element={<ProgramDetails onOpenEnquiry={handleOpenEnquiry} />} />
-            
+
             {features.results && <Route path="/results" element={<Results />} />}
             {features.faculty && <Route path="/faculty" element={<Faculty />} />}
             {features.gallery && <Route path="/student-life" element={<Gallery />} />}
@@ -89,12 +89,12 @@ export default function App() {
         <Footer onOpenEnquiry={handleOpenEnquiry} />
 
         {/* Mobile Sticky Quick CTA Bar — completely hidden when menu or enquiry modal is open */}
-        <MobileStickyCTA 
-          onOpenEnquiry={handleOpenEnquiry} 
-          hidden={enquiryModalOpen || isMobileMenuOpen} 
+        <MobileStickyCTA
+          onOpenEnquiry={handleOpenEnquiry}
+          hidden={enquiryModalOpen || isMobileMenuOpen}
         />
 
-        {/* Global Enquiry Popup Modal (z-[100] with prominent close options) */}
+        {/* Global Enquiry & Free Demo Class Modal (z-[100]) */}
         <EnquiryModal
           isOpen={enquiryModalOpen}
           onClose={() => setEnquiryModalOpen(false)}

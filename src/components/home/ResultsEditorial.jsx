@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Award, ArrowRight, GraduationCap, Trophy, CheckCircle2, Sparkles } from 'lucide-react';
+import { ArrowRight, GraduationCap, Trophy } from 'lucide-react';
 import { toppers, resultSummary } from '../../config/results';
 import { features } from '../../config/features';
 
@@ -11,45 +11,45 @@ export default function ResultsEditorial() {
   const supporting = toppers.slice(1, 5);
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-16 lg:py-20 bg-white border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-3">
-          <div className="space-y-2 max-w-2xl">
-            <span className="text-[11px] sm:text-xs font-black text-[#1E4FA8] uppercase tracking-widest bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-100 inline-block">
-              SUCCESS STORIES
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-10 gap-3 sm:gap-4 text-left">
+          <div className="space-y-1.5 sm:space-y-2 max-w-2xl">
+            <span className="text-[10px] sm:text-xs font-black text-[#0F4C81] uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100 inline-block">
+              RESULTS & ACHIEVEMENTS
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#1D2B53] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#0B192C] tracking-tight">
               {resultSummary.headline}
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 font-bold">
+            <p className="font-marathi text-xs sm:text-sm text-slate-700 font-semibold leading-relaxed">
               {resultSummary.marathiHeadline}
             </p>
           </div>
 
           <Link
             to="/results"
-            className="inline-flex items-center gap-1.5 text-xs font-black text-[#1E4FA8] hover:text-[#163E85] group shrink-0 min-h-[44px] items-center"
+            className="inline-flex items-center justify-center gap-1.5 text-xs font-black text-[#0F4C81] hover:text-[#0A3357] bg-blue-50/80 sm:bg-transparent px-4 py-2.5 sm:p-0 rounded-xl group shrink-0 min-h-[44px] w-full sm:w-auto"
           >
-            <span>View All 1,000+ Selections</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <span>View All Achievers</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#F59E0B]" />
           </Link>
         </div>
 
         {/* Results Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-stretch">
           
           {/* Featured Topper Card */}
-          <div className="lg:col-span-7 bg-[#F8F9FC] rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-saarthi flex flex-col justify-between space-y-5">
+          <div className="lg:col-span-7 bg-[#F8FAFC] rounded-3xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-2xs flex flex-col justify-between space-y-4 sm:space-y-5 text-left">
             
             {/* Top Badge */}
             <div className="flex items-center justify-between border-b border-slate-200/80 pb-3">
-              <span className="bg-[#1E4FA8] text-white text-[10px] sm:text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
-                <Trophy className="w-3.5 h-3.5 text-[#F8B81F]" />
+              <span className="bg-[#0F4C81] text-white text-[10px] sm:text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
+                <Trophy className="w-3.5 h-3.5 text-[#F59E0B]" />
                 {featured.role}
               </span>
-              <span className="text-xs font-bold text-slate-500">
+              <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
                 {featured.score}
               </span>
             </div>
@@ -66,8 +66,8 @@ export default function ResultsEditorial() {
                     className="w-full h-56 sm:h-72 object-cover rounded-2xl border-2 border-white shadow-md"
                     loading="lazy"
                   />
-                  <div className="absolute -bottom-2 -right-1 bg-[#1E4FA8] text-white font-black text-[10px] sm:text-[11px] px-2.5 py-0.5 rounded-lg shadow">
-                    Selected
+                  <div className="absolute -bottom-2 -right-1 bg-[#0F4C81] text-white font-black text-[10px] sm:text-[11px] px-2.5 py-0.5 rounded-lg shadow">
+                    Top Ranker
                   </div>
                 </div>
               </div>
@@ -75,24 +75,24 @@ export default function ResultsEditorial() {
               {/* Details */}
               <div className="sm:col-span-7 space-y-3">
                 <div className="inline-block bg-amber-50 border border-amber-200 px-3.5 py-1 rounded-xl">
-                  <span className="text-2xl sm:text-3xl font-black text-[#1D2B53] tracking-tight block">
+                  <span className="text-xl sm:text-2xl font-black text-[#0B192C] tracking-tight block">
                     {featured.rank}
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-black text-[#1D2B53]">
+                  <h3 className="text-xl sm:text-2xl font-black text-[#0B192C]">
                     {featured.name}
                   </h3>
                   {featured.marathiName && (
-                    <p className="text-xs font-bold text-[#F8941F]">
+                    <p className="font-marathi text-xs sm:text-[13px] font-bold text-[#D97706] mt-0.5 leading-relaxed">
                       {featured.marathiName}
                     </p>
                   )}
                 </div>
 
                 <div className="bg-white p-3 rounded-xl border border-slate-200 text-xs text-slate-700 flex items-center gap-2">
-                  <GraduationCap className="w-4 h-4 text-[#1E4FA8] shrink-0" />
+                  <GraduationCap className="w-4 h-4 text-[#0F4C81] shrink-0" />
                   <span className="font-bold">{featured.allocatedCollege}</span>
                 </div>
 
@@ -107,8 +107,8 @@ export default function ResultsEditorial() {
 
             {/* Card Footer */}
             <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
-              <span className="font-semibold text-[#1E4FA8]">Saarthi Classroom Batch</span>
-              <span className="font-bold text-slate-700">100% Authentic Result</span>
+              <span className="font-semibold text-[#0F4C81]">PERL Classroom Batch</span>
+              <span className="font-bold text-slate-700">Small Batch Excellence</span>
             </div>
 
           </div>
@@ -118,7 +118,7 @@ export default function ResultsEditorial() {
             {supporting.map((topper) => (
               <div
                 key={topper.id}
-                className="bg-[#F8F9FC] rounded-2xl border border-slate-200 p-4 sm:p-5 shadow-2xs hover:shadow-md transition-all flex items-center gap-3.5"
+                className="bg-[#F8FAFC] rounded-2xl border border-slate-200 p-4 sm:p-5 shadow-2xs hover:shadow-md transition-all flex items-center gap-3.5"
               >
                 <img
                   src={topper.photo}
@@ -129,24 +129,24 @@ export default function ResultsEditorial() {
 
                 <div className="flex-1 min-w-0 space-y-1">
                   <div className="flex items-center justify-between gap-1">
-                    <span className="text-[9px] sm:text-[10px] font-black uppercase text-[#1E4FA8] bg-blue-50 px-2 py-0.5 rounded truncate">
-                      {topper.role}
+                    <span className="text-[9px] sm:text-[10px] font-black uppercase text-[#0F4C81] bg-blue-50 px-2 py-0.5 rounded truncate">
+                      {topper.exam}
                     </span>
-                    <span className="text-[10px] font-bold text-slate-400 shrink-0">
-                      {topper.score.split(' ')[0]}
+                    <span className="text-[10px] font-bold text-emerald-700 shrink-0">
+                      {topper.score}
                     </span>
                   </div>
 
-                  <h4 className="font-black text-sm sm:text-base text-[#1D2B53] leading-tight truncate">
+                  <h4 className="font-black text-sm sm:text-base text-[#0B192C] leading-tight truncate">
                     {topper.name}
                   </h4>
 
-                  <p className="text-[11px] font-semibold text-[#F8941F] truncate">
-                    {topper.marathiName || topper.exam}
+                  <p className="text-[11px] font-semibold text-[#D97706] truncate">
+                    {topper.role}
                   </p>
 
                   <p className="text-[11px] text-slate-600 truncate flex items-center gap-1">
-                    <GraduationCap className="w-3.5 h-3.5 text-[#1E4FA8] shrink-0" />
+                    <GraduationCap className="w-3.5 h-3.5 text-[#0F4C81] shrink-0" />
                     <span>{topper.allocatedCollege}</span>
                   </p>
                 </div>

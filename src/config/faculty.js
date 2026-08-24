@@ -1,88 +1,82 @@
 /**
  * FACULTY & ACADEMIC TEAM DATA MODEL
  * 
- * Saarthi Education Faculty Team:
- * Master educators with years of banking, MCAER, and competitive coaching expertise.
+ * PERL Education Faculty Team:
+ * Highly qualified mentors in Physics, Chemistry, Mathematics, and Biology (PCMB)
+ * with a proven track record of producing Top Ranks in IIT-JEE, NEET, and School Boards.
  */
 
 export const facultySummary = {
-  title: "MEET OUR FACULTY",
-  marathiTitle: "अनुभवी शिक्षकांचे मार्गदर्शन",
-  headline: "Learn From Teachers Who've Been There",
-  subTitle: "अनुभवी शिक्षक, स्पष्ट मार्गदर्शन आणि प्रत्येक विद्यार्थ्याकडे वैयक्तिक लक्ष — हीच आमची ताकद. (Expert teachers, clear guidance, and personal attention to every student)."
+  title: "MEET OUR EXPERT FACULTY",
+  headline: "Learn from Master Mentors Who Inspire Academic Excellence",
+  subTitle: "All faculty members at PERL Education bring years of specialized IIT-JEE, NEET, and Board teaching experience. Our small batch philosophy ensures every student receives direct, personal mentorship."
 };
 
 export const facultyMembers = [
   {
     id: "f1",
-    name: "Mr. Rahul Misal",
-    marathiName: "श्री. राहुल मिसाळ",
-    designation: "Director & Senior Faculty (Quantitative Aptitude)",
-    qualification: "M.Sc (Mathematics)",
-    experience: "10+ Years Experience",
-    specialization: "Quantitative Aptitude, Speed Math & Data Interpretation",
-    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-4.png",
-    bio: "Renowned for simplifying complex numerical calculations and developing high-speed mental math techniques for IBPS PO, SBI, and RBI aspirants.",
-    quote: "Quantitative aptitude is not about lengthy formulas — it is about pattern recognition, simplification logic, and exam-day speed."
+    name: "Prof. S. R. Kulkarni",
+    designation: "Head of Physics & Senior JEE/NEET Mentor",
+    qualification: "M.Tech (IIT Alumnus)",
+    experience: "12+ Years Teaching Experience",
+    specialization: "Mechanics, Electrodynamics & Modern Physics",
+    photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
+    bio: "Specializes in building deep conceptual intuition for complex physical phenomena and simplifying tough multi-concept JEE Advanced numericals.",
+    quote: "Physics is not about memorizing equations — it is about understanding nature's principles and building problem-solving logic."
   },
   {
     id: "f2",
-    name: "Mr. Dnyandev Warade",
-    marathiName: "श्री. ज्ञानदेव वराडे",
-    designation: "Senior Faculty (Banking & Financial Awareness)",
-    qualification: "MBA (Finance)",
-    experience: "9+ Years Experience",
-    specialization: "Banking Awareness, Indian Economy & Current Affairs",
-    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-5.png",
-    bio: "Specialist in Indian Financial System, RBI guidelines, Monetary Policy, and budget analysis with deep knowledge of exam interview expectations.",
-    quote: "General and Banking Awareness gives you the maximum score in the shortest time when prepared with conceptual clarity."
+    name: "Dr. Ananya Deshmukh",
+    designation: "Head of Biology & Medical Entrance Specialist",
+    qualification: "Ph.D. in Life Sciences, M.Sc",
+    experience: "10+ Years Experience",
+    specialization: "Human Physiology, Genetics & Molecular Biology",
+    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80",
+    bio: "Renowned for NCERT line-by-line decoding and 3D visual diagram pedagogy that helps students score 340+ out of 360 in NEET Biology.",
+    quote: "Mastering NCERT with clarity and frequent visual recall is the surefire path to securing a Govt Medical MBBS seat."
   },
   {
     id: "f3",
-    name: "Mr. Akshay Cholke",
-    marathiName: "श्री. अक्षय चोळके",
-    designation: "Senior Faculty (Reasoning & Logical Ability)",
-    qualification: "B.E. (Electrical Engineering)",
-    experience: "8+ Years Experience",
-    specialization: "High-level Puzzles, Seating Arrangement & Logical Reasoning",
-    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-6.png",
-    bio: "Known for systematic decoding of complicated floor, box, and circular seating puzzles that routinely determine Mains cutoffs.",
-    quote: "A structured, condition-based breakdown turns the toughest 5-minute puzzle into a 2-minute guaranteed score."
+    name: "Prof. Amit Verma",
+    designation: "Senior Faculty - Chemistry (Organic & Inorganic)",
+    qualification: "M.Sc (Chemistry), CSIR-NET",
+    experience: "11+ Years Experience",
+    specialization: "Organic Reaction Mechanisms, Chemical Bonding & Periodic Trends",
+    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop&q=80",
+    bio: "Expert in Organic Chemistry reaction flowcharts and Inorganic memory techniques that turn chemistry into a high-scoring subject.",
+    quote: "When mechanisms are understood logically, Organic Chemistry transforms from a challenge into your strongest scoring asset."
   },
   {
     id: "f4",
-    name: "Mr. Khalid Ahmed",
-    marathiName: "श्री. खालीद अहमद",
-    designation: "Faculty (Economics, GA & Interview Mentor)",
-    qualification: "MBA (Finance)",
-    experience: "7+ Years Experience",
-    specialization: "Economic Trends, Government Schemes & Interview Prep",
-    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-7.png",
-    bio: "Extensively mentors students on personality development, Group Discussion, and banking personal interview rounds.",
-    quote: "Confidence in interviews comes from authentic knowledge, clarity of expression, and structured thinking."
+    name: "Prof. Rajesh Joshi",
+    designation: "Senior Faculty - Mathematics (JEE Mains & Advanced)",
+    qualification: "M.Sc (Applied Mathematics)",
+    experience: "9+ Years Experience",
+    specialization: "Calculus, Coordinate Geometry, Vectors & 3D",
+    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80",
+    bio: "Known for quick-elimination techniques and step-by-step problem breakdown in high-level calculus and coordinate geometry.",
+    quote: "Speed in Mathematics comes directly from rock-solid fundamentals and disciplined daily question practice."
   },
   {
     id: "f5",
-    name: "Mr. Krishna Patil",
-    marathiName: "श्री. कृष्णा पाटील",
-    designation: "Lead Educator (MCAER & Agriculture Division)",
-    qualification: "M.Sc (Agriculture)",
+    name: "Prof. Snehal Patil",
+    designation: "Lead Educator - School Foundation & Olympiads (Class 8-10)",
+    qualification: "M.Sc, B.Ed (Science & Mathematics)",
     experience: "8+ Years Experience",
-    specialization: "Agronomy, Soil Science & MCAER PG-CET Syllabus",
-    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-8.png",
-    bio: "State-recognized mentor for Maharashtra Agriculture graduates aspiring for M.Sc Agri PG-CET and IBPS Agriculture Field Officer positions.",
-    quote: "Comprehensive understanding of core agricultural sciences is the gateway to top state university ranks."
+    specialization: "CBSE & ICSE Science, Geometry & Mental Ability",
+    photo: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=500&auto=format&fit=crop&q=80",
+    bio: "Dedicated to nurturing young minds in Class 8th, 9th, and 10th with interactive experiments, digital animations, and Olympiad readiness.",
+    quote: "A strong foundation built in middle school gives students the confidence to excel effortlessly in higher competitive exams."
   },
   {
     id: "f6",
-    name: "Mr. Deepak Wadhwa",
-    marathiName: "श्री. दीपक वाधवा",
-    designation: "Senior Faculty (English Language & Verbal Ability)",
-    qualification: "M.A. (English Literature), B.Ed",
-    experience: "9+ Years Experience",
-    specialization: "Reading Comprehension, Error Spotting & Grammar",
-    photo: "https://saarthiedu.online/wp-content/uploads/2026/08/Untitled-design-9.png",
-    bio: "Helps regional Marathi & vernacular medium students overcome English anxiety and achieve high scores in Bank PO and Clerk prelims.",
-    quote: "English for competitive exams is a practical skill of sentence structure and contextual reading, not rote memorization."
+    name: "Prof. Manoj Shinde",
+    designation: "Senior Faculty - Physical Chemistry & Doubt Mentor",
+    qualification: "M.Tech (Chemical Engineering)",
+    experience: "7+ Years Experience",
+    specialization: "Thermodynamics, Electrochemistry, Equilibrium & Solutions",
+    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80",
+    bio: "Leads daily doubt-resolution sessions and helps students master numerical calculations with short methods and error-reduction drills.",
+    quote: "Every doubt resolved today is a confirmed mark secured in tomorrow's competitive exam."
   }
 ];

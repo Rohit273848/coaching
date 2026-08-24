@@ -1,33 +1,35 @@
 /**
  * UPDATES & ANNOUNCEMENTS DATA MODEL
+ * 
+ * Announcements for PERL Education Aurangabad.
  */
 
 export const updates = [
   {
     id: "up1",
-    title: "New Online + Offline Banking Batch Starting 1 September 2026",
-    category: "NEW BATCH LAUNCH",
-    date: "September 1, 2026",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&auto=format&fit=crop&q=80",
-    summary: "Comprehensive classroom & online coaching for IBPS PO, Clerk, SBI PO/Clerk and RRB. Limited seats with personal attention.",
+    title: "New IIT-JEE (Mains & Advanced) 2026-27 Batches Starting Soon",
+    category: "JEE ADMISSIONS",
+    date: "Admissions Open",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80",
+    summary: "Integrated classroom batches with small batch sizes, daily DPP practice, smart digital board lectures, and national-level mock tests. Reserve your seat for the free demo class.",
     link: "/contact"
   },
   {
     id: "up2",
-    title: "MCAER PG-CET 2026 Special Batch for Agri Graduates",
-    category: "MCAER ADMISSION",
-    date: "September 1, 2026",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&auto=format&fit=crop&q=80",
-    summary: "Targeted coaching for Maharashtra Agricultural Universities Post Graduate CET with regular topic-wise mock tests and updated notes.",
+    title: "NEET (UG) 2026-27 Comprehensive Medical Preparation Batch",
+    category: "NEET ADMISSIONS",
+    date: "Admissions Open",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop&q=80",
+    summary: "NCERT line-by-line decoding, 3D biological animations, 720-marks full length OMR mock tests, and daily doubt resolution desks at New Usmanpura center.",
     link: "/contact"
   },
   {
     id: "up3",
-    title: "Free Silent Study Library & Computer Lab Access for Enrolled Students",
-    category: "CAMPUS FACILITY",
-    date: "August 20, 2026",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&auto=format&fit=crop&q=80",
-    summary: "Air-conditioned silent reading hall and computer-based online test lab now open from 7:00 AM to 10:00 PM.",
+    title: "School Foundation Batch for Classes 8th, 9th & 10th (CBSE / ICSE / State)",
+    category: "FOUNDATION BATCH",
+    date: "Fresh Batch Open",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=80",
+    summary: "Build strong concepts in Math & Science, secure 95%+ in Board Exams, and prepare for Olympiads & NTSE with personalized mentor attention.",
     link: "/contact"
   }
 ];

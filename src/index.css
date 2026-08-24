@@ -2,22 +2,22 @@
 
 @layer base {
   :root {
-    --color-primary: #1E4FA8;
-    --color-primary-hover: #163E85;
-    --color-secondary: #E74C3C;
-    --color-secondary-hover: #C0392B;
-    --color-accent: #F8B81F;
-    --color-accent-hover: #E5A40F;
-    --color-bg: #F8F9FC;
+    --color-primary: #0F4C81;
+    --color-primary-hover: #0A3357;
+    --color-secondary: #059669;
+    --color-secondary-hover: #047857;
+    --color-accent: #F59E0B;
+    --color-accent-hover: #D97706;
+    --color-bg: #F8FAFC;
     --color-surface: #FFFFFF;
-    --color-surface-subtle: #EEF2F9;
-    --color-surface-dark: #1D2B53;
-    --color-text: #231F40;
+    --color-surface-subtle: #F1F5F9;
+    --color-surface-dark: #0B192C;
+    --color-text: #1E293B;
     --color-text-light: #FFFFFF;
-    --color-heading: #1D2B53;
-    --color-muted: #555555;
-    --color-border: #E5E9F2;
-    --color-border-dark: #2A3C6E;
+    --color-heading: #0F172A;
+    --color-muted: #64748B;
+    --color-border: #E2E8F0;
+    --color-border-dark: #1E293B;
   }
 
   html {
@@ -28,7 +28,7 @@
   body {
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Poppins', 'Noto Sans Devanagari', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -37,8 +37,15 @@
 
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
     letter-spacing: -0.02em;
+  }
+
+  /* Support for Marathi / Devanagari typography */
+  .font-marathi, [lang="mr"] {
+    font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
   }
 
   /* Optimize tap highlight for mobile browsers */
@@ -47,44 +54,44 @@
   }
 }
 
-/* Custom Saarthi Education Styling Utilities */
+/* Custom PERL Education Styling Utilities */
 .font-accent {
   font-family: 'Poppins', sans-serif;
 }
 
 .text-gradient-amber {
-  background: linear-gradient(135deg, #F8B81F 0%, #FF6900 100%);
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.bg-saarthi-blue {
-  background-color: #1E4FA8;
+.bg-perl-blue {
+  background-color: #0F4C81;
 }
 
-.text-saarthi-blue {
-  color: #1E4FA8;
+.text-perl-blue {
+  color: #0F4C81;
 }
 
-.bg-saarthi-amber {
-  background-color: #F8B81F;
+.bg-perl-amber {
+  background-color: #F59E0B;
 }
 
-.text-saarthi-amber {
-  color: #F8B81F;
+.text-perl-amber {
+  color: #F59E0B;
 }
 
 .bg-pattern-grid {
-  background-image: radial-gradient(rgba(30, 79, 168, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(15, 76, 129, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
-.shadow-saarthi {
-  box-shadow: 0 10px 40px 0 rgba(26, 46, 85, 0.08);
+.shadow-perl {
+  box-shadow: 0 10px 40px 0 rgba(11, 25, 44, 0.08);
 }
 
-.shadow-saarthi-lg {
-  box-shadow: 0 20px 50px 0 rgba(26, 46, 85, 0.12);
+.shadow-perl-lg {
+  box-shadow: 0 20px 50px 0 rgba(11, 25, 44, 0.12);
 }
 
 /* Marquee Scroller Animation */
@@ -116,7 +123,7 @@
   scrollbar-width: none;
 }
 
-/* Safe area padding utilities for modern iPhone & Android notch devices */
+/* Safe area padding utilities for mobile devices */
 .pb-safe {
   padding-bottom: env(safe-area-inset-bottom, 16px);
 }
@@ -131,7 +138,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #F0F4F8;
+    background: #F1F5F9;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -140,6 +147,6 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #1E4FA8;
+    background: #0F4C81;
   }
 }

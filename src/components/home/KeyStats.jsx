@@ -1,69 +1,83 @@
 import React from 'react';
-import { Users, Trophy, Award, BookOpen, ShieldCheck, Clock } from 'lucide-react';
-import { institute } from '../../config/institute';
-import { resultSummary } from '../../config/results';
+import { Users, Trophy, Star, Sparkles } from 'lucide-react';
 
 export default function KeyStats() {
   return (
-    <section className="bg-white py-8 sm:py-10 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-6 sm:py-8 lg:py-10 border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
         
-        {/* Mobile-First 2-Column Grid (4-Column on Desktop) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-0 lg:divide-x divide-slate-200">
+        {/* Unified 4-Box Grid: 2x2 on Mobile, 4-Column on Desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           
-          {/* Stat 1 */}
-          <div className="p-3.5 sm:p-4 lg:p-0 lg:px-8 bg-blue-50/40 sm:bg-transparent rounded-2xl sm:rounded-none border border-blue-100 sm:border-none text-left space-y-1">
-            <div className="flex items-center gap-1.5 text-slate-500 mb-1">
-              <Users className="w-4 h-4 text-[#1E4FA8] shrink-0" />
-              <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#1E4FA8]">ENROLLED</span>
+          {/* Box 1: Google Rating & Reviews */}
+          <div className="p-3.5 xs:p-4 sm:p-5 bg-amber-50/60 rounded-2xl sm:rounded-3xl border border-amber-200/90 text-left space-y-1.5 shadow-2xs hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-1.5 text-amber-900">
+              <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500 fill-amber-500 shrink-0" />
+              <span className="text-[9.5px] xs:text-[10.5px] sm:text-[11px] font-black uppercase tracking-wider">
+                REPUTATION
+              </span>
             </div>
-            <span className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#1D2B53] tracking-tight block">
-              25.2K+
-            </span>
-            <p className="text-[11px] sm:text-xs text-slate-600 font-medium leading-snug">
-              Students guided across Maharashtra
+            <div>
+              <span className="text-xl xs:text-2xl sm:text-3xl lg:text-[34px] font-black text-[#0B192C] tracking-tight block leading-none">
+                4.8 / 5.0
+              </span>
+            </div>
+            <p className="text-[10.5px] xs:text-[11px] sm:text-xs text-slate-600 font-semibold leading-snug">
+              370+ Verified Google Reviews
             </p>
           </div>
 
-          {/* Stat 2 */}
-          <div className="p-3.5 sm:p-4 lg:p-0 lg:px-8 bg-amber-50/40 sm:bg-transparent rounded-2xl sm:rounded-none border border-amber-100 sm:border-none text-left space-y-1">
-            <div className="flex items-center gap-1.5 text-slate-500 mb-1">
-              <Trophy className="w-4 h-4 text-[#F8941F] shrink-0" />
-              <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#F8941F]">SELECTIONS</span>
+          {/* Box 2: Selection & Ranks */}
+          <div className="p-3.5 xs:p-4 sm:p-5 bg-blue-50/60 rounded-2xl sm:rounded-3xl border border-blue-200/90 text-left space-y-1.5 shadow-2xs hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-1.5 text-[#0F4C81]">
+              <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0F4C81] shrink-0" />
+              <span className="text-[9.5px] xs:text-[10.5px] sm:text-[11px] font-black uppercase tracking-wider">
+                SELECTION RATE
+              </span>
             </div>
-            <span className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#1D2B53] tracking-tight block">
-              {resultSummary.totalSelections}
-            </span>
-            <p className="text-[11px] sm:text-xs text-slate-600 font-medium leading-snug">
-              In SBI, IBPS, RRB, AFO & MCAER
+            <div>
+              <span className="text-xl xs:text-2xl sm:text-3xl lg:text-[34px] font-black text-emerald-600 tracking-tight block leading-none">
+                98%
+              </span>
+            </div>
+            <p className="text-[10.5px] xs:text-[11px] sm:text-xs text-slate-600 font-semibold leading-snug">
+              IITs, NITs, GMCs & Board Merit
             </p>
           </div>
 
-          {/* Stat 3 */}
-          <div className="p-3.5 sm:p-4 lg:p-0 lg:px-8 bg-emerald-50/40 sm:bg-transparent rounded-2xl sm:rounded-none border border-emerald-100 sm:border-none text-left space-y-1">
-            <div className="flex items-center gap-1.5 text-slate-500 mb-1">
-              <Award className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-emerald-600">FACULTY</span>
+          {/* Box 3: Small Batches & Mentorship */}
+          <div className="p-3.5 xs:p-4 sm:p-5 bg-emerald-50/60 rounded-2xl sm:rounded-3xl border border-emerald-200/90 text-left space-y-1.5 shadow-2xs hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-1.5 text-emerald-800">
+              <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 shrink-0" />
+              <span className="text-[9.5px] xs:text-[10.5px] sm:text-[11px] font-black uppercase tracking-wider">
+                ATTENTION
+              </span>
             </div>
-            <span className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#1D2B53] tracking-tight block">
-              100% Master
-            </span>
-            <p className="text-[11px] sm:text-xs text-slate-600 font-medium leading-snug">
-              Senior subject specialists & directors
+            <div>
+              <span className="text-lg xs:text-xl sm:text-2xl lg:text-[28px] font-black text-[#0B192C] tracking-tight block leading-none sm:pt-0.5">
+                Small Batches
+              </span>
+            </div>
+            <p className="text-[10.5px] xs:text-[11px] sm:text-xs text-slate-600 font-semibold leading-snug">
+              1-on-1 Dedicated Doubt Desks
             </p>
           </div>
 
-          {/* Stat 4 */}
-          <div className="p-3.5 sm:p-4 lg:p-0 lg:px-8 bg-slate-50 sm:bg-transparent rounded-2xl sm:rounded-none border border-slate-200 sm:border-none text-left space-y-1">
-            <div className="flex items-center gap-1.5 text-slate-500 mb-1">
-              <BookOpen className="w-4 h-4 text-[#1E4FA8] shrink-0" />
-              <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#1E4FA8]">FACILITIES</span>
+          {/* Box 4: AC Smart Classrooms & App */}
+          <div className="p-3.5 xs:p-4 sm:p-5 bg-purple-50/60 rounded-2xl sm:rounded-3xl border border-purple-200/90 text-left space-y-1.5 shadow-2xs hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-1.5 text-purple-900">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0F4C81] shrink-0" />
+              <span className="text-[9.5px] xs:text-[10.5px] sm:text-[11px] font-black uppercase tracking-wider">
+                CAMPUS
+              </span>
             </div>
-            <span className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#1D2B53] tracking-tight block">
-              Free Library
-            </span>
-            <p className="text-[11px] sm:text-xs text-slate-600 font-medium leading-snug">
-              Silent study rooms & online CBT lab
+            <div>
+              <span className="text-lg xs:text-xl sm:text-2xl lg:text-[28px] font-black text-[#0B192C] tracking-tight block leading-none sm:pt-0.5">
+                AC Smart Class
+              </span>
+            </div>
+            <p className="text-[10.5px] xs:text-[11px] sm:text-xs text-slate-600 font-semibold leading-snug">
+              Digital Boards & Hybrid App
             </p>
           </div>
 
