@@ -20,7 +20,7 @@ export default function TopBar({ onOpenEnquiry }) {
 
   return (
     <div className="bg-[#1D2B53] text-white text-xs py-2 px-2 border-b border-[#283868] relative z-30 overflow-hidden">
-      <div className="flex items-center justify-between gap-4 max-w-7xl mx-auto">
+      <div className="flex items-center justify-between gap-4 max-w-[1600px] mx-auto px-2 sm:px-4 lg:px-6">
         
         {/* Left: Animated Infinite Ticker Scroller */}
         <div className="flex items-center gap-2 overflow-hidden flex-1 relative">

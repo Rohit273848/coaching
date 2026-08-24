@@ -68,7 +68,7 @@ export default function App() {
         />
 
         {/* Main Content Area — Mobile-First Padding: clears navbar at top and floating sticky bar on mobile */}
-        <main className="flex-1 pt-[84px] sm:pt-[94px] lg:pt-[100px] pb-24 lg:pb-0">
+        <main className="flex-1 pt-21 sm:pt-[94px] lg:pt-[100px] pb-24 lg:pb-0">
           <Routes>
             <Route path="/" element={<Home onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/programs" element={<Programs onOpenEnquiry={handleOpenEnquiry} />} />
