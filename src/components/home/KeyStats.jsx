@@ -1,68 +1,83 @@
 import React from 'react';
-import { Award, Trophy, TrendingUp, ShieldCheck } from 'lucide-react';
-import { resultSummary } from '../../config/results';
+import { Users, Trophy, Star, Sparkles } from 'lucide-react';
 
 export default function KeyStats() {
   return (
-    <section className="bg-white py-8 sm:py-10 border-b border-stone-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-6 sm:py-8 lg:py-10 border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
         
-        {/* Mobile-First 2-Column Grid (4-Column on Desktop) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-0 lg:divide-x divide-stone-200">
+        {/* Unified 4-Box Grid: 2x2 on Mobile, 4-Column on Desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           
-          {/* Stat 1 */}
-          <div className="p-3 sm:p-4 lg:p-0 lg:px-8 bg-stone-50/70 sm:bg-transparent rounded-xl sm:rounded-none border border-stone-200/80 sm:border-none text-left space-y-1">
-            <div className="flex items-center gap-1.5 text-slate-500 mb-0.5 sm:mb-1">
-              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8B1E26] shrink-0" />
-              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider">Experience</span>
+          {/* Box 1: Google Rating & Reviews */}
+          <div className="p-3.5 xs:p-4 sm:p-5 bg-amber-50/60 rounded-2xl sm:rounded-3xl border border-amber-200/90 text-left space-y-1.5 shadow-2xs hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-1.5 text-amber-900">
+              <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500 fill-amber-500 shrink-0" />
+              <span className="text-[9.5px] xs:text-[10.5px] sm:text-[11px] font-black uppercase tracking-wider">
+                REPUTATION
+              </span>
             </div>
-            <span className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#0F2038] font-accent tracking-tight block">
-              15+ Years
-            </span>
-            <p className="text-[11px] sm:text-xs text-slate-600 font-medium leading-snug">
-              Academic excellence in Sambhajinagar
+            <div>
+              <span className="text-xl xs:text-2xl sm:text-3xl lg:text-[34px] font-black text-[#0B192C] tracking-tight block leading-none">
+                4.8 / 5.0
+              </span>
+            </div>
+            <p className="text-[10.5px] xs:text-[11px] sm:text-xs text-slate-600 font-semibold leading-snug">
+              370+ Verified Google Reviews
             </p>
           </div>
 
-          {/* Stat 2 */}
-          <div className="p-3 sm:p-4 lg:p-0 lg:px-8 bg-stone-50/70 sm:bg-transparent rounded-xl sm:rounded-none border border-stone-200/80 sm:border-none text-left space-y-1">
-            <div className="flex items-center gap-1.5 text-slate-500 mb-0.5 sm:mb-1">
-              <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4AF37] shrink-0" />
-              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider">Selections</span>
+          {/* Box 2: Selection & Ranks */}
+          <div className="p-3.5 xs:p-4 sm:p-5 bg-blue-50/60 rounded-2xl sm:rounded-3xl border border-blue-200/90 text-left space-y-1.5 shadow-2xs hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-1.5 text-[#0F4C81]">
+              <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0F4C81] shrink-0" />
+              <span className="text-[9.5px] xs:text-[10.5px] sm:text-[11px] font-black uppercase tracking-wider">
+                SELECTION RATE
+              </span>
             </div>
-            <span className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#0F2038] font-accent tracking-tight block">
-              {resultSummary.totalSelections}
-            </span>
-            <p className="text-[11px] sm:text-xs text-slate-600 font-medium leading-snug">
-              In Top IITs, NITs, AIIMS & Govt Colleges
+            <div>
+              <span className="text-xl xs:text-2xl sm:text-3xl lg:text-[34px] font-black text-emerald-600 tracking-tight block leading-none">
+                98%
+              </span>
+            </div>
+            <p className="text-[10.5px] xs:text-[11px] sm:text-xs text-slate-600 font-semibold leading-snug">
+              IITs, NITs, GMCs & Board Merit
             </p>
           </div>
 
-          {/* Stat 3 */}
-          <div className="p-3 sm:p-4 lg:p-0 lg:px-8 bg-stone-50/70 sm:bg-transparent rounded-xl sm:rounded-none border border-stone-200/80 sm:border-none text-left space-y-1">
-            <div className="flex items-center gap-1.5 text-slate-500 mb-0.5 sm:mb-1">
-              <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8B1E26] shrink-0" />
-              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider">Top Ranks</span>
+          {/* Box 3: Small Batches & Mentorship */}
+          <div className="p-3.5 xs:p-4 sm:p-5 bg-emerald-50/60 rounded-2xl sm:rounded-3xl border border-emerald-200/90 text-left space-y-1.5 shadow-2xs hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-1.5 text-emerald-800">
+              <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 shrink-0" />
+              <span className="text-[9.5px] xs:text-[10.5px] sm:text-[11px] font-black uppercase tracking-wider">
+                ATTENTION
+              </span>
             </div>
-            <span className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#0F2038] font-accent tracking-tight block">
-              84+ Top 500
-            </span>
-            <p className="text-[11px] sm:text-xs text-slate-600 font-medium leading-snug">
-              AIR Ranks produced in JEE & NEET
+            <div>
+              <span className="text-lg xs:text-xl sm:text-2xl lg:text-[28px] font-black text-[#0B192C] tracking-tight block leading-none sm:pt-0.5">
+                Small Batches
+              </span>
+            </div>
+            <p className="text-[10.5px] xs:text-[11px] sm:text-xs text-slate-600 font-semibold leading-snug">
+              1-on-1 Dedicated Doubt Desks
             </p>
           </div>
 
-          {/* Stat 4 */}
-          <div className="p-3 sm:p-4 lg:p-0 lg:px-8 bg-stone-50/70 sm:bg-transparent rounded-xl sm:rounded-none border border-stone-200/80 sm:border-none text-left space-y-1">
-            <div className="flex items-center gap-1.5 text-slate-500 mb-0.5 sm:mb-1">
-              <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-700 shrink-0" />
-              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider">Success Rate</span>
+          {/* Box 4: AC Smart Classrooms & App */}
+          <div className="p-3.5 xs:p-4 sm:p-5 bg-purple-50/60 rounded-2xl sm:rounded-3xl border border-purple-200/90 text-left space-y-1.5 shadow-2xs hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-1.5 text-purple-900">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0F4C81] shrink-0" />
+              <span className="text-[9.5px] xs:text-[10.5px] sm:text-[11px] font-black uppercase tracking-wider">
+                CAMPUS
+              </span>
             </div>
-            <span className="text-2xl xs:text-3xl sm:text-4xl font-black text-[#0F2038] font-accent tracking-tight block">
-              82% Batch Rate
-            </span>
-            <p className="text-[11px] sm:text-xs text-slate-600 font-medium leading-snug">
-              Students qualifying target exams
+            <div>
+              <span className="text-lg xs:text-xl sm:text-2xl lg:text-[28px] font-black text-[#0B192C] tracking-tight block leading-none sm:pt-0.5">
+                AC Smart Class
+              </span>
+            </div>
+            <p className="text-[10.5px] xs:text-[11px] sm:text-xs text-slate-600 font-semibold leading-snug">
+              Digital Boards & Hybrid App
             </p>
           </div>
 

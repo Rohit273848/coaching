@@ -1,48 +1,57 @@
 /**
  * TESTIMONIALS DATA MODEL
  * 
- * Authentic student and parent feedback focusing on academic discipline,
- * doubt solving counters, faculty accessibility, and test analytics.
+ * PERL Education student and parent reflections.
+ * Reflecting 4.8 / 5.0 Google Rating (370+ Reviews)
  */
 
 export const studentTestimonials = [
   {
     id: "st1",
-    name: "Siddharth Deshpande",
-    role: "Student (JEE Advanced AIR 192)",
-    course: "2-Year Integrated JEE Batch",
-    photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80",
-    content: "The daily doubt counter from 4 PM to 7 PM was my secret weapon. Instead of letting doubts accumulate, I cleared them on the same day with senior teachers.",
-    highlight: "Daily Doubt Counter"
+    name: "Aditya Kulkarni",
+    role: "IIT Bombay (Computer Science) - JEE Adv AIR 412",
+    course: "IIT-JEE 2-Year Classroom Program",
+    photo: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=200&auto=format&fit=crop&q=80",
+    content: "The small batch sizes and personal attention from faculty at PERL Education made difficult physics and calculus concepts very clear. The weekly CBT mock test series completely removed my exam fear.",
+    highlight: "IIT Bombay Selection"
   },
   {
     id: "st2",
-    name: "Anuj Shinde",
-    role: "Student (NEET Score 695)",
-    course: "2-Year NEET Batch",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80",
-    content: "Bi-weekly test series with exact NTA CBT UI gave me total confidence on exam day. The diagnostic analysis showed me my weak chapters immediately after every test.",
-    highlight: "Exact NTA CBT Test Series"
+    name: "Tanvi Deshpande",
+    role: "MBBS Student, GMC Aurangabad (NEET 682/720)",
+    course: "NEET Medical Preparation Batch",
+    photo: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&auto=format&fit=crop&q=80",
+    content: "Line-by-line NCERT analysis and 3D visual models on the digital smart boards helped me score 350+ in Biology. Daily 1-on-1 doubt clearing sessions played a decisive role in getting into Government Medical College.",
+    highlight: "GMC Aurangabad MBBS"
+  },
+  {
+    id: "st3",
+    name: "Saurabh Jadhav",
+    role: "Class 10th CBSE 98.4% & NTSE Scholar",
+    course: "School Foundation Batch (Class 8-10)",
+    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop&q=80",
+    content: "Joining PERL Education in Class 8 completely eliminated my fear of Mathematics and Science. The teachers explained concepts from the fundamentals up, helping me achieve a perfect 100/100 in Math.",
+    highlight: "100/100 in Mathematics"
   }
 ];
 
 export const parentTestimonials = [
   {
     id: "pt1",
-    name: "Sanjay Patil (Father of Arjun Patil, AIR 42)",
-    role: "Parent",
-    course: "Parent of JEE Aspirant",
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&auto=format&fit=crop&q=80",
-    content: "As parents, we appreciated the monthly PTMs and detailed progress reports. The directors were personally reachable whenever we had concerns regarding our son's health or academic stress.",
-    highlight: "Transparent Parent Communication"
+    name: "Dr. Sanjay Deshpande",
+    role: "Doctor & Proud Parent of Tanvi (GMC Student)",
+    course: "Parent of NEET Aspirant",
+    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80",
+    content: "The teaching methodology and sincere commitment to each student at PERL Education is truly commendable. Their continuous mentoring helped our daughter secure admission to a prestigious Government Medical College.",
+    highlight: "4.8★ Trusted Experience"
   },
   {
     id: "pt2",
-    name: "Sunita Deshmukh (Mother of Ananya, AIR 118)",
-    role: "Parent",
-    course: "Parent of NEET Aspirant",
+    name: "Mrs. Sunita Kulkarni",
+    role: "Proud Parent of Aditya (IITian)",
+    course: "Parent of IIT-JEE Aspirant",
     photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&auto=format&fit=crop&q=80",
-    content: "The disciplined academic culture and safety in Samarth Nagar center gave us peace of mind. Apex faculty truly care about their students' future.",
-    highlight: "Disciplined Academic Environment"
+    content: "Finding an institute in Usmanpura with such disciplined faculty, small batch focus, and modern air-conditioned digital classrooms has been a wonderful experience for our family.",
+    highlight: "Small Batch Attention"
   }
 ];

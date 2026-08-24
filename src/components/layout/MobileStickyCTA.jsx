@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
+import { Phone, MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { institute } from '../../config/institute';
 
 export default function MobileStickyCTA({ onOpenEnquiry, hidden = false }) {
@@ -7,76 +7,72 @@ export default function MobileStickyCTA({ onOpenEnquiry, hidden = false }) {
   if (hidden) return null;
 
   return (
-    <div 
-      className="lg:hidden fixed left-2.5 right-2.5 z-30 transition-opacity duration-200 pointer-events-auto"
-      style={{
-        bottom: 'max(12px, env(safe-area-inset-bottom, 12px))',
-        maxWidth: 520,
-        margin: '0 auto',
-      }}
+    <aside
+      aria-label="Quick Mobile Actions"
+      className="lg:hidden fixed inset-x-0 bottom-0 z-40 pointer-events-none pb-[max(10px,env(safe-area-inset-bottom,10px))] px-3 mb-1 flex justify-center"
     >
-      {/* Floating Glass Container */}
+      {/* Floating Pill Container */}
       <div 
-        className="p-1.5 rounded-[16px] transition-all duration-200"
+        className="w-full max-w-[420px] p-1 rounded-2xl pointer-events-auto transition-all duration-200 shadow-[0_8px_30px_rgba(0,0,0,0.38)]"
         style={{
-          background: 'rgba(15, 32, 56, 0.95)',
+          background: 'rgba(11, 25, 44, 0.97)',
           backdropFilter: 'blur(16px)',
           WebkitBackdropFilter: 'blur(16px)',
           border: '1px solid rgba(255, 255, 255, 0.12)',
-          boxShadow: '0 10px 30px -4px rgba(0, 0, 0, 0.32), 0 4px 12px rgba(0, 0, 0, 0.18)',
         }}
       >
         <div className="flex items-center justify-between gap-1">
           
-          {/* Action 1: Call */}
+          {/* Action 1: Call (Secondary) */}
           <a
             href={`tel:${institute.contact.phonePrimary}`}
-            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl text-slate-200 hover:text-white hover:bg-white/5 active:bg-white/10 active:scale-[0.97] transition-all min-h-[46px] select-none"
-            aria-label={`Call the academy at ${institute.contact.phonePrimary}`}
+            className="flex-1 flex items-center justify-center gap-1.5 h-11 px-2 rounded-xl text-slate-200 hover:text-white hover:bg-white/5 active:bg-white/10 active:scale-[0.97] transition-all select-none"
+            aria-label={`Call Admissions: ${institute.contact.phonePrimary}`}
           >
-            <Phone className="w-4 h-4 text-slate-300 shrink-0" />
-            <span className="text-[13px] font-semibold text-slate-100 tracking-tight whitespace-nowrap">
+            <Phone className="w-4 h-4 text-[#F59E0B] shrink-0" />
+            <span className="text-[12px] xs:text-[13px] font-bold text-slate-100 tracking-tight whitespace-nowrap">
               Call
             </span>
           </a>
 
-          {/* Hairline Divider */}
-          <div className="h-5 w-[1px] bg-white/10 shrink-0" />
+          {/* Vertical Hairline Divider */}
+          <div className="h-4 w-[1px] bg-slate-700/70 shrink-0" />
 
-          {/* Action 2: WhatsApp */}
+          {/* Action 2: WhatsApp (Secondary) */}
           <a
             href={`https://wa.me/${institute.contact.whatsappNumber}?text=${encodeURIComponent(institute.contact.whatsappDefaultMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-xl text-slate-200 hover:text-white hover:bg-white/5 active:bg-white/10 active:scale-[0.97] transition-all min-h-[46px] select-none"
-            aria-label="Chat on WhatsApp with academic counselor"
+            className="flex-[1.1] flex items-center justify-center gap-1.5 h-11 px-2 rounded-xl text-slate-200 hover:text-white hover:bg-white/5 active:bg-white/10 active:scale-[0.97] transition-all select-none"
+            aria-label="Chat on WhatsApp with PERL Education"
           >
             <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span className="text-[13px] font-semibold text-slate-100 tracking-tight whitespace-nowrap">
+            <span className="text-[12px] xs:text-[13px] font-bold text-slate-100 tracking-tight whitespace-nowrap">
               WhatsApp
             </span>
           </a>
 
-          {/* Hairline Divider */}
-          <div className="h-5 w-[1px] bg-white/10 shrink-0" />
+          {/* Vertical Hairline Divider */}
+          <div className="h-4 w-[1px] bg-slate-700/70 shrink-0" />
 
-          {/* Action 3: Enquire */}
+          {/* Action 3: Free Demo (Primary CTA - Dominant) */}
           <button
-            onClick={() => onOpenEnquiry && onOpenEnquiry('Mobile Sticky CTA')}
-            className="flex-[1.15] flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#8B1E26] hover:bg-[#72181F] active:bg-[#5C1319] active:scale-[0.97] text-white shadow-md transition-all min-h-[46px] select-none cursor-pointer"
+            onClick={() => onOpenEnquiry && onOpenEnquiry('Mobile Sticky Free Demo CTA')}
+            className="flex-[1.4] flex items-center justify-center gap-1.5 h-11 px-2.5 xs:px-3.5 rounded-xl bg-gradient-to-r from-[#0F4C81] via-[#0D4474] to-[#0284C7] hover:from-[#0A3357] hover:to-[#0369A1] active:scale-[0.97] text-white shadow-md transition-all select-none cursor-pointer border border-blue-400/20"
             style={{
-              boxShadow: '0 2px 10px rgba(139, 30, 38, 0.40)',
+              boxShadow: '0 2px 10px rgba(15, 76, 129, 0.45)',
             }}
-            aria-label="Book free academic counselling enquiry"
+            aria-label="Book a Free Demo Class"
           >
-            <span className="text-[13px] font-extrabold text-white tracking-tight whitespace-nowrap">
-              Enquire
+            <Sparkles className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" />
+            <span className="text-[12px] xs:text-[13px] font-black text-white tracking-tight whitespace-nowrap">
+              Free Demo
             </span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+            <ArrowRight className="w-3.5 h-3.5 text-white/85 shrink-0" />
           </button>
 
         </div>
       </div>
-    </div>
+    </aside>
   );
 }

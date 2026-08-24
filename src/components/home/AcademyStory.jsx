@@ -1,117 +1,107 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Target, LineChart, Users, ArrowRight, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, ArrowRight, ShieldCheck, Star } from 'lucide-react';
 import { institute } from '../../config/institute';
 
 export default function AcademyStory() {
-  const pillars = [
-    {
-      title: "Conceptual Grounding First",
-      desc: "Deep root derivations and physical intuition before solving advanced numericals.",
-      icon: BookOpen
-    },
-    {
-      title: "Daily 1-on-1 Doubt Desks",
-      desc: "Senior IITian faculty sit at doubt counters from 4 PM to 7 PM to ensure zero backlog.",
-      icon: Users
-    },
-    {
-      title: "Exact NTA-Pattern CBT Tests",
-      desc: "On-campus computer lab simulates the real JEE/NEET environment with instant diagnostics.",
-      icon: Target
-    },
-    {
-      title: "Transparent Parent Progress",
-      desc: "Monthly PTMs and automated attendance/test reports keep parents fully in sync.",
-      icon: LineChart
-    }
-  ];
-
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-white border-b border-stone-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-10 sm:py-16 lg:py-20 bg-white border-b border-slate-200 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           
-          {/* Left Column: Institute / Classroom Image with Mobile-Friendly Ratio */}
+          {/* Left Column: Image / Visual Card */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden border border-stone-200 shadow-md bg-slate-900 aspect-16/10 sm:aspect-4/3 lg:aspect-auto lg:h-[480px]">
+            
+            {/* Main Classroom Visual Container */}
+            <div className="relative rounded-3xl overflow-hidden border-4 border-slate-100 shadow-xl bg-slate-900 aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:h-[460px]">
               <img
-                src={institute.images.buildingImage || institute.images.heroImage}
-                alt="Apex Momentum Academic Center"
+                src={institute.images.classroomImage || institute.images.heroImage}
+                alt="PERL Education Smart Classroom Aurangabad"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F2038]/85 via-transparent to-transparent" />
               
-              <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 text-white space-y-1">
-                <div className="inline-flex items-center gap-1.5 bg-[#8B1E26] text-white text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase">
-                  <ShieldCheck className="w-3 h-3" />
-                  <span>Samarth Nagar Center</span>
+              {/* High-Contrast Smooth Dark Gradient for Perfect Text Legibility */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/70 via-45% to-transparent pointer-events-none" />
+              
+              {/* Bottom Text Overlay Area */}
+              <div className="absolute bottom-0 inset-x-0 p-4 sm:p-6 text-white space-y-1.5 text-left z-10">
+                <div className="inline-flex items-center gap-1.5 bg-[#0F4C81] text-white text-[9px] sm:text-[10.5px] font-black px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full uppercase tracking-wider shadow-xs">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#F59E0B]" />
+                  <span>Shrinath Complex, New Usmanpura</span>
                 </div>
-                <h4 className="text-sm sm:text-base font-extrabold text-white">
-                  Disciplined Academic Infrastructure
+                
+                <h4 className="text-base sm:text-lg lg:text-xl font-black text-white leading-snug">
+                  Empowering Minds. Shaping Futures.
                 </h4>
-                <p className="text-[11px] sm:text-xs text-slate-200">
-                  Smart classrooms, silent study library, and 50-seater CBT lab.
+                
+                <p className="text-xs sm:text-[13px] text-slate-200 leading-relaxed font-normal line-clamp-2 sm:line-clamp-none">
+                  Air-conditioned smart classrooms equipped with digital interactive boards and comprehensive PCMB mentorship.
                 </p>
               </div>
             </div>
 
-            {/* Badge overlay */}
-            <div className="absolute -bottom-3 -right-2 sm:-bottom-5 sm:-right-4 bg-white p-2.5 sm:p-4 rounded-xl border border-stone-300 shadow-lg flex items-center gap-2.5">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#0F2038] text-white flex items-center justify-center font-bold">
-                <span className="text-[#D4AF37] font-accent text-base sm:text-xl font-black">15</span>
-              </div>
-              <div>
-                <span className="text-[9px] sm:text-[10px] font-extrabold uppercase text-slate-500 block">Legacy</span>
-                <strong className="text-xs sm:text-sm font-extrabold text-slate-900 block">Years of Merit</strong>
+            {/* Google Reputation Badge — Zero Overlap on Mobile, Floating on Tablet/Desktop */}
+            <div className="mt-2.5 sm:mt-0 flex justify-end sm:block">
+              <div className="sm:absolute sm:-bottom-4 sm:-right-4 bg-white p-2.5 sm:p-3.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-2.5 sm:gap-3 z-20">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold shadow-md shrink-0">
+                  <Star className="w-5 h-5 fill-white" />
+                </div>
+                <div className="text-left">
+                  <span className="text-[8.5px] sm:text-[9.5px] font-black uppercase text-slate-400 block tracking-wider">GOOGLE REPUTATION</span>
+                  <strong className="text-xs sm:text-sm font-black text-[#0B192C] block">4.8★ (370+ Reviews)</strong>
+                </div>
               </div>
             </div>
+
           </div>
 
-          {/* Right Column: Editorial Story & Approach */}
-          <div className="lg:col-span-6 space-y-4 sm:space-y-6 pt-2 lg:pt-0">
+          {/* Right Column: Narrative & Values */}
+          <div className="lg:col-span-6 space-y-3.5 sm:space-y-5 text-left">
             
             <div className="space-y-1.5 sm:space-y-2">
-              <span className="text-[10px] sm:text-xs font-extrabold text-[#8B1E26] uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full border border-red-100 inline-block">
-                THE ACADEMIC APPROACH
+              <span className="text-[10px] sm:text-xs font-black text-[#0F4C81] uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full border border-blue-100 inline-block">
+                ABOUT PERL EDUCATION
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-[#0F2038] tracking-tight leading-tight">
-                Preparation Built Around Concepts, Practice & Performance.
+              <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black text-[#0B192C] tracking-tight leading-tight">
+                A Premier Coaching Hub for <br className="hidden sm:inline" />
+                <span className="text-[#0F4C81]">IIT-JEE, NEET & Foundation.</span>
               </h2>
             </div>
 
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
-              At {institute.name}, we refuse the assembly-line commercial model. We strictly cap batches to 35 students so every student is known by name and mentored directly by senior IITian educators.
+              PERL Education is Chhatrapati Sambhajinagar's leading coaching destination, dedicated to guiding students toward exceptional ranks in IIT-JEE (Mains & Advanced), NEET (UG Medical), and School Foundation (Classes 8th to 10th).
             </p>
 
-            {/* 4 Pillars Grid (Mobile-First 1 or 2 col) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5 pt-1">
-              {pillars.map((p, idx) => {
-                const Icon = p.icon;
-                return (
-                  <div key={idx} className="p-3 sm:p-4 rounded-xl bg-stone-50 border border-stone-200/80 space-y-1">
-                    <div className="flex items-center gap-2">
-                      <Icon className="w-4 h-4 text-[#8B1E26] shrink-0" />
-                      <h4 className="font-extrabold text-xs text-[#0F2038]">{p.title}</h4>
-                    </div>
-                    <p className="text-[11px] text-slate-600 leading-relaxed font-normal">
-                      {p.desc}
-                    </p>
-                  </div>
-                );
-              })}
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+              We reject crowded mass-batch teaching in favor of <strong className="text-[#0B192C]">Small Batch Sizes</strong> and <strong className="text-[#0B192C]">Personalized Attention</strong>. Our air-conditioned smart classrooms, seasoned master educators, and daily 1-on-1 doubt clearing desks ensure complete conceptual clarity for every aspirant.
+            </p>
+
+            {/* 3 Core Highlights */}
+            <div className="space-y-2 pt-1">
+              <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-blue-50/50 border border-blue-100 text-left">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#0F4C81] shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-[#0B192C]">Small Batch Sizes & Dedicated 1-on-1 Mentoring</span>
+              </div>
+              <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-amber-50/50 border border-amber-100 text-left">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#D97706] shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-[#0B192C]">Air-Conditioned Digital Smart Board Classrooms</span>
+              </div>
+              <div className="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-emerald-50/50 border border-emerald-100 text-left">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-[#0B192C]">Daily Doubt Resolution Desks & Hybrid App Integration</span>
+              </div>
             </div>
 
-            {/* Story Link */}
+            {/* Link */}
             <div className="pt-2">
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 text-xs font-extrabold text-[#0F2038] hover:text-[#8B1E26] group transition-colors min-h-[44px] items-center"
+                className="inline-flex items-center justify-center gap-2 bg-[#0F4C81] hover:bg-[#0A3357] text-white font-black text-xs px-6 py-3.5 rounded-xl transition-all shadow-md min-h-[46px] w-full sm:w-auto"
               >
-                <span>Discover Our Complete Academic Philosophy</span>
-                <ArrowRight className="w-4 h-4 text-[#8B1E26] group-hover:translate-x-1 transition-transform" />
+                <span>Learn More About PERL</span>
+                <ArrowRight className="w-4 h-4 text-[#F59E0B]" />
               </Link>
             </div>
 

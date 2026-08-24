@@ -1,47 +1,52 @@
 /**
  * THEME SYSTEM CONFIGURATION
  * 
- * Rebrand the entire institute website by editing the theme values below.
- * Colors are injected dynamically into CSS root variables.
+ * PERL Education Brand Palette:
+ * Primary: #0F4C81 (Deep Sapphire Blue)
+ * Primary Hover: #0A3357
+ * Secondary / Success: #059669 (Vibrant Emerald Green)
+ * Accent: #F59E0B (Amber Gold)
+ * Surface Dark: #0B192C / #1E293B
+ * Surface Subtle: #F1F5F9
  */
 
 export const theme = {
-  // Main Institute Colors
-  primary: "#0F2038",      // Deep Academic Navy (Authority & Trust)
-  primaryHover: "#183256", // Darker Navy hover state
-  secondary: "#8B1E26",    // Classic Academic Maroon / Crimson (Discipline & Merit)
-  secondaryHover: "#6D171E",
-  accent: "#D4AF37",       // Rich Academic Gold (Excellence & Achievements)
-  accentHover: "#B59226",
+  // Main Institute Brand Colors
+  primary: "#0F4C81",      // PERL Sapphire Blue
+  primaryHover: "#0A3357", // Deep Navy Hover
+  secondary: "#059669",    // Vibrant Emerald (Academic Growth & Clarity)
+  secondaryHover: "#047857",
+  accent: "#F59E0B",       // Warm Amber Gold (High-impact CTAs & Stars)
+  accentHover: "#D97706",
 
-  // Backgrounds & Surfaces (Off-white / Warm Ivory aesthetics)
-  background: "#FBFBFA",   // Warm off-white page background
+  // Backgrounds & Surfaces
+  background: "#F8FAFC",   // Clean modern slate tinted background
   surface: "#FFFFFF",      // Card & Container crisp white background
-  surfaceSubtle: "#F4F3EF",// Subtle warm neutral surface for alternating sections
-  surfaceDark: "#0B1526",  // Deep charcoal background for contrast sections (Stats, Footer)
+  surfaceSubtle: "#F1F5F9",// Cool slate subtle surface
+  surfaceDark: "#0B192C",  // Deep Navy for contrast sections (Stats, Footer)
 
   // Typography Colors
-  text: "#1C2430",         // Deep charcoal body text (readable, high contrast)
+  text: "#1E293B",         // Deep slate body text
   textLight: "#FFFFFF",    // Inverted text for dark surfaces
-  heading: "#0A1424",      // High contrast heading text
-  mutedText: "#5A6578",    // Muted secondary text
+  heading: "#0F172A",      // High contrast heading text
+  mutedText: "#64748B",    // Muted secondary text
   border: "#E2E8F0",       // Clean subtle border
   borderDark: "#1E293B",
 
   // Contextual Colors
-  success: "#15803D",      // Green for selections / positive badges
-  warning: "#B45309",      // Orange/Amber for status flags
-  info: "#1D4ED8",         // Blue for updates/info tags
+  success: "#10B981",      // Green for selections / positive badges
+  warning: "#F59E0B",      // Amber for high-priority alerts
+  info: "#0284C7",         // Sky blue for syllabus info
 
   // Visual Styling Details
-  borderRadius: "0.5rem",  // Restrained card rounding (8px)
-  fontHeading: "'Plus Jakarta Sans', sans-serif",
-  fontBody: "'Plus Jakarta Sans', sans-serif",
-  fontAccent: "'Lora', serif" // Used for AIR Ranks & Topper numbers
+  borderRadius: "1rem",    // Smooth 16px modern curves
+  fontHeading: "'Poppins', sans-serif",
+  fontBody: "'Poppins', system-ui, -apple-system, sans-serif",
+  fontAccent: "'Poppins', sans-serif"
 };
 
 /**
- * Utility to inject theme CSS variables into the document head dynamically.
+ * Utility to inject theme CSS variables into document head dynamically.
  */
 export function applyTheme(currentTheme = theme) {
   const root = document.documentElement;

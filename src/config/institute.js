@@ -1,76 +1,123 @@
 /**
  * CENTRAL INSTITUTE INFORMATION & BRANDING
  * 
- * Changing data in this file updates the institute name, contact details,
- * address, social links, and SEO tags across all components.
+ * PERL Education Aurangabad (Chhatrapati Sambhajinagar)
+ * Premier Coaching Institute for IIT-JEE, NEET, Foundation & School Curriculum (PCMB).
  */
 
 export const institute = {
-  name: "Apex Momentum Academy",
-  shortName: "Apex Momentum",
-  tagline: "Build Strong Concepts. Prepare With Purpose.",
-  subTagline: "Chhatrapati Sambhajinagar's Premier Coaching Institute for JEE (Main & Advanced), NEET-UG, MHT-CET & Foundation.",
-  establishedYear: 2011,
+  name: "PERL Education Aurangabad",
+  shortName: "PERL Education",
+  tagline: "Empowering Minds, Shaping Futures in IIT-JEE, NEET & Foundation.",
+  subTagline: "Chhatrapati Sambhajinagar's premier coaching institute — small batch sizes, air-conditioned smart digital classrooms, expert faculty, and dedicated personal mentorship for every student.",
+  establishedYear: 2018,
   
-  // Hero & Announcement Banner Setup
+  // Hero & Announcement Marquee Banner Setup
   announcement: {
     enabled: true,
-    badge: "ADMISSIONS OPEN 2026-27",
-    text: "Scholarship & Admission Test (SAT) on Sunday • Up to 100% Fee Waiver",
-    ctaText: "Register for SAT",
+    badge: "ADMISSIONS OPEN",
+    text: "New IIT-JEE, NEET & Foundation (8th-10th) Batches Starting Soon — Book a Free Demo Class",
+    phoneText: "Call: +91 88620 15626",
+    ctaText: "Book Free Demo",
     link: "/contact"
   },
 
-  // Academic Proof Numbers (Shown in Hero & Stats Bar)
+  // Academic Proof Numbers & Reputation
   stats: [
-    { label: "Years of Academic Excellence", value: "15+", icon: "Award" },
-    { label: "Selections in Top IITs & AIIMS", value: "1,450+", icon: "GraduationCap" },
-    { label: "AIR Top 500 Ranks Produced", value: "84", icon: "Trophy" },
-    { label: "Average Batch Selection Rate", value: "82%", icon: "TrendingUp" }
+    { label: "Google Rating", value: "4.8 ★", icon: "Star", sub: "370+ Authentic Reviews" },
+    { label: "Google Reviews", value: "370+", icon: "Users", sub: "Rated & Trusted by Parents" },
+    { label: "Success & Selection", value: "98%", icon: "Trophy", sub: "Top JEE / NEET & Board Ranks" },
+    { label: "Personal Mentorship", value: "100%", icon: "Award", sub: "Small Batch Attention" }
   ],
 
   // Contact Information
   contact: {
-    phonePrimary: "+91 98220 12345",
-    phoneSecondary: "+91 98220 67890",
-    whatsappNumber: "919822012345",
-    whatsappDefaultMessage: "Hello Apex Momentum Academy! I would like to enquire about admission details for JEE/NEET coaching.",
-    email: "admissions@apexmomentum.edu.in",
-    officeHours: "Monday to Saturday: 8:00 AM – 8:00 PM | Sunday: 9:00 AM – 2:00 PM"
+    phonePrimary: "+91 88620 15626",
+    phoneSecondary: "+91 88620 15626",
+    whatsappNumber: "918862015626",
+    whatsappDefaultMessage: "Hello PERL Education! I would like to enquire about admissions and book a free demo class for IIT-JEE / NEET / Foundation.",
+    email: "admissions@perleducation.in",
+    officeHours: "Mon, Wed–Sun: 8:00 AM – 10:00 PM | Tue: 8:30 AM – 10:00 PM",
+    operatingSchedule: [
+      { days: "Monday, Wednesday – Sunday", hours: "8:00 AM – 10:00 PM" },
+      { days: "Tuesday", hours: "8:30 AM – 10:00 PM" }
+    ]
   },
 
-  // Branch & Physical Location
+  // Branch & Physical Location (New Usmanpura, Chhatrapati Sambhajinagar)
   location: {
-    city: "Chhatrapati Sambhajinagar",
+    city: "Chhatrapati Sambhajinagar (Aurangabad)",
     state: "Maharashtra",
-    pincode: "431005",
-    address: "Plot No. 42, Academic Enclave, Near Nirala Bazar, Samarth Nagar",
-    landmark: "Opposite City Library, Samarth Nagar",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.417240321587!2d75.32561937500588!3d19.864571781507964!2m3!1f0!1f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba287669d0d3b%3A0xb35a0cfcf570f80d!2sSamarth%20Nagar%2C%20Chhatrapati%20Sambhajinagar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
-    mapDirectUrl: "https://maps.google.com"
+    pincode: "431009",
+    area: "New Usmanpura",
+    address: "1st Floor, Shrinath Complex, Near Bank of Baroda, Sahakar Nagar Chowk, New SBH Colony, Jyoti Nagar, New Usmanpura",
+    fullAddress: "1st Floor, Shrinath Complex, Near Bank of Baroda, Sahakar Nagar Chowk, New SBH Colony, Jyoti Nagar, New Usmanpura, Chhatrapati Sambhajinagar (Aurangabad), Maharashtra – 431009",
+    landmark: "Near Bank of Baroda, Sahakar Nagar Chowk, Jyoti Nagar",
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.423984577884!2d75.3195!3d19.8645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb986c7504a79b%3A0xa19f0775d7b57b98!2sNew%20Usmanpura%2C%20Chhatrapati%20Sambhajinagar!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
+    mapDirectUrl: "https://maps.google.com/?q=PERL+Education+Shrinath+Complex+New+Usmanpura+Aurangabad+Maharashtra+431009"
   },
+
+  // Key Highlights & Pillars
+  highlights: [
+    {
+      title: "Small Batch Sizes",
+      desc: "Focus on personalized attention, continuous 1-on-1 mentoring, and individual performance tracking.",
+      icon: "Users"
+    },
+    {
+      title: "Modern Infrastructure",
+      desc: "Air-conditioned smart classrooms equipped with digital interactive boards for crystal-clear visual learning.",
+      icon: "MonitorPlay"
+    },
+    {
+      title: "Hybrid / Tech Integration",
+      desc: "App-based daily quizzes, 24/7 recorded lecture access, and regular mock testing aligned with actual exam patterns.",
+      icon: "Laptop"
+    },
+    {
+      title: "Doubt Clearing & Practice",
+      desc: "Frequent doubt-resolution sessions with high-volume question banks and previous years paper drills.",
+      icon: "HelpCircle"
+    }
+  ],
 
   // Social & External Channels
   social: {
-    facebook: "https://facebook.com/apexmomentum",
-    instagram: "https://instagram.com/apexmomentum_official",
-    youtube: "https://youtube.com/@apexmomentum_academy",
-    telegram: "https://t.me/apexmomentum_jee_neet"
+    facebook: "https://facebook.com",
+    instagram: "https://instagram.com",
+    youtube: "https://youtube.com",
+    whatsapp: "https://wa.me/918862015626"
+  },
+
+  // Mobile App & Digital Ecosystem
+  app: {
+    name: "PERL Education Learning App",
+    tagline: "Your Smart Study Companion Anytime, Anywhere",
+    description: "Access recorded lectures, topic-wise practice tests, digital notes, and instant doubt resolution directly from the PERL Education mobile app.",
+    playStoreUrl: "https://play.google.com",
+    features: [
+      "Daily Practice Quizzes & Mock Test Series (JEE/NEET)",
+      "Recorded Video Lectures for Revision",
+      "Chapter-wise Digital e-Notes & Formula Sheets",
+      "Real-time Performance Analytics & Rank Predictor"
+    ]
   },
 
   // Local SEO Defaults
   seo: {
-    titleTemplate: "%s | Apex Momentum Academy",
-    defaultTitle: "Apex Momentum Academy | Best JEE & NEET Coaching in Chhatrapati Sambhajinagar",
-    defaultDescription: "Join Apex Momentum Academy for rigorous JEE Main, JEE Advanced, NEET UG & MHT-CET coaching. Expert IITian faculty, small batch size, daily doubt solving & proven AIR results.",
-    keywords: "JEE coaching Chhatrapati Sambhajinagar, NEET academy Aurangabad, best MHT-CET classes, foundation coaching class 8 9 10"
+    titleTemplate: "%s | PERL Education Aurangabad",
+    defaultTitle: "PERL Education Aurangabad | Best IIT-JEE, NEET & Foundation Coaching",
+    defaultDescription: "Join PERL Education Aurangabad for premier IIT-JEE, NEET, and Foundation (Class 8-10) coaching in Chhatrapati Sambhajinagar. Small batch sizes, smart digital classrooms, 4.8★ Google rating.",
+    keywords: "PERL Education Aurangabad, IIT JEE coaching Aurangabad, NEET coaching Chhatrapati Sambhajinagar, Foundation classes Class 8 9 10, New Usmanpura coaching institute, PCMB tutorials Aurangabad"
   },
 
-  // Images & Logos References
+  // High Quality Curated Images
   images: {
-    logo: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=300&auto=format&fit=crop&q=80",
-    heroImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1000&auto=format&fit=crop&q=80", // Real classroom focus
-    directorImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
-    buildingImage: "https://images.unsplash.com/photo-1562774053-701939374585?w=800&auto=format&fit=crop&q=80"
+    logo: "/logo.png",
+    heroImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&auto=format&fit=crop&q=80",
+    classroomImage: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1000&auto=format&fit=crop&q=80",
+    digitalBoardImage: "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1000&auto=format&fit=crop&q=80",
+    doubtSolvingImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&auto=format&fit=crop&q=80",
+    libraryImage: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1000&auto=format&fit=crop&q=80"
   }
 };
